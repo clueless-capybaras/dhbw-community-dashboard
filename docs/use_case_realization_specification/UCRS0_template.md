@@ -1,4 +1,4 @@
-# Use-Case Specification: Template
+# Use-Case-Realization Specification: Template
 
 # 1. Introduction
 
@@ -13,4 +13,4 @@
 
 ## 2.1 Basic Flow
 
-### Activity Diagram
+### Sequence Diagram
