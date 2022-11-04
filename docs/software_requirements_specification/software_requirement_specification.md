@@ -29,7 +29,7 @@ The DHBW Community Dashboard will be designed to **serve the needs of DHBW stude
 - **Superuser modification**: letting specific users administrate information for their fellow students to minimize the individual, organizational efforts
 - **Campus matters**: giving access to interesting information regarding the student’s everyday life
 
-Represented by the associated user role these aspects are also depicted in our [overall use case diagram]().
+Represented by the associated user role these aspects are also depicted in our [overall use case diagram](../use_case_diagrams/UCD1_overall.png).
 
 # Specific Requirements
 ## Functionality
