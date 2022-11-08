@@ -1,0 +1,24 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+CREATE TABLE `option` (
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `dailymenu` (
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `option`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `option`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `dailymenu`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `dailymenu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;

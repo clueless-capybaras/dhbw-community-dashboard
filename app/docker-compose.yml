@@ -1,0 +1,79 @@
+services:
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    #restart: always
+
+  user-backend:
+    container_name: user-backend
+    build: ./backend/user
+    ports:
+      - "8080:8080"
+    #restart: always
+    depends_on:
+      - database-user
+    
+  calendar-backend:
+    container_name: calendar-backend
+    build: ./backend/calendar
+    ports:
+      - "8081:8080"
+    #restart: always
+    depends_on:
+      - database-calendar
+    
+  backend-canteen:
+    container_name: backend-canteen
+    build: ./backend/canteen
+    ports:
+      - "8082:8080"
+    #restart: always
+    depends_on:
+      - database-canteen
+  
+  database-user:
+    container_name: database-user
+    image: mariadb:latest
+    ports:
+      - "3306:3306"
+    #restart: always 
+    volumes:
+      - ./database/user/init.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./database/user/data:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=dummyrootpassword
+      - MARIADB_DATABASE=dhbwcd_user
+      - MARIADB_USER=dummyuser
+      - MARIADB_PASSWORD=dummypassword
+  
+  database-calendar:
+    container_name: database-calendar
+    image: mariadb:latest
+    ports:
+      - "3307:3306"
+    #restart: always 
+    volumes:
+      - ./database/calendar/init.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./database/calendar/data:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=dummyrootpassword
+      - MARIADB_DATABASE=dhbwcd_calendar
+      - MARIADB_USER=dummyuser
+      - MARIADB_PASSWORD=dummypassword
+
+  database-canteen:
+    container_name: database-canteen
+    image: mariadb:latest
+    ports:
+      - "3308:3306"
+    #restart: always 
+    volumes:
+      - ./database/canteen/init.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./database/canteen/data:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=dummyrootpassword
+      - MARIADB_DATABASE=dhbwcd_canteen
+      - MARIADB_USER=dummyuser
+      - MARIADB_PASSWORD=dummypassword
