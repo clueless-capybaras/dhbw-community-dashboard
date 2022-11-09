@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "/api/user")
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "/api/calendar")
 public class CalendarController {
     private final CalendarService calendarService;
 
