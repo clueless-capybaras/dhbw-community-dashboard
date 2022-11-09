@@ -11,9 +11,7 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-      - name: change working directory
-        run: cd app
       - name: Compose down potentially running old version
-        run: docker-compose down --remove-orphans --rmi all
+        run: docker-compose -f app/docker-compose.yml down --remove-orphans --rmi all
       - name: Compose Up
-        run: docker-compose up --build --force-recreate -d
+        run: docker-compose -f app/docker-compose.yml up --build --force-recreate -d
