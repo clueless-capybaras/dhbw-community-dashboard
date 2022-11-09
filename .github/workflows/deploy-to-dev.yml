@@ -1,0 +1,19 @@
+name: deploy to dev
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: change working directory
+        run: cd app
+      - name: Compose down potentially running old version
+        run: docker-compose down --remove-orphans --rmi all
+      - name: Compose Up
+        run: docker-compose up --build --force-recreate -d
