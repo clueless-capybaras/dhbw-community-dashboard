@@ -27,10 +27,10 @@ jobs:
           sed -i "s/dummypassword/$dbpasswd/g" ./app/backend/canteen/src/main/resources/application.properties
           sed -i "s/dummypassword/$dbpasswd/g" ./app/docker-compose.yml
           sed -i "s/dummyrootpassword/$dbrootpw/g" ./app/docker-compose.yml
-      - name: enable database persistence
-        run: |
-          sed -i "s/#replaceforpersistenceUserDB/$dbuserdata/g" ./app/docker-compose.yml
-          sed -i "s/#replaceforpersistenceCalendarDB/$dbcalendardata/g" ./app/docker-compose.yml
-          sed -i "s/#replaceforpersistenceCanteenDB/$dbcanteendata/g" ./app/docker-compose.yml
+      #- name: enable database persistence
+      #  run: |
+      #    sed -i "s/#replaceforpersistenceUserDB/$dbuserdata/g" ./app/docker-compose.yml
+      #    sed -i "s/#replaceforpersistenceCalendarDB/$dbcalendardata/g" ./app/docker-compose.yml
+      #    sed -i "s/#replaceforpersistenceCanteenDB/$dbcanteendata/g" ./app/docker-compose.yml
       - name: Compose Up
         run: docker-compose -f app/docker-compose.yml up --build --force-recreate -d
