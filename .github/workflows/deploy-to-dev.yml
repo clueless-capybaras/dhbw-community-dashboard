@@ -15,10 +15,9 @@ jobs:
         run: docker-compose -f app/docker-compose.yml down --remove-orphans --rmi all
       - name: set env variables
         run: |
-          dbuserdata="- ~/db/user:/var/lib/mysql"
-          dbcalendardata="- ~/db/calendar:/var/lib/mysql"
-          dbcanteendata="- ~/db/canteen:/var/lib/mysql"
-          dbuserdata="- ~/db/user:/var/lib/mysql"
+          dbuserdata="~/db/user:/var/lib/mysql"
+          dbcalendardata="~/db/calendar:/var/lib/mysql"
+          dbcanteendata="~/db/canteen:/var/lib/mysql"
           dbrootpw=${{ secrets.DEV_DB_ROOT_PW }}
           dbpasswd=${{ secrets.DEV_DB_PW }}
       - name: adjust db credentials
