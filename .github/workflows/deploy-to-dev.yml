@@ -13,6 +13,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Compose down potentially running old version
         run: docker-compose -f app/docker-compose.yml down --remove-orphans --rmi all
+      - name: set env variables
+      - run: |
+          dbrootpw = ${secrets.DEV_DB_ROOT_PW}
+          dbpasswd = ${secrets.DEV_DB_PW}
+          test = ${secrets.TEST}
+          echo $test
       - name: adjust db credentials
         run: |
           sed -i 's/dummypassword/${secrets.DEV_DB_PW}/g' ./app/backend/user/src/main/resources/application.properties
