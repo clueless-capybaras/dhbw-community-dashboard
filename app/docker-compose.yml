@@ -41,7 +41,7 @@ services:
     restart: unless-stopped 
     volumes:
       - ./database/user/init.sql:/docker-entrypoint-initdb.d/dump.sql
-      #- ./database/user/data:/var/lib/mysql
+      #replaceforpersistenceUserDB
     environment:
       - MARIADB_ROOT_PASSWORD=dummyrootpassword
       - MARIADB_DATABASE=dhbwcd_user
@@ -56,7 +56,7 @@ services:
     restart: unless-stopped 
     volumes:
       - ./database/calendar/init.sql:/docker-entrypoint-initdb.d/dump.sql
-      #- ./database/calendar/data:/var/lib/mysql
+      #replaceforpersistenceCalendarDB
     environment:
       - MARIADB_ROOT_PASSWORD=dummyrootpassword
       - MARIADB_DATABASE=dhbwcd_calendar
@@ -71,7 +71,7 @@ services:
     restart: unless-stopped 
     volumes:
       - ./database/canteen/init.sql:/docker-entrypoint-initdb.d/dump.sql
-      #- ./database/canteen/data:/var/lib/mysql
+      #replaceforpersistenceCanteenDB
     environment:
       - MARIADB_ROOT_PASSWORD=dummyrootpassword
       - MARIADB_DATABASE=dhbwcd_canteen
