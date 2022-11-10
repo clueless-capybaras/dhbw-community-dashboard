@@ -15,9 +15,9 @@ jobs:
         run: docker-compose -f app/docker-compose.yml down --remove-orphans --rmi all
       - name: set env variables
         run: |
-          dbrootpw= ${{ secrets.DEV_DB_ROOT_PW }}
-          dbpasswd= ${{ secrets.DEV_DB_PW }}
-          test= ${{ secrets.TEST }}
+          dbrootpw=${{ secrets.DEV_DB_ROOT_PW }}
+          dbpasswd=${{ secrets.DEV_DB_PW }}
+          test=${{ secrets.TEST }}
           echo $test
       - name: adjust db credentials
         run: |
