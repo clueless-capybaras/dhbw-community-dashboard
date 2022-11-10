@@ -15,9 +15,9 @@ jobs:
         run: docker-compose -f app/docker-compose.yml down --remove-orphans --rmi all
       - name: adjust db credentials
         run: |
-          sed -i 's/dummypassword/${secrets.DEV_DB_PW}/g' .app/backend/user/src/main/resources/application.properties
-          sed -i 's/dummypassword/${secrets.DEV_DB_PW}/g' .app/backend/calendar/src/main/resources/application.properties
-          sed -i 's/dummypassword/${secrets.DEV_DB_PW}/g' .app/backend/canteen/src/main/resources/application.properties
+          sed -i 's/dummypassword/${secrets.DEV_DB_PW}/g' ./app/backend/user/src/main/resources/application.properties
+          sed -i 's/dummypassword/${secrets.DEV_DB_PW}/g' ./app/backend/calendar/src/main/resources/application.properties
+          sed -i 's/dummypassword/${secrets.DEV_DB_PW}/g' ./app/backend/canteen/src/main/resources/application.properties
         
     
       - name: Compose Up
