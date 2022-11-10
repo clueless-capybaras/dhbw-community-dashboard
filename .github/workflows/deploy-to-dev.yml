@@ -25,6 +25,6 @@ jobs:
           sed -i 's/dummypassword/${secrets.DEV_DB_PW}/g' ./app/backend/calendar/src/main/resources/application.properties
           sed -i 's/dummypassword/${secrets.DEV_DB_PW}/g' ./app/backend/canteen/src/main/resources/application.properties
           sed -i 's/dummypassword/${secrets.DEV_DB_PW}/g' ./app/docker-compose.yml
-          sed -i "s/dummyrootpassword/${{secrets.DEV_DB_ROOT_PW}}/g" ./app/docker-compose.yml
+          sed -i "s/dummyrootpassword/$dbrootpw/g" ./app/docker-compose.yml
       - name: Compose Up
         run: docker-compose -f app/docker-compose.yml up --build --force-recreate -d
