@@ -33,6 +33,10 @@ Represented by the associated user role these aspects are also depicted in our [
 
 # Specific Requirements
 ## Functionality
+
+### Student requirement: Dashboard Entry Point
+As a DHBW student I want to access a dashboard with a pleasent design so that I have an overview to choose which DHBW-CD feature I want to use.
+
 ### Student requirement: Calendar
 As a DHBW student I want to have my lecture schedule displayed up to date to recent changes to see all my upcoming lectures.
 
