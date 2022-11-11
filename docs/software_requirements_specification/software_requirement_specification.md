@@ -37,6 +37,20 @@ Represented by the associated user role these aspects are also depicted in our [
 ### Student requirement: Dashboard Entry Point
 As a DHBW student I want to access a dashboard with a pleasent design so that I have an overview to choose which DHBW-CD feature I want to use.
 
+**Derivatives** from this user story:
+with respect to [Vanessas research on univerity apps](https://capyclue.atlassian.net/wiki/spaces/KE/pages/11108375/Other+DHBW+Apps)
+- I want a little newsfeed (Lörrach Campus App)
+- I want a little section for useful links such that I get to know all the offers of the DHBW universe (Anreise und Lageplan, Bibliothek, Service-Zugänge)
+
+- I want to be able to access to the canteen section
+- I want to be able to to the calendar section
+- I want to be able to to the contact section
+- I want to be able to to an SOS section
+
+- I want to be able to access (profile) settings
+
+
+
 ### Student requirement: Calendar
 As a DHBW student I want to have my lecture schedule displayed up to date to recent changes to see all my upcoming lectures.
 
