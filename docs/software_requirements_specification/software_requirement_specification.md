@@ -49,6 +49,7 @@ with respect to [Vanessas research on univerity apps](https://capyclue.atlassian
 
 - I want to be able to access (profile) settings
 
+[Wireframe: Dashboard](../wireframes/WFM09_dashboard.png)
 
 
 ### Student requirement: Calendar
