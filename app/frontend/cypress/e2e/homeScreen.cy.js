@@ -4,5 +4,8 @@ describe('empty spec', () => {
   })
   it('hasFeatureEntryPoints', () => {
     cy.get('div.card');
+    cy.get('div.card').each(($card, index, $lcards) => {
+        $card.click();
+    })
   })
 })
