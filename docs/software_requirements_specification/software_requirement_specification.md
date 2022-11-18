@@ -38,6 +38,7 @@ Represented by the associated user role these aspects are also depicted in our [
 As a User I want to be able to navigate between pages to always be able to switch between services easily.
 
 [Wireframe: Sidebar (desktop)](../wireframes/WF01D_Sidebar.png)
+
 [Wireframe: Sidebar (mobile)](../wireframes/WF01M_Sidebar.png)
 
 [Activity Diagram: Sidebar (mobile)](../activity_diagrams/AD4_general_navigation.png)
