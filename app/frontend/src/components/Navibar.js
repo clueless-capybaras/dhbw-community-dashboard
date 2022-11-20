@@ -3,8 +3,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Dashboard from "./Dashboard";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import logo from "../icons/LOGO_DHBWCD.svg";
+
 import { Link } from 'react-router-dom';
 
 function Navibar() {
@@ -28,7 +28,7 @@ function Navibar() {
           </Navbar.Offcanvas>
           <Navbar.Brand>
             <Link to='/' style={{textDecoration: 'none', color: 'white'}}>
-              <FontAwesomeIcon icon={faGraduationCap} />
+              <img src={logo} alt="Logo" style={{height: '30px', width: '30px'}}/>
               {' '}
               DHBW Community Dashboard
             </Link> 
