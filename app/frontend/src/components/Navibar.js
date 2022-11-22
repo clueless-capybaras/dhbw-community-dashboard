@@ -28,7 +28,7 @@ function Navibar() {
           </Navbar.Offcanvas>
           <Navbar.Brand>
             <Link to='/' style={{textDecoration: 'none', color: 'white'}}>
-              <img src={logo} alt="Logo" style={{height: '30px', width: '30px'}}/>
+              <img src={logo} alt="Logo" style={{height: '30px', width: '30px'}} className="d-inline-block align-top"/>
               {' '}
               DHBW Community Dashboard
             </Link> 
