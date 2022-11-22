@@ -1,5 +1,6 @@
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";
 import DashboardCard from "./DashboardCard";
 
 import book from '../svg/book.svg';
@@ -13,9 +14,9 @@ import settings from '../icons/ICON_Settings_deselected.svg'
 
 function Dashboard() {
     return (
-        <Container>
+        <Container style={{width: '50%'}}> {/* First Idea for good-looking dashboard, but not yet responsive */}
             <Row>
-                <DashboardCard title='Moodle'   icon={book} external={true} path='https://moodle.dhbw.de'/>
+                {/*<DashboardCard title='Moodle'   icon={book} external={true} path='https://moodle.dhbw.de'/>*/}
                 <DashboardCard title='Kalender'    icon={calendar} external={false} path='../calendar'/>
                 <DashboardCard title='Mensa'    icon={canteen} external={false} path='../canteen'/>
                 <DashboardCard title='Dualis'  icon={dualis} external={true} path='https://dualis.dhbw.de'/>
