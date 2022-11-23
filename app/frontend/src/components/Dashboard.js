@@ -18,7 +18,7 @@ function Dashboard() {
             <Row>
                 {/*<DashboardCard title='Moodle'   icon={book} external={true} path='https://moodle.dhbw.de'/>*/}
                 <DashboardCard title='Kalender'    icon={calendar} external={false} path='../calendar'/>
-                <DashboardCard title='Mensa'    icon={canteen} external={false} path='../canteen'/>
+                <DashboardCard title='Mensa'    icon={canteen} external={false} path='../canteen/default'/>
                 <DashboardCard title='Dualis'  icon={dualis} external={true} path='https://dualis.dhbw.de'/>
                 <DashboardCard title='Links'    icon={links} external={false} path='../links'/>
                 <DashboardCard title='News'    icon={news} external={false} path='../news'/>
