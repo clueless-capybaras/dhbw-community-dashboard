@@ -14,9 +14,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class CanteenService implements ICanteenService {
@@ -70,15 +68,55 @@ public class CanteenService implements ICanteenService {
                             .replace(" €", "")
                             .replace(",", ".");
                     option.setPrice((price.length() > 0)?Double.parseDouble(price):0);
-                    option.setTags(element.select("p.aw-meal-attributes").text());
+                    String tags = element.select("p.aw-meal-attributes").text();
+                    HashMap<String, String[]> tagMap = filterTagsString(tags);
+                    option.setAllergens(Arrays.asList(tagMap.get("allergens")));
+                    option.setAdditives(Arrays.asList(tagMap.get("additives")));
+                    option.setMeatCategory(tagMap.get("meatCat")[0]);
+                    try {
+                        option.setLastServed(dateFormat.parse(tagMap.get("lastServed")[0]));
+                    } catch (Exception e) {
+                        option.setLastServed(dailyMenu.getDay());
+                    }
                     dailyMenu.addOption(option);
                 });
-
                 dailyMenus.add(dailyMenu);
             }
             return dailyMenus;
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return null;
         }
+    }
+
+    private HashMap<String, String[]> filterTagsString(String tags){
+        HashMap<String, String[]> tagsMap = new HashMap<>();
+        String[] tagsArr = tags.split(" ");
+
+        // Meat category
+        String meatCat = (!tagsArr[0].contains("ZULETZT") &&
+                            !tagsArr[0].contains("ZUSATZ") &&
+                            !tagsArr[0].contains("ALLERGEN"))?tagsArr[0]:"Keine Angabe";
+        tagsMap.put("meatCat", new String[]{meatCat});
+
+        // Last served
+        String lastServed = (tags.contains("ZULETZT"))?
+                tags.split("ZULETZT")[1].trim():
+                null;
+        tagsMap.put("lastServed", new String[]{lastServed});
+
+        // Allergens
+        String[] allergens = (tags.contains("ALLERGEN"))?
+                tags.split("ALLERGEN")[1].trim().split("ZULETZT")[0].trim().split(" "):
+                new String[]{"Keine Allergene"};
+        tagsMap.put("allergens", allergens);
+
+        // Additives
+        String[] additives = (tags.contains("ZUSATZ"))?
+                tags.split("ZUSATZ")[1].trim().split("ZULETZT")[0].trim().split("ALLERGEN")[0].trim().split(" "):
+                new String[]{"Keine Zusatzstoffe"};
+        tagsMap.put("additives", additives);
+
+        return tagsMap;
     }
 }
