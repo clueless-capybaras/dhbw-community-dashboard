@@ -5,14 +5,15 @@ import Badge from 'react-bootstrap/Badge';
 function CanteenMealCard(props){
     return(
         <Col>
-            <Card bg="light" className="mb-3" style={{ width: '18rem', height: '18rem'}}>
+            <Card bg="light" className="mb-3" style={{ width: '25rem', height: '25rem', textAlign: 'left'}}>
             <Card.Body>
                 <Card.Title>{props.meal.name}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">{props.meal.note}</Card.Subtitle>
                 <Card.Text>
-                    {props.meal.tags}€
+                    <br/><Badge bg="secondary">{props.meal.meatCategory}</Badge><hr/>
+                    Zusatzstoffe:<br/>{props.meal.additives.map((additive) => <Badge bg="secondary">{additive}</Badge>)}<hr/>
+                    Allergene:<br/>{props.meal.allergens.map((allergen) => <Badge bg="secondary">{allergen}</Badge>)}<hr/>
+                    Preis:<br/><Badge bg="secondary">{props.meal.price.toLocaleString('de-DE', { style: 'currency', currency: 'EUR'})}</Badge>
                 </Card.Text>
-                <Badge bg="secondary">{props.meal.price} €</Badge>
             </Card.Body>
             </Card>
         </Col>
