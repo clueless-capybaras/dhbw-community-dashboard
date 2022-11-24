@@ -13,22 +13,13 @@
 |           |  functional cohesion of components |     |     |    |      |    |     |       |       |       |
 |    Performance       |  low latency |       |     |      |      |     |     |     |     |     |
 |       |  asnychronous rendering |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
-|       |  xy |     |     |      |      |      |     |     |     |     |
+|       |  quick startup |     |     |      |      |      |     |     |     |     |
+|       |  quicker "navigation" |     |     |      |      |      |     |     |     |     |
+|  Security  |  user data is secured |     |     |      |      |      |     |     |     |     |
+|       |  security standard is transparent (included in privacy statement) |     |     |      |      |      |     |     |     |     |
+|       |  authentication |     |     |      |      |      |     |     |     |     |
+|       |  authorization |     |     |      |      |      |     |     |     |     |
+| Usability  |  responsive design |     |     |      |      |      |     |     |     |     |
+|       |  user action feedback |     |     |      |      |      |     |     |     |     |
+|       |  intuitive design |     |     |      |      |      |     |     |     |     |
+|       |  error transparent |     |     |      |      |      |     |     |     |     |
