@@ -1,7 +1,7 @@
 # Quality Attribute Requirements
 
 
-| Quality Attribute  |  Refinement  |Quality attribute scenarios </br> Source        | Stimulus         | Artifact      | Environment       | Response      | Response Measure        | Business Value  | Technical risk |
+| Quality Attribute  |  Refinement  |x </br> Source        | Stimulus         | Artifact      | Environment       | Response      | Response Measure        | Business Value  | Technical risk |
 | ------------------  | ------------------------------   | ----------------  | ------------------ | ------------------ | ------------------ | ------------------------------ | -------------------------|------------|-------------|
 |     Availability      |        No downtime   |    |    |    |    |    |   |     |    |    |
 |           |  Usable with bad connection     |    |      |     |     |     |   |    |       |       |
