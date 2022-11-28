@@ -3,7 +3,7 @@
 
 | Quality Attribute  |  Refinement  | Source        | Stimulus         | Artifact      | Environment       | Response      | Response Measure        | Business Value  | Technical risk |
 | ------------------  | ------------------------------   | ----------------  | ------------------ | ------------------ | ------------------ | ------------------------------ | -------------------------|------------|-------------|
-|     Availability      |        No downtime   |    |    |    |    |    |   |     |    |    |
+| Availability |No downtime | Student user | unable to access server |  web server |  server is down, not first access  |  notify that user is seeing cached data, show cached data  | notification is seen, data is most recent state of last server access  |   High  |  Medium  |   
 |           |  Usable with bad connection     |    |      |     |     |     |   |    |       |       |
 |           |  availability as a whole not be affected by unavailability of a module |     |     |    |     |    |  |       |       |       |
 |           |  Available both on mobile / desktop |    |     |     |     |     |     |     |     |     |
