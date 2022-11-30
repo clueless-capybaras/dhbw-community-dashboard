@@ -12,18 +12,18 @@ import news from '../icons/ICON_News_deselected.svg';
 import contact from '../icons/ICON_Contact_deselected.svg';
 import settings from '../icons/ICON_Settings_deselected.svg'
 
-function Dashboard() {
+function Dashboard(props) {
     return (
-        <Container style={{width: '50%'}}> {/* First Idea for good-looking dashboard, but not yet responsive */}
+        <Container> {/* First Idea for good-looking dashboard, but not yet responsive */}
             <Row>
                 {/*<DashboardCard title='Moodle'   icon={book} external={true} path='https://moodle.dhbw.de'/>*/}
-                <DashboardCard title='Kalender'    icon={calendar} external={false} path='../calendar'/>
-                <DashboardCard title='Mensa'    icon={canteen} external={false} path='../canteen/default'/>
-                <DashboardCard title='Dualis'  icon={dualis} external={true} path='https://dualis.dhbw.de'/>
-                <DashboardCard title='Links'    icon={links} external={false} path='../links'/>
-                <DashboardCard title='News'    icon={news} external={false} path='../news'/>
-                <DashboardCard title='Kontakt'    icon={contact} external={false} path='../contact'/>
-                <DashboardCard title='Einstellungen'    icon={settings} external={false} path='../settings'/>
+                <DashboardCard colWidth={props.colWidth} title='Kalender'    icon={calendar} external={false} path='../calendar'/>
+                <DashboardCard colWidth={props.colWidth} title='Mensa'    icon={canteen} external={false} path='../canteen/default'/>
+                <DashboardCard colWidth={props.colWidth} title='Dualis'  icon={dualis} external={true} path='https://dualis.dhbw.de'/>
+                <DashboardCard colWidth={props.colWidth} title='Links'    icon={links} external={false} path='../links'/>
+                <DashboardCard colWidth={props.colWidth} title='News'    icon={news} external={false} path='../news'/>
+                <DashboardCard colWidth={props.colWidth} title='Kontakt'    icon={contact} external={false} path='../contact'/>
+                <DashboardCard colWidth={props.colWidth} title='Einstellungen'    icon={settings} external={false} path='../settings'/>
             </Row>
         </Container>
     );

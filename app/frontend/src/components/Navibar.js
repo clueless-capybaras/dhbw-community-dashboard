@@ -23,7 +23,7 @@ function Navibar() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Dashboard/>
+              <Dashboard colWidth='6'/>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
           <Navbar.Brand>

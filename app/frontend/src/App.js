@@ -16,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Navibar />
         <Routes>
-          <Route path='/' element={<Dashboard />} />
+          <Route path='/' element={<Dashboard colWidth='3'/>} />
           <Route path='/canteen/:whichCanteen' element={<CanteenHttpClientContext.Provider value={new CanteenHttpClient()}><Canteen /></CanteenHttpClientContext.Provider>} />
           <Route path='/calendar' element={<Calendar />} />
           <Route path='*' element={<h1>404</h1>} />
