@@ -1,4 +1,4 @@
-# Software Requirement Specification (SRS)
+# Software Architecture Document (SAD)
 
 # Introduction
 ## Purpose
@@ -11,6 +11,7 @@ This document provides a comprehensive architectural overview of the system, usi
 Abbrevation | Meaning
 ----------- | ---------------------------
 DHBW        | [Duale Hochschule Baden-Württemberg](https://de.wikipedia.org/wiki/Duale_Hochschule_Baden-W%C3%BCrttemberg_Karlsruhe) (Baden-Württemberg                   Cooperative State University)
+SAD         | Software Architecture Document
 
 ## References
 [This subsection provides a complete list of all documents referenced elsewhere in the Software Architecture Document. Identify each document by title, report number (if applicable), date, and publishing organization. Specify the sources from which the references can be obtained. This information may be provided by reference to an appendix or to another document.]
