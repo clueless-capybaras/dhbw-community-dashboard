@@ -1,4 +1,4 @@
-# Architecture descision based on utility tree
+# Architecture decisions based on utility tree
 
 ## 1. Availability: No downtime
 | Quality Attribute  |  Refinement  | Source        | Stimulus         | Artifact      | Environment       | Response      | Response Measure        | Business Value  | Technical risk |
