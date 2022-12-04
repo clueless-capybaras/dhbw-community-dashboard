@@ -22,4 +22,4 @@ DHBW        | [Duale Hochschule Baden-Württemberg](https://de.wikipedia.org/wik
 [This section describes what software architecture is for the current system, and how it is represented. Of the Use-Case, Logical, Process, Deployment, and Implementation Views, it enumerates the views that are necessary, and for each view, explains what types of model elements it contains.]
 
 # Architectural Goals and Constraints
-![Architectural Decisions and Design Patterns](../architecture_significant_requirements/"architecture decisions_and_patterns.md")
+[Architectural Decisions and Design Patterns](../architecture_significant_requirements/"architecture decisions_and_patterns.md")
