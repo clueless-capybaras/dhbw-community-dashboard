@@ -1,3 +1,6 @@
 app/database/user/data
 app/database/canteen/data
 app/database/calendar/data
+app/backend/calendar/mvnw
+app/backend/canteen/mvnw
+app/backend/user/mvnw
