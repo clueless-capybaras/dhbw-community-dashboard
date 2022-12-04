@@ -52,4 +52,4 @@ description.]
 # Size and Performance
 
 # Quality
-[Architecture significant requirements](docs/architecture_significant_requirements/architecture_decisions_and_design_patterns.md)
+[Architecture significant requirements](../architecture_significant_requirements/architecture_decisions_and_design_patterns.md)
