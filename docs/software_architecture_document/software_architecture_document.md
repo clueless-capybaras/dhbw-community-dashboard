@@ -42,10 +42,10 @@ description]
 # Deployment View
 
 # Implementation View
-[This section describes the overall structure of the implementation model, the decomposition of the software into layers and subsystems in the implementation model, and any architecturally significant components.]
 
-[Section 8: component diagrams and/or package diagrams, and necessary
-description.]
+![component diagram](../component_diagrams/CD1_components.png)
+
+This component diagram displays the architecurally releveant modulation of the software. The porject is split into a react frontend and multiple microservices consisting of a java spring-boot rest backend and corresponding mariadb databases. Each component is nested in a seperate docker container, where only the rest backends and the react frontend will be exposed to the user, the databses are only addressable by the backends.
 
 # Data View
 
