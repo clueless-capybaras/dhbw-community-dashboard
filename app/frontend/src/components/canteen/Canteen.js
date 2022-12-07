@@ -29,7 +29,8 @@ function Canteen(){
         setDailyMenus(null);
         canteenHttpClient.getWeeklyMenuOfCanteen(canteen.key).then((dm) => setDailyMenus(dm));
     }, [canteen.key, canteenHttpClient, whichCanteen]);
-
+    const weekdayReference = new Date().toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' });
+    
     return(
         <Container>
             <Row>
@@ -46,10 +47,10 @@ function Canteen(){
                 {(dailyMenus)?
                     (<div>
                         <Col>
-                            <Tabs defaultActiveKey={dailyMenus[0].day} id="fill-tab-example" className="mb-3" fill>
+                            <Tabs defaultActiveKey={weekdayReference} id="fill-tab-example" className="mb-3" fill>
                                 {dailyMenus.map((dailyMenu) => {
-                                    const weekday = new Date(dailyMenu.day).toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' });;
-                                    return (<Tab eventKey={dailyMenu.day} title={weekday}>
+                                    const weekday = new Date(dailyMenu.day).toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' });
+                                    return (<Tab eventKey={weekday} title={weekday}>
                                         <Row>
                                             {dailyMenu.options.map((meal) => <CanteenMealCard key={meal.name} meal={meal} />)}
                                         </Row>
