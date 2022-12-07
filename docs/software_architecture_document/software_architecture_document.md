@@ -34,10 +34,10 @@ SAD         | Software Architecture Document
 # Logical View
 
 # Process View
-[This section describes the system's decomposition into lightweight processes (single threads of control) and heavyweight processes (groupings of lightweight processes). Organize the section by groups of processes that communicate or interact. Describe the main modes of communication between processes, such as message passing, interrupts, and rendezvous.]
 
-[Sections 6: sequence diagrams on a component level, and necessary
-description]
+![sequence diagram](../sequence_diagrams/SD0_Components.png)
+
+This sequence diagram displays the general sequence when the user opens a page. The component (frontend) gets props and user-specific settings via microservice (backend) from the database. For canteen, the frontend component gets the data from an API. Each component contains several subcomponents (e.g. [canteen card](https://dhbwcd-dev.mush-it.com/canteen/default)) to display the provided data/props.
 
 # Deployment View
 
