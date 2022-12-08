@@ -18,11 +18,10 @@ Abbrevation | Meaning
 ----------- | ---------------------------
 DHBW        | [Duale Hochschule Baden-Württemberg](https://de.wikipedia.org/wiki/Duale_Hochschule_Baden-W%C3%BCrttemberg_Karlsruhe) (Baden-Württemberg                   Cooperative State University)
 
-## References
 ## Overview
 
 # Overall Descripiton
-The DHBW Community Dashboard will be designed to **serve the needs of DHBW students** regarding their time management and everyday life at the university. The students do often face changes in their schedule and need to communicate such changes via different tools such as Moodle or Discord. To give an example, the Community Dashboard will offer the right calendar based on course affiliation of the specific student and will furthermore notify the users if any changes have been made to their calendar. We also want to give special rights to the course representatives, such that they can administer course specific information for their fellow students.
+The DHBW Community Dashboard will be designed to **serve the needs of DHBW students** regarding their time management and everyday life at the university. The students often face changes in their schedule and need to communicate such changes via different tools such as Moodle or Discord. To give an example, the Community Dashboard will offer the right calendar based on course affiliation of the specific student and will furthermore notify the users if any changes have been made to their calendar. We also want to give special rights to the course representatives, such that they can administer course specific information for their fellow students.
 
 **Overall, we can divide our project into three aspects:**
 - **Personalized tool**: DHBW Community Dashboard gives the students one tool for their time management as a reliable source of truth
@@ -56,10 +55,10 @@ with respect to [Vanessas research on univerity apps](https://capyclue.atlassian
 - I want a little newsfeed (Lörrach Campus App)
 - I want a little section for useful links such that I get to know all the offers of the DHBW universe (Anreise und Lageplan, Bibliothek, Service-Zugänge)
 
-- I want to be able to access to the canteen section
-- I want to be able to to the calendar section
-- I want to be able to to the contact section
-- I want to be able to to an SOS section
+- I want to be able to access the canteen section
+- I want to be able to access the calendar section
+- I want to be able to access the contact section
+- I want to be able to access an SOS section
 
 - I want to be able to access (profile) settings
 
