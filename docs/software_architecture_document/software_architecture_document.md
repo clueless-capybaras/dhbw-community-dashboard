@@ -34,18 +34,18 @@ SAD         | Software Architecture Document
 # Logical View
 
 # Process View
-[This section describes the system's decomposition into lightweight processes (single threads of control) and heavyweight processes (groupings of lightweight processes). Organize the section by groups of processes that communicate or interact. Describe the main modes of communication between processes, such as message passing, interrupts, and rendezvous.]
 
-[Sections 6: sequence diagrams on a component level, and necessary
-description]
+![sequence diagram](../sequence_diagrams/SD0_Components.png)
+
+This sequence diagram displays the general sequence when the user opens a page. The component (frontend) gets props and user-specific settings via microservice (backend) from the database. For canteen, the frontend component gets the data from an API. Each component contains several subcomponents (e.g. [canteen card](https://dhbwcd-dev.mush-it.com/canteen/default)) to display the provided data/props.
 
 # Deployment View
 
 # Implementation View
-[This section describes the overall structure of the implementation model, the decomposition of the software into layers and subsystems in the implementation model, and any architecturally significant components.]
 
-[Section 8: component diagrams and/or package diagrams, and necessary
-description.]
+![component diagram](../component_diagrams/CD1_components.png)
+
+This component diagram displays the architecurally releveant modulation of the software. The project is split into a react frontend and multiple microservices consisting of a java spring-boot rest backend and corresponding mariadb databases. Each component is nested in a seperate docker container, where only the rest backends and the react frontend will be exposed to the user, the databses are only addressable by the backends.
 
 # Data View
 
