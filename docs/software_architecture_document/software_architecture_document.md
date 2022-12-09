@@ -5,7 +5,7 @@
 This document provides a comprehensive architectural overview of the system, using a number of different architectural views to depict different aspects of the system. It is intended to capture and convey the significant architectural decisions which have been made on the system.
 
 ## Scope
-[A brief description of what the Software Architecture Document applies to; what is affected or influenced by this document.]
+This Software Architecture Document provides an architectural overview of the DHBW Community Dashboard.
 
 ## Definitions, Acronyms and Abbreviations
 Abbrevation | Meaning
@@ -13,25 +13,55 @@ Abbrevation | Meaning
 DHBW        | [Duale Hochschule Baden-Württemberg](https://de.wikipedia.org/wiki/Duale_Hochschule_Baden-W%C3%BCrttemberg_Karlsruhe) (Baden-Württemberg                   Cooperative State University)
 SAD         | Software Architecture Document
 
-## References
-[This subsection provides a complete list of all documents referenced elsewhere in the Software Architecture Document. Identify each document by title, report number (if applicable), date, and publishing organization. Specify the sources from which the references can be obtained. This information may be provided by reference to an appendix or to another document.]
 
 ## Overview
 [This subsection describes what the rest of the Software Architecture Document contains and explains how the Software Architecture Document is organized.]
 
 # Architectural Representation
-[This section describes what software architecture is for the current system, and how it is represented. Of the Use-Case, Logical, Process, Deployment, and Implementation Views, it enumerates the views that are necessary, and for each view, explains what types of model elements it contains.]
+EXAMPLE:
+The next two sections of the document describe the architectural goals and constraints.
+Architecturally relevant Use Cases are described by a Use Case diagram and a short explanation
+of their impact on the architecture. The following views will also be provided:
+• A logical view provides a high-level view of the platform presenting the structure of the
+system through its components and their interactions.
+• An implementation view describes the software layers and the main software
+components. A component diagram is used in this view.
+• A deployment view provides a description of the hardware components and how they
+are linked together. This view gives a technical description of protocols and hardware
+nodes used.
+• A data view provides information about the data persistency. A class diagram will be used
+to model the main system data.
+UML diagrams are systematically used to represent the different views of the system.
 
 # Architectural Goals and Constraints
 [Utility Tree](../architecture_significant_requirements/utility_tree.md)
 
 # Use-Case View 
-[This section lists use cases or scenarios from the use-case model if they represent some significant, central functionality of the final system, or if they have a large architectural coverage—they exercise many architectural elements or if they stress or illustrate a specific, delicate point of the architecture.]
+
+## Overall Use Case Diagram
+![Overall Use-Case Diagram](../use_case_diagrams/UCD1_overall.png)
 
 ## Use-Case Realizations
-[reference your use cases and sequence diagrams created earlier. If necessary, revise them based on your new understanding -- a few selected use-case (or scenario) realizations, and explains how the various design model elements contribute to their functionality]
+The following use-cases were chosen to exemplify the advantages of a microservice architecture in which each service works indeendently from the other services.
+
+### Calendar
+As a DHBW student I want to have my lecture schedule displayed up to date to recent changes to see all my upcoming lectures.
+
+### Canteen screen
+As a student I want to be able to see which meals of the canteen are offered for the current week.
+
+### Dualis
+As a student I want to be able to have direct access to Dualis to look at my grades.
 
 # Logical View
+## Relevant Class Diagrams
+![Overview](class_diagrams/CD1_overview.png)
+![Calendar (Frontend)](CD2_frontend_calendar.png)
+![Canteen (Frontend)](class_diagrams/CD3_frontend_canteen.png)
+![Settings (Frontend)](class_diagrams/CD4_frontend_settings.png)
+![User (Backend)](class_diagrams/CD5_backend_user.png)
+![Calendar (Backend)](class_diagrams/CD6_backend_calendar.png)
+![Canteen (Backend)](class_diagrams/CD7_backend_canteen.png)
 
 # Process View
 
