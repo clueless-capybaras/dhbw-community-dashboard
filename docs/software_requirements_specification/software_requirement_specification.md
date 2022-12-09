@@ -69,7 +69,7 @@ As a DHBW student I want to have my lecture schedule displayed up to date to rec
 - I want RAPLA to be synchronized with my calendar on a daily basis // 12 h basis / when I login
 - I want to have at least a week and a day view such that upcoming events can be seen comfortably
 
-[Wireframe: main calendar view with lectures and private appointments](../wireframes/WFM_calendar.png)
+[Wireframe: main calendar view with lectures and private appointments](../wireframes/WFM_Calendar.png)
 
 ### Student requirement: Information management
 As a student I want to do as little as possible to set up my DHBW Dashboard to reduce organizational effort.
@@ -106,13 +106,15 @@ As a student I want to be able to see which meals of the canteen are offered for
 ### Student requirement: Canteen highlighting
 As a student I want to configure which meals of the canteen should be highlighted such that I can easily see which meal fulfills my wishes.
 
-[Wireframe: Canteen plan with highlighted vegan meals](../wireframes/WFM_canteen.png)
+[Wireframe: Canteen plan with highlighted vegan meals](../wireframes/WFM_Canteen.png)
 
 [Activity Diagram: Canteen highlighting](../activity_diagrams/AD1_canteen_highlighting.png)
 
 ### Student requirement: Dualis
 As a student I want to be able to have direct access to Dualis to look at my grades.
+
 [Wireframe: Dualis, desktop version](../wireframes/WFD_Dualis.png)
+
 [Wireframe: Dualis, mobile version](../wireframes/WFM_Dualis.png)
 ### Student requirement: Data security
 As a student I want to have held my personal data in a secure environment such that it can’t be abused neither by interns nor externs.
@@ -120,7 +122,7 @@ As a student I want to have held my personal data in a secure environment such t
 **Derivatives** from this user story:
 - registration should be via email and secure password
   
-  [Activity Diagram: user registration](../activity_diagrams/AD3_user_registration.png)
+  [Activity Diagram: User registration](../activity_diagrams/AD3_user_registration.png)
 - registration should demand as little private information as possible (such that there is less data that needs protection)
 - any private information or customization data should be prevented from being read by external persons and the amount of personal data that is accessable to internals should be reduced to the very minimum 
 - login/logout should be easy nevertheless
