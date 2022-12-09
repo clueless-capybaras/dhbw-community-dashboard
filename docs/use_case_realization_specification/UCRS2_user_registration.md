@@ -1,4 +1,4 @@
-# Use-Case-Realization Specification: Template
+# Use-Case-Realization Specification: User Registration
 
 # 1. Introduction
 
