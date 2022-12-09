@@ -38,30 +38,45 @@ UML diagrams are systematically used to represent the different views of the sys
 
 # Use-Case View 
 
+This section provides a representation of the use cases relevant for the architecture.
+
+The Use cases that are relevant for the architecture have - at this stage - been selected based on the following criteria:
+
++ Use cases that stress out the variety of services
++ Use cases that stress out the importance of availibility at any time
++ Use cases that show the exchange between backend components and the frontend
+
+The following use cases have therefore been selected:
++ The overall usecase diagram because it displays the variety of services
++ The activity diagram for adding a new appointment to the calendar because it represents both the calendar as an integral service of the Dashboard and a case of user specific backend communication
+
 ## Overall Use Case Diagram
 ![Overall Use-Case Diagram](../use_case_diagrams/UCD1_overall.png)
 
-## Use-Case Realizations
-The following use-cases were chosen to exemplify the advantages of a microservice architecture in which each service works indeendently from the other services.
-
-### Calendar
-As a DHBW student I want to have my lecture schedule displayed up to date to recent changes to see all my upcoming lectures.
-
-### Canteen screen
-As a student I want to be able to see which meals of the canteen are offered for the current week.
-
-### Dualis
-As a student I want to be able to have direct access to Dualis to look at my grades.
+## Adding a calendar appointment
+![Overall Use-Case Diagram](../activity_diagrams/AD2_new_appointment.png)
 
 # Logical View
+
+This chapter describes the main application modules and their interaction.
+
 ## Relevant Class Diagrams
-![Overview](class_diagrams/CD1_overview.png)
-![Calendar (Frontend)](CD2_frontend_calendar.png)
-![Canteen (Frontend)](class_diagrams/CD3_frontend_canteen.png)
-![Settings (Frontend)](class_diagrams/CD4_frontend_settings.png)
-![User (Backend)](class_diagrams/CD5_backend_user.png)
-![Calendar (Backend)](class_diagrams/CD6_backend_calendar.png)
-![Canteen (Backend)](class_diagrams/CD7_backend_canteen.png)
+
+The following diagram provides a general overview of the components that form the DHBW Community Dashboard. It mainly consists of primarily frontend related components (such as NavComponent, HomeComponent) that use primarily backend related components (the microservices).
+
+![Overview](../class_diagrams/CD1_overview.png)
+
+The more detailed diagrams that are listed below are giving further detail on the nature of those frontend and microservice components.
+
+![Calendar (Frontend)](../class_diagrams/CD2_frontend_calendar.png)
+
+![Canteen (Frontend)](../class_diagrams/CD3_frontend_canteen.png)
+
+![User (Backend)](../class_diagrams/CD5_backend_user.png)
+
+![Calendar (Backend)](../class_diagrams/CD6_backend_calendar.png)
+
+![Canteen (Backend)](../class_diagrams/CD7_backend_canteen.png)
 
 # Process View
 
