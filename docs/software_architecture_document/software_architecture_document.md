@@ -22,14 +22,14 @@ EXAMPLE:
 The next two sections of the document describe the architectural goals and constraints.
 Architecturally relevant Use Cases are described by a Use Case diagram and a short explanation
 of their impact on the architecture. The following views will also be provided:
-• A logical view provides a high-level view of the platform presenting the structure of the
++ A logical view provides a high-level view of the platform presenting the structure of the
 system through its components and their interactions.
-• An implementation view describes the software layers and the main software
++ An implementation view describes the software layers and the main software
 components. A component diagram is used in this view.
-• A deployment view provides a description of the hardware components and how they
++ A deployment view provides a description of the hardware components and how they
 are linked together. This view gives a technical description of protocols and hardware
 nodes used.
-• A data view provides information about the data persistency. A class diagram will be used
++ A data view provides information about the data persistency. A class diagram will be used
 to model the main system data.
 UML diagrams are systematically used to represent the different views of the system.
 
