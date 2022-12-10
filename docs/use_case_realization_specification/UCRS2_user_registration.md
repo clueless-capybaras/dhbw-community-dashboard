@@ -20,7 +20,7 @@ This use-case-realization specification describes the flow of new user registrat
 - A new user navigates to the registration page of the frontend.
 - The user is faced with a registration form and enters a (valid DHBW) email address and 2x a new password.
 - Frontend pattern matching is used to check if the email is a generally valid email address and the password have sufficient complexity as well as if they are identical.
-- The password is hasehd and the email address and a password hash are sent to the back end.
+- The password is hashed and the email address and a password hash are sent to the back end.
 - The backend retrieves additional validation criteria and patterns from the database (e.g. the valid DHBW email schemas or if the user already exists, ...)
 - The backend applies these validation criteria.
 - On success the user data is stored to the database for future log in attempts and a session auth token (jwt) is handed back to the frontend which redirects the user to the logged-in sections of the application.
