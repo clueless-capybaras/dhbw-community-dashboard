@@ -15,22 +15,16 @@ SAD         | Software Architecture Document
 
 
 ## Overview
-This document gives an overview to the architectural representation, summarizes the goals and constraints and describes the drivers of the architectural approach in several views, namely the use case, logical, process, deployment and imlementation view and concludes with size, performance and quality considerations.
+This document gives an overview to the architectural representation, summarizes the goals and constraints and describes the drivers of the architectural approach in several views. It then concludes with size, performance and quality considerations.
 
 # Architectural Representation
-EXAMPLE:
-The next two sections of the document describe the architectural goals and constraints.
-Architecturally relevant Use Cases are described by a Use Case diagram and a short explanation
+The next two sections describe the architectural goals and constraints. Architecturally relevant Use Cases are described by a Use Case diagram and a short explanation
 of their impact on the architecture. The following views will also be provided:
-+ A logical view provides a high-level view of the platform presenting the structure of the
-system through its components and their interactions.
++ A logical view provides a view on the systems components and their interactions
++ A process view depicts the system's general behaviour with a sequence diagram
 + An implementation view describes the software layers and the main software
 components. A component diagram is used in this view.
-+ A deployment view provides a description of the hardware components and how they
-are linked together. This view gives a technical description of protocols and hardware
-nodes used.
-+ A data view provides information about the data persistency. A class diagram will be used
-to model the main system data.
+
 UML diagrams are systematically used to represent the different views of the system.
 
 # Architectural Goals and Constraints
