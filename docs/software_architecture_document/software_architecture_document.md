@@ -15,7 +15,7 @@ SAD         | Software Architecture Document
 
 
 ## Overview
-[This subsection describes what the rest of the Software Architecture Document contains and explains how the Software Architecture Document is organized.]
+This document gives an overview to the architectural representation, summarizes the goals and constraints and describes the drivers of the architectural approach in several views, namely the use case, logical, process, deployment and imlementation view and concludes with size, performance and quality considerations.
 
 # Architectural Representation
 EXAMPLE:
@@ -48,7 +48,7 @@ The Use cases that are relevant for the architecture have - at this stage - been
 
 The following use cases have therefore been selected:
 + The overall usecase diagram because it displays the variety of services
-+ The activity diagram for adding a new appointment to the calendar because it represents both the calendar as an integral service of the Dashboard and a case of user specific backend communication
++ The activity diagram for adding a new appointment to the calendar because it represents both the calendar as an integral service that is expected to be steadily available  and a case of user specific backend communication. A full use case realization document will be added to a later version of the software architecture document.
 
 ## Overall Use Case Diagram
 ![Overall Use-Case Diagram](../use_case_diagrams/UCD1_overall.png)
@@ -91,8 +91,6 @@ This sequence diagram displays the general sequence when the user opens a page. 
 ![component diagram](../component_diagrams/CD1_components.png)
 
 This component diagram displays the architecurally releveant modulation of the software. The project is split into a react frontend and multiple microservices consisting of a java spring-boot rest backend and corresponding mariadb databases. Each component is nested in a seperate docker container, where only the rest backends and the react frontend will be exposed to the user, the databses are only addressable by the backends.
-
-# Data View
 
 # Size and Performance
 
