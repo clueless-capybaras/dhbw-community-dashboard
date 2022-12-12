@@ -86,7 +86,11 @@ This sequence diagram displays the general sequence when the user opens a page. 
 
 This component diagram displays the architecurally releveant modulation of the software. The project is split into a react frontend and multiple microservices consisting of a java spring-boot rest backend and corresponding mariadb databases. Each component is nested in a seperate docker container, where only the rest backends and the react frontend will be exposed to the user, the databses are only addressable by the backends.
 
-# Size and Performance
+# Performance
+
+An important architectural decision that the system's performance benifits from is to implement caching in several contexts such that the overhead of loading the displayable HTML, JS and CSS is kept as minimal as possible. While a certain size is realistically unavoidable here, concepts like lazy loading, resource injection and minification should be adhered to.
+
+Moreover to ensure both the availability and a proper performance in cases of a slow internet connection a bad-connection-mode will be implemented.
 
 # Quality
 [Architecture significant requirements](../architecture_significant_requirements/architecture_decisions_and_design_patterns.md)
