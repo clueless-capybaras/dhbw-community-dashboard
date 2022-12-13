@@ -4,15 +4,11 @@
 ## Purpose
 This document provides a comprehensive architectural overview of the system, using a number of different architectural views to depict different aspects of the system. It is intended to capture and convey the significant architectural decisions which have been made on the system.
 
-## Scope
-This Software Architecture Document provides an architectural overview of the DHBW Community Dashboard.
-
 ## Definitions, Acronyms and Abbreviations
 Abbrevation | Meaning
 ----------- | ---------------------------
 DHBW        | [Duale Hochschule Baden-Württemberg](https://de.wikipedia.org/wiki/Duale_Hochschule_Baden-W%C3%BCrttemberg_Karlsruhe) (Baden-Württemberg                   Cooperative State University)
 SAD         | Software Architecture Document
-
 
 ## Overview
 This document gives an overview to the architectural representation, summarizes the goals and constraints and describes the drivers of the architectural approach in several views. It then concludes with size, performance and quality considerations.
