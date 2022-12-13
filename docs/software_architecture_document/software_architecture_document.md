@@ -62,6 +62,8 @@ The more detailed diagrams that are listed below are giving further detail on th
 
 ![Canteen (Frontend)](../class_diagrams/CD3_frontend_canteen.png)
 
+![Canteen (Frontend)](../class_diagrams/CD4_frontend_settings.png) 
+
 ![User (Backend)](../class_diagrams/CD5_backend_user.png)
 
 ![Calendar (Backend)](../class_diagrams/CD6_backend_calendar.png)
