@@ -77,6 +77,13 @@ The more detailed diagrams that are listed below are giving further detail on th
 This sequence diagram displays the general sequence when the user opens a page. The component (frontend) gets props and user-specific settings via microservice (backend) from the database. For canteen, the frontend component gets the data from an API. Each component contains several subcomponents (e.g. [canteen card](https://dhbwcd-dev.mush-it.com/canteen/default)) to display the provided data/props.
 
 # Deployment View
+The following is a description of the hardware and virtualised instances running the execution environment for the application.
+
+![deployment diagram](deployment_diagram.png)
+
+This diagram provides a view of hardware and virtualised components involved in this project. Please Note that this is the current development and integration scheme, for a production release splitting up the docker images on a kubernetes cluster with an ingress instead of the nginx reverse proxy is plausible.
+
+
 
 # Implementation View
 
