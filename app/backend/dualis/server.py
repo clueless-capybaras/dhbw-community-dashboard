@@ -27,7 +27,7 @@ pass_store()
 
 
 @app.route('/grades', methods = ['GET'])
-@app.route('api/dualis/grades', methods = ['GET'])
+@app.route('/api/dualis/grades', methods = ['GET'])
 @auth.login_required
 def myhome():
     cmd = ['/bin/bash', '/opt/dualis-app/NOTEN.sh', '-u', auth.username(), '-p', get_password(auth.username())]
