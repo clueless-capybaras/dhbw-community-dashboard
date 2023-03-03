@@ -1,0 +1,7 @@
+*.conf
+.lock/
+cookie
+header
+noten.log
+noten2.log
+page.html

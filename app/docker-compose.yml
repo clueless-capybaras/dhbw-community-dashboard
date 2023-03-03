@@ -32,6 +32,13 @@ services:
     restart: unless-stopped
     depends_on:
       - database-canteen
+
+  backend-dualis:
+    container_name: backend-dualis
+    build: ./backend/dualis
+    ports:
+      - "8083:5001"
+    restart: unless-stopped
   
   database-user:
     container_name: database-user
