@@ -8,15 +8,6 @@ import Container from 'react-bootstrap/esm/Container';
 import {CalendarHttpClientContext} from '../../App';
 
 function Calendar() {
-  const icalUrl = 'https://rapla.dhbw-karlsruhe.de/rapla?page=calendar&user=eisenbiegler&file=TINF21B4';
-  const calendarHttpClient = React.useContext(CalendarHttpClientContext);
-  const [calendarEvents, setCalendarEvents] = React.useState([]);
-  React.useEffect(() => {
-    calendarHttpClient.getEventsFromRapla(icalUrl).then((events) => {
-      setCalendarEvents(events);
-    });
-    console.log(calendarEvents);
-  }, [calendarEvents, calendarHttpClient, icalUrl]);
   return (
     <Container>
       <h1>Calendar</h1>
