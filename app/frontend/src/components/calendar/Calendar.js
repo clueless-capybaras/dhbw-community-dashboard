@@ -3,6 +3,7 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list'
+import interactionPlugin from '@fullcalendar/interaction'
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import Container from 'react-bootstrap/esm/Container';
 
@@ -43,6 +44,22 @@ function Calendar() {
             firstDay: 1
           }
         }}
+        events={[
+          {
+            title  : 'event1',
+            start  : '2023-03-03'
+          },
+          {
+            title  : 'event2',
+            start  : '2023-03-04',
+            end    : '2010-03-05'
+          },
+          {
+            title  : 'event3',
+            start  : '2023-01-09T12:30:00',
+            allDay : false // will make the time show
+          }
+        ]}
       />
     </Container>
   );
