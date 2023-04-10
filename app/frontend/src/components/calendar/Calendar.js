@@ -11,6 +11,18 @@ import { useState } from 'react';
 
 import {CalendarHttpClientContext} from '../../App';
 
+
+const EventItem = ({ info }) => {
+  const { event } = info;
+  return (
+    <div>
+      <p>{event.title}</p>
+      <p>{event.id}</p>
+    </div>
+  );
+};
+
+
 function Calendar() {
   const [events, setEvents] = useState([]);
 
@@ -19,7 +31,7 @@ function Calendar() {
     const eventNamePrompt = prompt("Enter event name");
     if (eventNamePrompt) {
       setEvents([
-        ...events,
+        ...events,  /* werden an dieser stelle alle events neu gesetzt, statt nur eines hinzuzufügen?*/ 
         {start,
         end,
         title: eventNamePrompt,
@@ -29,12 +41,13 @@ function Calendar() {
   };
 
   return (
-    <Container>
+    <Container>s
       <h1>Calendar</h1>
       <FullCalendar
         editable
         selectable
         events={events}
+        eventContent={(info) => <EventItem info={info}/>}
         select={handleSelect}
         plugins={[ bootstrap5Plugin, dayGridPlugin, listPlugin, timeGridPlugin, interactionPlugin ]}
         initialView="timeGridSixDay"
@@ -66,22 +79,6 @@ function Calendar() {
             firstDay: 1
           }
         }}
-        events={[
-          {
-            title  : 'event1',
-            start  : '2023-03-03'
-          },
-          {
-            title  : 'event2',
-            start  : '2023-03-04',
-            end    : '2010-03-05'
-          },
-          {
-            title  : 'event3',
-            start  : '2023-01-09T12:30:00',
-            allDay : false // will make the time show
-          }
-        ]}
       />
     </Container>
   );
