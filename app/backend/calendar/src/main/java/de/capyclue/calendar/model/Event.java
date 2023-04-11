@@ -6,8 +6,8 @@ import java.time.LocalDateTime;
 @Entity
 public class Event {
     @Id
-    @Column(name = "uid", nullable = false)
-    private final String id;
+    @Column(name = "uuid", nullable = false)
+    private final String uuid;
 
     @Column(name = "summary", nullable = true)
     private final String title;
@@ -25,8 +25,8 @@ public class Event {
     private final String url;
 
 
-    public Event(String id, String title, String description, LocalDateTime start, LocalDateTime end, String url) {
-        this.id = id;
+    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, String url) {
+        this.uuid = uuid;
         this.title = title;
         this.description = description;
         this.start = start;
@@ -35,7 +35,7 @@ public class Event {
     }
 
     public Event() {
-        this.id = null;
+        this.uuid = null;
         this.title = null;
         this.description = null;
         this.start = null;
@@ -43,8 +43,8 @@ public class Event {
         this.url = null;
     }
 
-    public String getId() {
-        return id;
+    public String getUuid() {
+        return uuid;
     }
 
     public String getTitle() {
