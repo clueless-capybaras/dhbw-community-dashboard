@@ -4,6 +4,7 @@ import de.capyclue.calendar.model.Event;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.net.URL;
 import java.util.List;
 
 @Repository
@@ -17,5 +18,13 @@ public class CalendarRepository {
 
     public List<Event> findAll() {
         return this.springCalendarRepository.findAll();
+    }
+
+    public void saveAll(List<Event> eventList) {
+        this.springCalendarRepository.saveAll(eventList);
+    }
+
+    public List<Event> findAllByUrl(URL url) {
+        return this.springCalendarRepository.findAllByUrl(url.toString());
     }
 }
