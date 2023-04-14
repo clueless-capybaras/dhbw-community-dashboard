@@ -19,7 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'building the application'
-                sh 'cd frontend'
+                sh 'cd app/frontend'
                 sh 'npm install'
                 sh 'npm build'
             }
@@ -42,12 +42,6 @@ pipeline {
                 echo 'deploying the application'
             }
         }
-        
-        /*stage('docker up') {
-            steps {
-                sh 'docker-compose -f app/docker-compose.yml up --build --force-recreate -d'
-            }
-        }*/
 
         //inform about Build Status or Build Status Changes 
         /*post {
