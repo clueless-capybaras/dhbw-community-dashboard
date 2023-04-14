@@ -19,9 +19,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'building the application'
-                sh 'cd app/frontend'
-                sh 'npm install'
-                sh 'npm build'
+                dir('app/frontend') {
+                    sh 'npm install'
+                    sh 'npm build'
+                }
             }
         }
 
