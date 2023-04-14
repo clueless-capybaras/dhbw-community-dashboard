@@ -21,7 +21,7 @@ pipeline {
                 echo 'building the application'
                 dir('app/frontend') {
                     sh 'npm install'
-                    sh 'npm build'
+                    sh 'npm run build'
                 }
             }
         }
