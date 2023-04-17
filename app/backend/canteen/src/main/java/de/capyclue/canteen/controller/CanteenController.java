@@ -24,17 +24,26 @@ public class CanteenController {
         return "hello world, this is the canteen microservice";
     }
 
+    /**
+     * Returns the weekly menu of a canteen
+     * @param mensa the canteen to request the menus from
+     * @return a list of daily menus
+     */
     @GetMapping(path = "/weekly/{mensa}")
     public List<DailyMenu> getWeeklyMenuOfCanteen(@PathVariable String mensa) {
         return canteenService.requestDailyMenus(mensa);
     }
 
+    /**
+     * Returns the weekly menu of all canteens
+     * @return a list of daily menus
+     */
     @GetMapping(path = "/weekly")
     public List<DailyMenu> getWeeklyMenuOfAllCanteens() {
         String[] mensen = {"mensa-erzbergerstrasse", "mensa-am-adenauerring", "mensa-moltke"};
         List<DailyMenu> dailyMenus = new ArrayList<>();
         for (String mensa : mensen) {
-            canteenService.requestDailyMenus(mensa).forEach(dailyMenus::add);
+            dailyMenus.addAll(canteenService.requestDailyMenus(mensa));
         }
         return dailyMenus;
     }
