@@ -4,6 +4,7 @@ import { createContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Navibar from './components/Navibar';
+import ErrorModal from './components/ErrorModal';
 import Canteen from './components/canteen/Canteen';
 import Calendar from './components/calendar/Calendar';
 import CalendarHttpClient from './components/calendar/CalendarHttpClient';
@@ -20,6 +21,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navibar />
+        <ErrorModal />
         <Routes>
           <Route path='/' element={<Dashboard colWidth='3'/>} />
           <Route path='/canteen/:whichCanteen' element={<CanteenHttpClientContext.Provider value={new CanteenHttpClient()}><Canteen /></CanteenHttpClientContext.Provider>} />

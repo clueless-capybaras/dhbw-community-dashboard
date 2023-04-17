@@ -6,6 +6,8 @@ import Dashboard from "./Dashboard";
 import logo from "../icons/LOGO_DHBWCD.svg";
 
 import { Link } from 'react-router-dom';
+import LoginButton from './auth/LoginButton';
+import LogoutButton from './auth/LogoutButton';
 
 function Navibar() {
     return (
@@ -23,6 +25,8 @@ function Navibar() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
+              <LoginButton />
+              <LogoutButton />
               <Dashboard colWidth='6'/>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
