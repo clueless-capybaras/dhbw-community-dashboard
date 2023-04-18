@@ -4,7 +4,11 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
 
+import AccountSettings from './AccountSettings';
+import CalendarSettings from './CalendarSettings';
 import CanteenSettings from './CanteenSettings';
+import GeneralSettings from './GeneralSettings';
+import AboutSettings from './AboutSettings';
 
 function Settings() {
     return(
@@ -29,19 +33,19 @@ function Settings() {
                 
                 <Tab.Content>
                     <Tab.Pane eventKey="account">
-
+                        <AccountSettings />
                     </Tab.Pane>
                     <Tab.Pane eventKey="calendar">
-
+                        <CalendarSettings />
                     </Tab.Pane>
                     <Tab.Pane eventKey="canteen">
                         <CanteenSettings />
                     </Tab.Pane>
                     <Tab.Pane eventKey="general">
-
+                        <GeneralSettings />
                     </Tab.Pane>
                     <Tab.Pane eventKey="about">
-
+                        <AboutSettings />
                     </Tab.Pane>
                 </Tab.Content>
                 </Col>
