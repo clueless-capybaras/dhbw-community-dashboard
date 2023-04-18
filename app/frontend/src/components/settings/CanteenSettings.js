@@ -25,10 +25,14 @@ function CanteenSettings(props) {
                 </Col>
             </Row>
             <Row className="mb-3">
-                <Col>
-                <Form.Check className="" type="switch" id="" label="Highlighting aktivieren" />
+                <Col md="3">
+                <Form.Label>Highlighting aktivieren: </Form.Label>
+                </Col>
+                <Col md="9">
+                <Form.Check className="" type="switch" id="" label="" />
                 </Col>
             </Row>
+
             <Row className="mb-3">
                 <Col md="3">
                 <Form.Label>Highlighting-Farbe: </Form.Label>
@@ -37,6 +41,7 @@ function CanteenSettings(props) {
                 <Form.Control type="color" defaultValue={highlightingColor} title="Color Picker" id="highlightingColorPicker" onChange={handleHighlightingColorChange} />
                 </Col>
             </Row>
+
             <Row className="mb-3">
                 <Col md="3">
                 <Form.Label>Highlighting-Typen: </Form.Label>
@@ -50,13 +55,16 @@ function CanteenSettings(props) {
                 </Col>
             </Row>
         </Container>
+
         <hr className="my-5 mx-3" />
+
         <Container>
             <Row className="mb-3">
                 <Col>
                 <h2>Ausblenden</h2>
                 </Col>
             </Row>
+
             <Row className="mb-3">
                 <Col md="3">
                 <Form.Label>Gerichte ausblenden mit Eigenschaft:</Form.Label>
