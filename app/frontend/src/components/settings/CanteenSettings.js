@@ -7,6 +7,12 @@ import Form from 'react-bootstrap/Form';
 
 function CanteenSettings(props) {
 
+    const [highlightingChecked, setHighlightingChecked] = useState(false);
+
+    const handleHighlightingCheckChange = event => {
+        setHighlightingChecked(!highlightingChecked);
+    }
+
     const [highlightingColor, setHighlightingColor] = useState("#3aac5c"); //Change the useState-Value to user's last saved settings
 
     const handleHighlightingColorChange = event => {
@@ -21,7 +27,19 @@ function CanteenSettings(props) {
         <Container>
             <Row className="mb-3">
                 <Col>
-                <h2>Highlighting</h2>
+                <h2>Darstellung</h2>
+                </Col>
+            </Row>
+            <Row className="mb-3">
+                <Col md="3">
+                Meine Mensa: 
+                </Col>
+                <Col md="9">
+                <Form.Select>
+                    <option>Mensa Erzbergerstraße</option>
+                    <option>Mensa am Adenauerring</option>
+                    <option>Mensa Moltke</option>
+                </Form.Select>
                 </Col>
             </Row>
             <Row className="mb-3">
@@ -29,10 +47,14 @@ function CanteenSettings(props) {
                 <Form.Label>Highlighting aktivieren: </Form.Label>
                 </Col>
                 <Col md="9">
-                <Form.Check className="" type="switch" id="" label="" />
+                <Form.Check className="" type="checkbox" onChange={handleHighlightingCheckChange} id="" label="" />
                 </Col>
             </Row>
 
+            {/* Show following Options only when Checkbox is checked */}
+            { highlightingChecked ?
+
+            <>
             <Row className="mb-3">
                 <Col md="3">
                 <Form.Label>Highlighting-Farbe: </Form.Label>
@@ -54,6 +76,10 @@ function CanteenSettings(props) {
                 </Form.Select>
                 </Col>
             </Row>
+            </>
+            
+            : null}
+
         </Container>
 
         <hr className="my-5 mx-3" />
