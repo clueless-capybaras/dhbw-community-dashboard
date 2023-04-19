@@ -13,7 +13,7 @@ import AboutSettings from './AboutSettings';
 function Settings() {
     return(
         <>
-        <Tab.Container defaultActiveKey="">
+        <Tab.Container defaultActiveKey="account">
             <Row>
                 <Col md="3">
                 
