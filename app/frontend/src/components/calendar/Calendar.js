@@ -4,6 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list'
 import interactionPlugin from '@fullcalendar/interaction'
+import rrulePlugin from '@fullcalendar/rrule'
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import Container from 'react-bootstrap/esm/Container';
 
@@ -22,7 +23,7 @@ function Calendar() {
     <Container>
       <h1>Kalender</h1>
       <FullCalendar
-        plugins={[ bootstrap5Plugin, dayGridPlugin, listPlugin, timeGridPlugin ]}
+        plugins={[ bootstrap5Plugin, dayGridPlugin, listPlugin, timeGridPlugin, rrulePlugin ]}
         initialView="timeGridWeek"
         weekends={false}
         themeSystem="bootstrap5"
