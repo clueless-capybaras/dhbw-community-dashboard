@@ -8,14 +8,14 @@ import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import Container from 'react-bootstrap/esm/Container';
 
 import {CalendarHttpClientContext} from '../../App';
-import { baseUrlRapla } from "../../config";
+import { tinf21B4Rapla } from "../../config";
 
 function Calendar() {
   const calendarHttpClient = useContext(CalendarHttpClientContext)
   const [events, setEvents] = useState(null);
   useEffect(() => {
     setEvents(null);
-    calendarHttpClient.getEventsFromRapla(baseUrlRapla).then((ev) => {setEvents(ev); console.log(ev);});
+    calendarHttpClient.getEventsFromRapla(tinf21B4Rapla).then((ev) => {setEvents(ev); console.log(ev);});
   }, []
   );
   return (
