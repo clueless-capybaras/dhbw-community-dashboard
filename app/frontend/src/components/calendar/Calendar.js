@@ -46,8 +46,13 @@ function Calendar() {
         }}
         events={[
           {
-            title  : 'event1',
-            start  : '2023-03-03'
+            uuid: "a0641fcf-7d21-4f73-8b5a-94f4ecc0b193",
+            title: "Rechnerarchitektur I",
+            description: "F492  Hörsaal",
+            start: "2022-10-05T09:30:00",
+            end: "2022-10-05T12:00:00",
+            url: "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4",
+            rrule : "FREQ=WEEKLY;INTERVAL=1;COUNT=11;BYDAY=WE"
           },
           {
             title  : 'event2',
