@@ -3,10 +3,9 @@ package de.capyclue.calendar.service;
 import de.capyclue.calendar.model.Event;
 import de.capyclue.calendar.repository.CalendarRepository;
 import net.fortuna.ical4j.data.CalendarBuilder;
-import net.fortuna.ical4j.model.Calendar;
-import net.fortuna.ical4j.model.Component;
-import net.fortuna.ical4j.model.ComponentList;
+import net.fortuna.ical4j.model.*;
 import net.fortuna.ical4j.model.component.VEvent;
+import net.fortuna.ical4j.model.property.RRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,9 +41,10 @@ public class CalendarService implements ICalendarService {
                 eventList.add(new Event(
                         event.getUid().getValue(),
                         (event.getSummary() == null)?null:event.getSummary().getValue(),
-                        ((event.getLocation() == null)?null:event.getLocation().getValue()),
+                        (event.getLocation() == null)?null:event.getLocation().getValue(),
                         (event.getStartDate() == null)?null:LocalDateTime.ofInstant(event.getStartDate().getDate().toInstant(), ZoneId.systemDefault()),
                         (event.getEndDate() == null)?null:LocalDateTime.ofInstant(event.getEndDate().getDate().toInstant(), ZoneId.systemDefault()),
+                        (event.getProperty("RRULE") == null)?null: ((RRule)((event.getProperty(Property.RRULE)))).getValue(),
                         url.toString()
                 ));
             }
@@ -55,6 +55,4 @@ public class CalendarService implements ICalendarService {
             return this.calendarRepository.findAllByUrl(url);
         }
     }
-
-
 }
