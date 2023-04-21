@@ -4,25 +4,25 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list'
 import interactionPlugin from '@fullcalendar/interaction'
-import iCalendarPlugin from '@fullcalendar/icalendar'
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import Container from 'react-bootstrap/esm/Container';
 
 import {CalendarHttpClientContext} from '../../App';
+import { baseUrlRapla } from "../../config";
 
 function Calendar() {
   const calendarHttpClient = useContext(CalendarHttpClientContext)
   const [events, setEvents] = useState(null);
   useEffect(() => {
     setEvents(null);
-    calendarHttpClient.getEventsFromRapla('https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4').then((ev) => {setEvents(ev); console.log(ev);});
+    calendarHttpClient.getEventsFromRapla(baseUrlRapla).then((ev) => {setEvents(ev); console.log(ev);});
   }, []
   );
   return (
     <Container>
       <h1>Calendar</h1>
       <FullCalendar
-        plugins={[ bootstrap5Plugin, dayGridPlugin, listPlugin, timeGridPlugin, iCalendarPlugin ]}
+        plugins={[ bootstrap5Plugin, dayGridPlugin, listPlugin, timeGridPlugin ]}
         initialView="timeGridSixDay"
         weekends={false}
         themeSystem="bootstrap5"
