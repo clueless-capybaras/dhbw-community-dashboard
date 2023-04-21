@@ -4,6 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list'
 import interactionPlugin from '@fullcalendar/interaction'
+import rrulePlugin from '@fullcalendar/rrule'
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import Container from 'react-bootstrap/esm/Container';
 
@@ -14,7 +15,7 @@ function Calendar() {
     <Container>
       <h1>Calendar</h1>
       <FullCalendar
-        plugins={[ bootstrap5Plugin, dayGridPlugin, listPlugin, timeGridPlugin ]}
+        plugins={[ bootstrap5Plugin, dayGridPlugin, listPlugin, timeGridPlugin, rrulePlugin ]}
         initialView="timeGridSixDay"
         weekends={false}
         themeSystem="bootstrap5"
@@ -50,9 +51,15 @@ function Calendar() {
             title: "Rechnerarchitektur I",
             description: "F492  Hörsaal",
             start: "2022-10-05T09:30:00",
-            end: "2022-10-05T12:00:00",
-            url: "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4",
-            rrule : "FREQ=WEEKLY;INTERVAL=1;COUNT=11;BYDAY=WE"
+            end: "2022-12-05T12:00:00",
+            rrule : {
+              freq: 'weekly',
+              interval: 1,
+              byweekday: [ 'mo', 'fr' ],
+              dtstart: '2022-10-05T09:30:00', // will also accept '20120201T103000'
+              count: 10
+              //until: '2022-12-05' // will also accept '20120201'
+            }
           },
           {
             title  : 'event2',

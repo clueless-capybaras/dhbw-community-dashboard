@@ -1,10 +1,12 @@
 package de.capyclue.calendar.service;
 
 import de.capyclue.calendar.model.Event;
+import de.capyclue.calendar.model.FC_RRule;
 import de.capyclue.calendar.repository.CalendarRepository;
 import net.fortuna.ical4j.data.CalendarBuilder;
 import net.fortuna.ical4j.model.*;
 import net.fortuna.ical4j.model.component.VEvent;
+import net.fortuna.ical4j.model.property.DtStart;
 import net.fortuna.ical4j.model.property.RRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,9 +46,11 @@ public class CalendarService implements ICalendarService {
                         (event.getLocation() == null)?null:event.getLocation().getValue(),
                         (event.getStartDate() == null)?null:LocalDateTime.ofInstant(event.getStartDate().getDate().toInstant(), ZoneId.systemDefault()),
                         (event.getEndDate() == null)?null:LocalDateTime.ofInstant(event.getEndDate().getDate().toInstant(), ZoneId.systemDefault()),
-                        (event.getProperty("RRULE") == null)?null: ((RRule)((event.getProperty(Property.RRULE)))).getValue(),
+                        (event.getProperty("RRULE") == null)?null: new FC_RRule(event),
                         url.toString()
                 ));
+                System.out.println((event.getProperty("RRULE") == null)?null: new FC_RRule(event));
+                System.out.println((event.getProperty("RRULE") == null)?null: ((RRule)((event.getProperty(Property.RRULE)))).getRecur().getDayList());
             }
             this.calendarRepository.saveAll(eventList);
             return eventList;

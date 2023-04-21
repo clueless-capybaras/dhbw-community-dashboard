@@ -23,13 +23,13 @@ public class Event {
 
     @Lob
     @Column(name = "rrule", nullable = true)
-    private final String rrule;
+    private final FC_RRule rrule;
 
     @Column(name = "url", nullable = true)
     private final String url;
 
 
-    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, String rrule, String url) {
+    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, FC_RRule rrule, String url) {
         this.uuid = uuid;
         this.title = title;
         this.description = description;
@@ -73,7 +73,7 @@ public class Event {
         return url;
     }
 
-    public String getRecurrence() {
+    public FC_RRule getRrule() {
         return rrule;
     }
 }
