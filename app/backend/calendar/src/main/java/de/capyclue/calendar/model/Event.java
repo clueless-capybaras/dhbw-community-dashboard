@@ -21,16 +21,21 @@ public class Event {
     @Column(name = "endDate", nullable = true)
     private final LocalDateTime end;
 
+    @Lob
+    @Column(name = "rrule", nullable = true)
+    private final String rrule;
+
     @Column(name = "url", nullable = true)
     private final String url;
 
 
-    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, String url) {
+    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, String rrule, String url) {
         this.uuid = uuid;
         this.title = title;
         this.description = description;
         this.start = start;
         this.end = end;
+        this.rrule = rrule;
         this.url = url;
     }
 
@@ -40,6 +45,7 @@ public class Event {
         this.description = null;
         this.start = null;
         this.end = null;
+        this.rrule = null;
         this.url = null;
     }
 
@@ -65,5 +71,9 @@ public class Event {
 
     public String getUrl() {
         return url;
+    }
+
+    public String getRecurrence() {
+        return rrule;
     }
 }
