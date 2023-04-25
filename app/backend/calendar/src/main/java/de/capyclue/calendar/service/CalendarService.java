@@ -55,6 +55,8 @@ public class CalendarService implements ICalendarService {
             this.calendarRepository.saveAll(eventList);
             return eventList;
         } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
             System.out.println("Error using ical url, fallback to database");
             return this.calendarRepository.findAllByUrl(url);
         }
