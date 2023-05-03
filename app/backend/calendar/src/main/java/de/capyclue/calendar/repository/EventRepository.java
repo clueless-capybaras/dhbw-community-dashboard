@@ -8,23 +8,23 @@ import java.net.URL;
 import java.util.List;
 
 @Repository
-public class CalendarRepository {
-    private final SpringCalendarRepository springCalendarRepository;
+public class EventRepository {
+    private final IEventRepository IEventRepository;
 
     @Autowired
-    public CalendarRepository(SpringCalendarRepository springCalendarRepository) {
-        this.springCalendarRepository = springCalendarRepository;
+    public EventRepository(IEventRepository IEventRepository) {
+        this.IEventRepository = IEventRepository;
     }
 
     public List<Event> findAll() {
-        return this.springCalendarRepository.findAll();
+        return this.IEventRepository.findAll();
     }
 
     public void saveAll(List<Event> eventList) {
-        this.springCalendarRepository.saveAll(eventList);
+        this.IEventRepository.saveAll(eventList);
     }
 
     public List<Event> findAllByUrl(URL url) {
-        return this.springCalendarRepository.findAllByUrl(url.toString());
+        return this.IEventRepository.findAllByUrl(url.toString());
     }
 }

@@ -1,12 +1,12 @@
 package de.capyclue.calendar.service;
 
 import de.capyclue.calendar.model.Event;
-import de.capyclue.calendar.model.FC_RRule;
-import de.capyclue.calendar.repository.CalendarRepository;
+import de.capyclue.calendar.model.FcRRule;
+import de.capyclue.calendar.repository.EventRepository;
+import de.capyclue.calendar.repository.FcRRuleRepository;
 import net.fortuna.ical4j.data.CalendarBuilder;
 import net.fortuna.ical4j.model.*;
 import net.fortuna.ical4j.model.component.VEvent;
-import net.fortuna.ical4j.model.property.DtStart;
 import net.fortuna.ical4j.model.property.RRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,16 +19,18 @@ import java.util.List;
 
 @Service
 public class CalendarService implements ICalendarService {
-    private final CalendarRepository calendarRepository;
+    private final EventRepository eventRepository;
+    private final FcRRuleRepository fcRRuleRepository;
 
     @Autowired
-    public CalendarService(CalendarRepository calendarRepository) {
-        this.calendarRepository = calendarRepository;
+    public CalendarService(EventRepository eventRepository, FcRRuleRepository fcRRuleRepository) {
+        this.eventRepository = eventRepository;
+        this.fcRRuleRepository = fcRRuleRepository;
     }
 
     @Override
     public List<Event> getAllEvents() {
-        return this.calendarRepository.findAll();
+        return this.eventRepository.findAll();
     }
 
     @Override
@@ -46,19 +48,19 @@ public class CalendarService implements ICalendarService {
                         (event.getLocation() == null)?null:event.getLocation().getValue(),
                         (event.getStartDate() == null)?null:LocalDateTime.ofInstant(event.getStartDate().getDate().toInstant(), ZoneId.systemDefault()),
                         (event.getEndDate() == null)?null:LocalDateTime.ofInstant(event.getEndDate().getDate().toInstant(), ZoneId.systemDefault()),
-                        (event.getProperty("RRULE") == null)?null: new FC_RRule(event),
+                        (event.getProperty("RRULE") == null)?null: new FcRRule(event),
                         url.toString()
                 ));
-                System.out.println((event.getProperty("RRULE") == null)?null: new FC_RRule(event));
+                System.out.println((event.getProperty("RRULE") == null)?null: new FcRRule(event));
                 System.out.println((event.getProperty("RRULE") == null)?null: ((RRule)((event.getProperty(Property.RRULE)))).getRecur().getDayList());
             }
-            this.calendarRepository.saveAll(eventList);
+            //this.eventRepository.saveAll(eventList);
             return eventList;
         } catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
             System.out.println("Error using ical url, fallback to database");
-            return this.calendarRepository.findAllByUrl(url);
+            return this.eventRepository.findAllByUrl(url);
         }
     }
 }

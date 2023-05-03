@@ -3,12 +3,12 @@ package de.capyclue.calendar.model;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity(name = "Event")
+@Entity
+@Table(name="events")
 public class Event {
     @Id
     @Column(name = "uuid", nullable = false)
     private final String uuid;
-
 
     @Column(name = "summary", nullable = true)
     private final String title;
@@ -23,14 +23,14 @@ public class Event {
     private final LocalDateTime end;
 
     @OneToOne
-    @JoinColumn(name="rrule_uuid")
-    private final FC_RRule rrule;
+    @JoinColumn(name = "rrule_uuid", referencedColumnName = "uuid")
+    private final FcRRule rrule;
 
     @Column(name = "url", nullable = true)
     private final String url;
 
 
-    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, FC_RRule rrule, String url) {
+    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, FcRRule rrule, String url) {
         this.uuid = uuid;
         this.title = title;
         this.description = description;
@@ -74,7 +74,7 @@ public class Event {
         return url;
     }
 
-    public FC_RRule getRrule() {
+    public FcRRule getRrule() {
         return rrule;
     }
 }
