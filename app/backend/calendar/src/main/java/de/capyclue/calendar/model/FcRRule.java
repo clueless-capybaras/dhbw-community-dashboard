@@ -7,42 +7,43 @@ import net.fortuna.ical4j.model.property.RRule;
 
 import java.util.ArrayList;
 
-@Entity(name = "RRule")
-public class FC_RRule {
+@Entity
+@Table(name="rrule")
+public class FcRRule {
     @Id
-    @Column(name = "uuid", nullable = false)
+   // @Column(name = "uuid", nullable = true)
     private String uuid;
-    @Column(name = "frequency", nullable = true)
+  //  @Column(name = "frequency", nullable = true)
     private String frequency;
-    @Column(name = "dtstart", nullable = true)
+   // @Column(name = "dtstart", nullable = true)
     private String dtstart;
-    @Column(name = "until", nullable = true)
+  //  @Column(name = "until", nullable = true)
     private Date until;
-    @Column(name = "count", nullable = true)
+  //  @Column(name = "count", nullable = true)
     private Integer count;
-    @Column(name = "interval", nullable = true)
+  //  @Column(name = "interval", nullable = true)
     private Integer interval;
     @Lob
-    @Column(name = "byweekday", nullable = false)
+    @Column(name = "byweekday", nullable = true)
     private WeekDayList byweekday;
     @Lob
-    @Column(name = "bymonthday", nullable = false)
+    @Column(name = "bymonthday", nullable = true)
     private NumberList bymonthday;
     @Lob
-    @Column(name = "byyearday", nullable = false)
+    @Column(name = "byyearday", nullable = true)
     private NumberList byyearday;
     @Lob
-    @Column(name = "byweekno", nullable = false)
+    @Column(name = "byweekno", nullable = true)
     private NumberList byweekno;
     @Lob
-    @Column(name = "bysetpos", nullable = false)
+    @Column(name = "bysetpos", nullable = true)
     private NumberList bysetpos;
     @Column(name = "wkst", nullable = true)
     private String wkst;
     @Column(name = "tzid", nullable = true)
     private String tzid;
 
-    public FC_RRule(String uuid, String frequency, String dtstart, Date until, Integer count, Integer interval, WeekDayList byweekday, NumberList bymonthday, NumberList byyearday, NumberList byweekno, NumberList bysetpos, String wkst, String tzid) {
+    public FcRRule(String uuid, String frequency, String dtstart, Date until, Integer count, Integer interval, WeekDayList byweekday, NumberList bymonthday, NumberList byyearday, NumberList byweekno, NumberList bysetpos, String wkst, String tzid) {
 
         this.uuid = uuid;
         this.frequency = frequency;
@@ -59,7 +60,7 @@ public class FC_RRule {
         this.tzid = tzid;
     }
 
-    public FC_RRule(VEvent event) {
+    public FcRRule(VEvent event) {
         RRule rrule = (event.getProperty("RRULE") == null)?null: ((RRule)((event.getProperty(Property.RRULE))));
         Recur recur = (rrule == null)?null: (rrule.getRecur() == null)?null: rrule.getRecur();
 
@@ -81,7 +82,7 @@ public class FC_RRule {
         }
     }
 
-    public FC_RRule() {
+    public FcRRule() {
         this.uuid = null;
         this.frequency = null;
         this.dtstart = null;
@@ -151,7 +152,7 @@ public class FC_RRule {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("FC_RRule{");
+        final StringBuilder sb = new StringBuilder("FcRRule{");
         sb.append("frequency='").append(frequency).append('\'');
         sb.append(", dtstart='").append(dtstart).append('\'');
         sb.append(", until=").append(until);
