@@ -10,7 +10,7 @@ import java.util.ArrayList;
 @Entity(name = "RRule")
 public class FC_RRule {
     @Id
-    @Column(name = "uuid", nullable = true)
+    @Column(name = "uuid", nullable = false)
     private String uuid;
     @Column(name = "frequency", nullable = true)
     private String frequency;
@@ -22,21 +22,21 @@ public class FC_RRule {
     private Integer count;
     @Column(name = "interval", nullable = true)
     private Integer interval;
-    @ElementCollection()
+    @Lob
     @Column(name = "byweekday", nullable = false)
-    private ArrayList<WeekDay> byweekday;
-    @ElementCollection()
+    private WeekDayList byweekday;
+    @Lob
     @Column(name = "bymonthday", nullable = false)
-    private ArrayList<Integer> bymonthday;
-    @ElementCollection()
+    private NumberList bymonthday;
+    @Lob
     @Column(name = "byyearday", nullable = false)
-    private ArrayList<Integer> byyearday;
-    @ElementCollection
+    private NumberList byyearday;
+    @Lob
     @Column(name = "byweekno", nullable = false)
-    private ArrayList<Integer> byweekno;
-    @ElementCollection
+    private NumberList byweekno;
+    @Lob
     @Column(name = "bysetpos", nullable = false)
-    private ArrayList<Integer> bysetpos;
+    private NumberList bysetpos;
     @Column(name = "wkst", nullable = true)
     private String wkst;
     @Column(name = "tzid", nullable = true)
