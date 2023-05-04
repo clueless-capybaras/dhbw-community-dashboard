@@ -17,12 +17,11 @@ DHBW        | [Duale Hochschule Baden-Württemberg](https://www.dhbw.de/startsei
 
 # Evaluation Mission and Test Motivation
 ## Background
-brief description of the background surrounding why the test effort defined by this Test Plan will be undertaken. 
-Include information such as the key problem being solved, 
-the major benefits of the solution, 
-the planned architecture of the solution, and a 
-brief history of the project. 
-Where this information is defined in other documents, you can include references to those other more detailed documents if appropriate. 
+Since the formation of capyclue. and especially the DHBW Community Dashboard kickoff, our aim has always been to please the needs of our users by delivering a consistent application.
+Providing a pleasent straight-forward user experience while still covering all necessary features with as much information and detail as possible is our highest priority.
+To achieve this goal, the DHBW Community Dashboard should be free from bugs or any kind of malfunction. This includes every component that is planned for our final release.
+During the developing process, we evaluated the importance of certain functionalities, which led to the decision of focusing on especially the Calendar and Canteen component.
+The [Software Requirement Specification (SRS)](../software_requirements_specification/software_requirement_specification.md) provides more information on these components.
 
 ## Evaluation Mission
 - find as many bugs as possible
