@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
@@ -16,7 +15,7 @@ function Settings() {
         <Tab.Container defaultActiveKey="account">
             <Row>
                 <Col md="3">
-                
+                {/* left navigation bar */}
                 <h1>Einstellungen</h1>
 
                 <Nav variant="pills" className="flex-column">
@@ -30,7 +29,7 @@ function Settings() {
                 </Col>
 
                 <Col md="9">
-                
+                {/* contents of different settings pages */}
                 <Tab.Content>
                     <Tab.Pane eventKey="account">
                         <AccountSettings />
