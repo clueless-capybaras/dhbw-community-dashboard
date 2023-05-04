@@ -28,12 +28,14 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Database
-      run: docker-compose -f app/docker-compose.yml up --build --force-recreate -d database-calendar
+    - name: Preparation
+      run: |
+        docker-compose -f app/docker-compose.yml up --build --force-recreate -d database-calendar
+        sed -i 's/database-calendar:3306/localhost:3307/' app/backend/calendar/src/main/resources/application.properties
     - name: Build
       run: mvn package -DskipTests --file app/backend/calendar/pom.xml
     - name: Test
-      run: mvn test -Dspring-boot.run.arguments='--spring.datasource.url=jdbc:mariadb://localhost:3307/dhbwcd_calendar' --file app/backend/calendar/pom.xml
+      run: mvn test --file app/backend/calendar/pom.xml
   JUnit-Canteen:
     runs-on: ubuntu-latest
     steps:
