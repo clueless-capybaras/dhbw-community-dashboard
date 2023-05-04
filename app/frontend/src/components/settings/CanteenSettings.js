@@ -7,10 +7,17 @@ import Form from 'react-bootstrap/Form';
 
 function CanteenSettings(props) {
 
-    const [highlightingChecked, setHighlightingChecked] = useState(false);
+    const [mealShowCheck, setMealShowCheck] = useState(true); //
+
+    const handleMealShowCheckChange = event => {
+        setMealShowCheck(!mealShowCheck);
+
+    }
+
+    const [highlightingCheck, setHighlightingCheck] = useState(false);
 
     const handleHighlightingCheckChange = event => {
-        setHighlightingChecked(!highlightingChecked);
+        setHighlightingCheck(!highlightingCheck);
     }
 
     const [highlightingColor, setHighlightingColor] = useState("#3aac5c"); //Change the useState-Value to user's last saved settings
@@ -47,12 +54,13 @@ function CanteenSettings(props) {
                 <Form.Label>Highlighting aktivieren: </Form.Label>
                 </Col>
                 <Col md="9">
-                <Form.Check className="" type="checkbox" onChange={handleHighlightingCheckChange} id="" label="" />
+                <Form.Check className="" type="checkbox" onChange={handleHighlightingCheckChange} id="" aria-label="activate Highlighting" />
                 </Col>
             </Row>
 
             {/* Show following Options only when Checkbox is checked */}
-            { highlightingChecked ?
+            {/* add Check for user's saved settings */}
+            { highlightingCheck ?
 
             <>
             <Row className="mb-3">
@@ -93,12 +101,12 @@ function CanteenSettings(props) {
 
             <Row className="mb-3">
                 <Col md="3">
-                <Form.Label>Gerichte ausblenden mit Eigenschaft:</Form.Label>
+                <Form.Label>Gerichte anzeigen mit Eigenschaft:</Form.Label>
                 </Col>
                 <Col md="9">
-                <Form.Check type="checkbox" label="vegetarisch" />
-                <Form.Check type="checkbox" label="vegan" />
-                <Form.Check type="checkbox" label="Schweinefleisch" />
+                <Form.Check type="checkbox" label="vegetarisch" checked={mealShowCheck} onChange={handleMealShowCheckChange} />
+                <Form.Check type="checkbox" label="vegan" checked={mealShowCheck} onChange={handleMealShowCheckChange} />
+                <Form.Check type="checkbox" label="Schweinefleisch" checked={mealShowCheck} onChange={handleMealShowCheckChange} />
                 </Col>
             </Row>
         </Container>

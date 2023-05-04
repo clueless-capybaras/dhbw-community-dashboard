@@ -16,7 +16,7 @@ function AccountSettings(props) {
         <Container>
             <Row className="mb-3">
                 <Col className="d-flex justify-content-center">
-                <Card className="text-center" style={{maxWidth: "30rem"}}>
+                <Card className="text-center" style={{width: "30rem"}}>
                     <Card.Header className="text-center">
                         <Card.Title>User</Card.Title>
                     </Card.Header>
@@ -28,7 +28,7 @@ function AccountSettings(props) {
                             <ListGroup.Item>lindner.christian.a21@student.dhbw-karlsruhe.de</ListGroup.Item>
                         </ListGroup>
                         <Button variant="primary" className="mx-1">Ändern</Button>
-                        <Button variant="danger" className="mx-1">Logout</Button>
+                        <Button variant="danger" className="mx-1">Löschen</Button>
                     </Card.Body>
                 </Card>
                 </Col>
@@ -40,7 +40,12 @@ function AccountSettings(props) {
         <hr className="my-5 mx-3" />
 
         <Container>
-        <Row className="mb-3">
+            <Row className="mb-3">
+                <Col>
+                <h2>Kurs</h2>
+                </Col>
+            </Row>
+            <Row className="mb-3">
                 <Col md="3">
                 
                 </Col>
