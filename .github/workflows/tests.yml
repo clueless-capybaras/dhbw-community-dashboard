@@ -45,6 +45,10 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    - name: Preparation
+      run: |
+        docker-compose -f app/docker-compose.yml up --build --force-recreate -d database-canteen
+        sed -i 's/database-canteen:3306/localhost:3308/' app/backend/canteen/src/main/resources/application.properties
     - name: Build
       run: mvn package -DskipTests --file app/backend/canteen/pom.xml
     - name: Test
@@ -58,6 +62,10 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    - name: Preparation
+      run: |
+        docker-compose -f app/docker-compose.yml up --build --force-recreate -d database-user
+        sed -i 's/database-user:3306/localhost:3306/' app/backend/user/src/main/resources/application.properties
     - name: Build
       run: mvn package -DskipTests --file app/backend/user/pom.xml
     - name: Test
