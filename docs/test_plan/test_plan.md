@@ -4,16 +4,18 @@
 ## Purpose
 The purpose of the Iteration Test Plan is to gather all of the information necessary to plan and control the test effort for a given iteration. It describes the approach to testing the software, and is the top-level plan generated and used by managers to direct the test effort.
 
-This Test Plan for the DHBW Community Dashboard supports the following objectives:
-- list items that should be targeted by the tests
-- Identifies the motivation for and ideas behind the test areas to be covered
-- Outlines the testing approach that will be used
+This Test Plan for the DHBW Community Dashboard supports the following objectives: !!!(DRAFT)!!!
+- Cypress E2E-/UI-Testing for frontend functionality to improve user experience
+- JUnit Unit-/Integration-Testing for _____________ to prevent major malfunctions and bugs
+- GitHub Actions Pipeline to initiate Cypress and JUnit tests
 - Identifies the required resources and provides an estimate of the test efforts
 
 ## Document Terminology and Acronyms
 Abbrevation | Meaning
 ------------|--------
 DHBW        | [Duale Hochschule Baden-Württemberg](https://www.dhbw.de/startseite) (Baden-Württemberg Cooperative State University)
+E2E         | End-to-End
+UI          | User Interface
 
 # Evaluation Mission and Test Motivation
 ## Background
