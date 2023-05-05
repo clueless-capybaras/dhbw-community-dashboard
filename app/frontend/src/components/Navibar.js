@@ -16,7 +16,7 @@ function Navibar(props) {
               id={`offcanvasNavbar-expand-${false}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${false}`}
               placement="start"
-              className={props.cy_class}
+              className={props.cyClass}
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${false}`}>
