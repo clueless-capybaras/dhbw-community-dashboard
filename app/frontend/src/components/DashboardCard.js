@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router';
 
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import handleClose from './Navibar';
 
 function DashboardCard(props) {
     const navigate = useNavigate();
