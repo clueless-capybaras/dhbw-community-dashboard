@@ -20,19 +20,21 @@ function Calendar() {
   );
   return (
     <Container>
-      <h1>Calendar</h1>
+      <h1>Kalender</h1>
       <FullCalendar
         plugins={[ bootstrap5Plugin, dayGridPlugin, listPlugin, timeGridPlugin ]}
-        initialView="timeGridSixDay"
+        initialView="timeGridWeek"
         weekends={false}
         themeSystem="bootstrap5"
         height={600}
         locale="de"
+        firstDay={1}
         headerToolbar={{
           left: 'today prev,next',
           center: 'title',
-          right: 'dayGridMonth,timeGridSixDay,listWeek'
+          right: 'timeGridWeek,dayGridMonth,listWeek'
         }}
+        nowIndicator={true}
         navLinks={true}
         weekNumbers={true}
         buttonText={{
@@ -41,15 +43,16 @@ function Calendar() {
           week:     'Woche',
           day:      'Tag',
           list:     'Liste',
-          timeGridSixDay:    '6 Tage'
         }}
         views={{
-          timeGridSixDay: {
-            type: 'timeGrid',
-            duration: { days: 6 },
-            buttonText: '10 day',
-            weekends: true,
-            firstDay: 1
+          timeGridWeek: {
+            weekends: true
+          },
+          dayGridMonth: {
+            weekends: true
+          },
+          listWeek: {
+            weekends: true
           }
         }}
         events={events}
