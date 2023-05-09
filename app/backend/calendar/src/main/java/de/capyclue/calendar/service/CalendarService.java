@@ -7,6 +7,7 @@ import net.fortuna.ical4j.model.Calendar;
 import net.fortuna.ical4j.model.Component;
 import net.fortuna.ical4j.model.ComponentList;
 import net.fortuna.ical4j.model.component.VEvent;
+import net.fortuna.ical4j.model.component.VTimeZone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,13 +39,14 @@ public class CalendarService implements ICalendarService {
             Calendar calendar = builder.build(url.openStream());
             ComponentList events = calendar.getComponents(Component.VEVENT);
             for (Object o : events) {
+                String timezone = ((VTimeZone) calendar.getComponents(Component.VTIMEZONE).get(0)).getTimeZoneId().getValue();
                 VEvent event = (VEvent) o;
                 eventList.add(new Event(
                         event.getUid().getValue(),
                         (event.getSummary() == null)?null:event.getSummary().getValue(),
                         ((event.getLocation() == null)?null:event.getLocation().getValue()),
-                        (event.getStartDate() == null)?null:LocalDateTime.ofInstant(event.getStartDate().getDate().toInstant(), ZoneId.systemDefault()),
-                        (event.getEndDate() == null)?null:LocalDateTime.ofInstant(event.getEndDate().getDate().toInstant(), ZoneId.systemDefault()),
+                        (event.getStartDate() == null)?null:LocalDateTime.ofInstant(event.getStartDate().getDate().toInstant(), ZoneId.of(timezone)),
+                        (event.getEndDate() == null)?null:LocalDateTime.ofInstant(event.getEndDate().getDate().toInstant(), ZoneId.of(timezone)),
                         url.toString()
                 ));
             }
