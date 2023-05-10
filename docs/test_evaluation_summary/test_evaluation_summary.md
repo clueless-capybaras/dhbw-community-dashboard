@@ -3,7 +3,6 @@
 - [Test Evaluation Summary](#test-evaluation-summary)
 - [Introduction](#introduction)
   - [Purpose](#purpose)
-  - [Scope](#scope)
   - [Document Terminology and Acronyms](#document-terminology-and-acronyms)
 - [Test Strategy](#test-strategy)
 - [Test Plan](#test-plan)
@@ -18,27 +17,32 @@
 ## Purpose
 This document aims to give an overview of the tests that have been planned for the DHBW Community Dashboard and, in more detail, disclose all performed tests, their results and related metrics. Moreover, it shall be 
 
-## Scope
 
 ## Document Terminology and Acronyms
-Abbrevation | Meaning
--|-
-DHBW | [Duale Hochschule Baden-Württemberg](https://www.dhbw.de/startseite) (Baden-Württemberg Cooperative State University)
-E2E | End-to-End
+| Abbrevation | Meaning                                                                                                               |
+| ----------- | --------------------------------------------------------------------------------------------------------------------- |
+| DHBW        | [Duale Hochschule Baden-Württemberg](https://www.dhbw.de/startseite) (Baden-Württemberg Cooperative State University) |
+| E2E         | End-to-End                                                                                                            |
 
 # Test Strategy
-
-# Test Plan
 In short, our plan is to use Cypress for E2E-Testing. This affects every major frontend functionality which includes Calendar, Canteen and Settings, but not Log In/Sign In because this is an externalized feature. With jUnit we run Unit and particularly Integration tests for backend components. Since our frontend and backend are deeply connected, it is complicated to make clear separations between units. Therefore, we mainly perform integration tests. For automation, we include all tests in a GitHub Actions pipeline that triggers on every push to a branch.
 
 For more information, please also read our full [Test Plan](../test_plan/test_plan.md).
 
+# Test Plan
+This section outlines the specific testing tasks, timelines, and resourcesrequired to achieve the testing objectives.
+
 # Test Cases
+This section details the specific test cases that were executed, including their pass/fail status and any defects found during testing. 
 
 # Test Results
+This section summarizes the results of the testing, including any defects found, their severity, and the steps taken to resolve them. 
 
 # Metrics
+This section provides quantitative data on the testing process, such as the number of defects found, the defect resolution time, and the test coverage achieved. 
 
 # Recommendations
+This section offers suggestions for improving the testing process and the quality of the software. 
 
 # Conclusion
+This section summarizes the key findings of the testing and the overall status of the software quality.
