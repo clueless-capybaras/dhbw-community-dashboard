@@ -5,6 +5,7 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import listPlugin from '@fullcalendar/list'
 import interactionPlugin from '@fullcalendar/interaction'
 import rrulePlugin from '@fullcalendar/rrule'
+import rrulePlugin from '@fullcalendar/rrule'
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import Container from 'react-bootstrap/esm/Container';
 
@@ -24,6 +25,7 @@ function Calendar() {
       <h1>Kalender</h1>
       <FullCalendar
         plugins={[ bootstrap5Plugin, dayGridPlugin, listPlugin, timeGridPlugin, rrulePlugin ]}
+<<<<<<< HEAD
         initialView="timeGridWeek"
         weekends={false}
         themeSystem="bootstrap5"
@@ -46,6 +48,7 @@ function Calendar() {
           list:     'Liste',
         }}
         views={{
+<<<<<<< HEAD
           timeGridWeek: {
             weekends: true
           },
