@@ -20,9 +20,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navibar />
+        <Navibar cyClass="cy-navBarNav"/>
         <Routes>
-          <Route path='/' element={<Dashboard colWidth='3'/>} />
+          <Route path='/' element={<Dashboard colWidth='3' cyClass='cy-entryPageNav'/>} />
           <Route path='/canteen/:whichCanteen' element={<CanteenHttpClientContext.Provider value={new CanteenHttpClient()}><Canteen /></CanteenHttpClientContext.Provider>} />
           <Route path='/calendar' element={<CalendarHttpClientContext.Provider value={new CalendarHttpClient()}><Calendar /></CalendarHttpClientContext.Provider>} />
           <Route path='/dualis' element={<DualisHttpClientContext.Provider value={new DualisHttpClient()}><Dualis /></DualisHttpClientContext.Provider>} />
