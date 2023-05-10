@@ -48,13 +48,11 @@ public class CalendarService implements ICalendarService {
                         (event.getLocation() == null)?null:event.getLocation().getValue(),
                         (event.getStartDate() == null)?null:LocalDateTime.ofInstant(event.getStartDate().getDate().toInstant(), ZoneId.systemDefault()),
                         (event.getEndDate() == null)?null:LocalDateTime.ofInstant(event.getEndDate().getDate().toInstant(), ZoneId.systemDefault()),
-                        (event.getProperty("RRULE") == null)?null: new FcRRule(event),
+                        (event.getProperty("RRULE") == null)?null:new FcRRule(event),
                         url.toString()
                 ));
-                System.out.println((event.getProperty("RRULE") == null)?null: new FcRRule(event));
-                System.out.println((event.getProperty("RRULE") == null)?null: ((RRule)((event.getProperty(Property.RRULE)))).getRecur().getDayList());
-            }
-            //this.eventRepository.saveAll(eventList);
+                }
+            this.eventRepository.saveAll(eventList);
             return eventList;
         } catch (Exception e) {
             System.out.println(e.getMessage());
