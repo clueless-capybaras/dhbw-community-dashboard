@@ -41,32 +41,6 @@ function AccountSettings(props) {
 
         <Container>
             <Row className="mb-3">
-                <Col className="d-flex justify-content-center">
-                <Card className="text-center" style={{width: "30rem"}}>
-                    <Card.Header className="text-center">
-                        <Card.Title>User</Card.Title>
-                    </Card.Header>
-                    <Card.Body>
-                        <Image src={require("../../images/christian-lindner.jpg")} className="mb-2" style={{maxWidth: "15rem", maxHeight: "auto"}} roundedCircle />
-                        <ListGroup variant="flush">
-                            <ListGroup.Item>Christian Lindner</ListGroup.Item>
-                            <ListGroup.Item>TINF21B4</ListGroup.Item>
-                            <ListGroup.Item>lindner.christian.a21@student.dhbw-karlsruhe.de</ListGroup.Item>
-                        </ListGroup>
-                        <Button variant="primary" className="mx-1">Ändern</Button>
-                        <Button variant="danger" className="mx-1">Löschen</Button>
-                    </Card.Body>
-                </Card>
-                </Col>
-
-            </Row>
-           
-        </Container>
-
-        <hr className="my-5 mx-3" />
-
-        <Container>
-            <Row className="mb-3">
                 <Col>
                 <h2>Kurs</h2>
                 </Col>
