@@ -7,23 +7,23 @@ import java.time.LocalDateTime;
 @Table(name="events")
 public class Event {
     @Id
-    @Column(name = "uuid", nullable = false)
+    @Column(name = "uuid")
     private final String uuid;
 
-    @Column(name = "summary", nullable = true)
+    @Column(name = "summary")
     private final String title;
 
-    @Column(name = "description", nullable = true)
+    @Column(name = "description")
     private final String description;
 
-    @Column(name = "startDate", nullable = true)
+    @Column(name = "startDate")
     private final LocalDateTime start;
 
-    @Column(name = "endDate", nullable = true)
+    @Column(name = "endDate")
     private final LocalDateTime end;
 
-    @OneToOne
-    @JoinColumn(name = "rrule_uuid", referencedColumnName = "uuid")
+    @OneToOne(cascade=CascadeType.ALL)
+    @JoinColumn(name="rrule_id", referencedColumnName = "id")
     private final FcRRule rrule;
 
     @Column(name = "url", nullable = true)

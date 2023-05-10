@@ -4,68 +4,53 @@ import javax.persistence.*;
 import net.fortuna.ical4j.model.*;
 import net.fortuna.ical4j.model.component.VEvent;
 import net.fortuna.ical4j.model.property.RRule;
+import org.hibernate.annotations.Generated;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name="rrule")
 public class FcRRule {
     @Id
-   // @Column(name = "uuid", nullable = true)
-    private String uuid;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long uuid;
   //  @Column(name = "frequency", nullable = true)
     private String frequency;
    // @Column(name = "dtstart", nullable = true)
     private String dtstart;
   //  @Column(name = "until", nullable = true)
+    @Column(name="termination")
     private Date until;
   //  @Column(name = "count", nullable = true)
+    @Column(name="numberOfRepititions")
     private Integer count;
   //  @Column(name = "interval", nullable = true)
+    @Column(name="rule_interval")
     private Integer interval;
-    @Lob
-    @Column(name = "byweekday", nullable = true)
-    private WeekDayList byweekday;
-    @Lob
-    @Column(name = "bymonthday", nullable = true)
-    private NumberList bymonthday;
-    @Lob
-    @Column(name = "byyearday", nullable = true)
-    private NumberList byyearday;
-    @Lob
-    @Column(name = "byweekno", nullable = true)
-    private NumberList byweekno;
-    @Lob
-    @Column(name = "bysetpos", nullable = true)
-    private NumberList bysetpos;
-    @Column(name = "wkst", nullable = true)
+
+    private String byweekday;
+
+    private String bymonthday;
+
+    private String byyearday;
+
+    private String byweekno;
+
+    private String bysetpos;
+
     private String wkst;
-    @Column(name = "tzid", nullable = true)
+
     private String tzid;
 
-    public FcRRule(String uuid, String frequency, String dtstart, Date until, Integer count, Integer interval, WeekDayList byweekday, NumberList bymonthday, NumberList byyearday, NumberList byweekno, NumberList bysetpos, String wkst, String tzid) {
-
-        this.uuid = uuid;
-        this.frequency = frequency;
-        this.dtstart = dtstart;
-        this.until = until;
-        this.count = count;
-        this.interval = interval;
-        this.byweekday = byweekday;
-        this.bymonthday = bymonthday;
-        this.byyearday = byyearday;
-        this.byweekno = byweekno;
-        this.bysetpos = bysetpos;
-        this.wkst = wkst;
-        this.tzid = tzid;
-    }
+    @OneToOne(mappedBy = "rrule")
+    private Event event;
 
     public FcRRule(VEvent event) {
         RRule rrule = (event.getProperty("RRULE") == null)?null: ((RRule)((event.getProperty(Property.RRULE))));
         Recur recur = (rrule == null)?null: (rrule.getRecur() == null)?null: rrule.getRecur();
 
-        this.uuid = event.getProperty(Property.UID).getValue();
-        this.dtstart = (event.getProperty(Property.DTSTART) == null)?null: (event.getProperty(Property.DTSTART)).getValue();
+        this.dtstart = (event.getProperty("RRULE") == null)?null: (event.getProperty(Property.DTSTART)).getValue();
         this.tzid = (event.getProperty(Property.TZID) == null)?null: (event.getProperty(Property.TZID)).getValue();
 
         if (recur != null) {
@@ -73,32 +58,31 @@ public class FcRRule {
             this.until = (recur.getUntil() == null)?null: recur.getUntil();
             this.count = recur.getCount();
             this.interval = recur.getInterval();
-            this.byweekday = (recur.getDayList() == null)?null: recur.getDayList();
-            this.bymonthday = (recur.getMonthDayList() == null)?null: recur.getMonthDayList();
-            this.byyearday = (recur.getYearDayList() == null)?null: recur.getYearDayList();
-            this.byweekno = (recur.getWeekNoList() == null)?new NumberList(): recur.getWeekNoList();
-            this.bysetpos = recur.getSetPosList();
+            this.byweekday = (recur.getDayList() == null)?null: recur.getDayList().toString();
+            this.bymonthday = (recur.getMonthDayList() == null)?null: recur.getMonthDayList().toString();
+            this.byyearday = (recur.getYearDayList() == null)?null: recur.getYearDayList().toString();
+            this.byweekno = (recur.getWeekNoList() == null)?null: recur.getWeekNoList().toString();
+            this.bysetpos = (recur.getSetPosList() == null)?null: recur.getSetPosList().toString();
             this.wkst = (recur.getWeekStartDay() == null)?null: recur.getWeekStartDay();
         }
     }
 
     public FcRRule() {
-        this.uuid = null;
         this.frequency = null;
         this.dtstart = null;
         this.until = null;
         this.count = null;
         this.interval = null;
-        this.byweekday = new WeekDayList();
-        this.bymonthday = new NumberList();
-        this.byyearday = new NumberList();
-        this.byweekno = new NumberList();
-        this.bysetpos = new NumberList();
+        this.byweekday = null;
+        this.bymonthday = null;
+        this.byyearday = null;
+        this.byweekno = null;
+        this.bysetpos = null;
         this.wkst = null;
         this.tzid = null;
     }
 
-    public String getUuid() {
+    public Long getUuid() {
         return uuid;
     }
 
@@ -122,23 +106,23 @@ public class FcRRule {
         return interval;
     }
 
-    public ArrayList<WeekDay> getByweekday() {
+    public String getByweekday() {
         return byweekday;
     }
 
-    public ArrayList<Integer> getBymonthday() {
+    public String getBymonthday() {
         return bymonthday;
     }
 
-    public ArrayList<Integer> getByyearday() {
+    public String getByyearday() {
         return byyearday;
     }
 
-    public ArrayList<Integer> getByweekno() {
+    public String getByweekno() {
         return byweekno;
     }
 
-    public ArrayList<Integer> getBysetpos() {
+    public String getBysetpos() {
         return bysetpos;
     }
 
@@ -153,6 +137,7 @@ public class FcRRule {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("FcRRule{");
+        sb.append("uuid='").append(uuid).append('\'');
         sb.append("frequency='").append(frequency).append('\'');
         sb.append(", dtstart='").append(dtstart).append('\'');
         sb.append(", until=").append(until);

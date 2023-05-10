@@ -19,7 +19,7 @@ public class FcRRuleRepository {
         return this.IFcRRuleRepository.findAll();
     }
 
-    public void saveAll(List<FcRRule> eventList) {
-        this.IFcRRuleRepository.saveAll(eventList);
+    public void saveAll(List<FcRRule> rRuleList) {
+        this.IFcRRuleRepository.saveAll(rRuleList);
     }
 }
