@@ -15,7 +15,7 @@
 # Introduction
 
 ## Purpose
-This document aims to give an overview of the tests that have been planned for the DHBW Community Dashboard and, in more detail, disclose all performed tests, their results and related metrics. Moreover, it shall be 
+This document aims to give an overview of the tests that have been planned for the DHBW Community Dashboard and, in more detail, disclose all performed tests, their results and related metrics. Moreover, it shall be a dynamic document which will be extended whenever there are new tests.
 
 
 ## Document Terminology and Acronyms
@@ -30,10 +30,12 @@ In short, our plan is to use Cypress for E2E-Testing. This affects every major f
 For more information, please also read our full [Test Plan](../test_plan/test_plan.md).
 
 # Test Plan
-This section outlines the specific testing tasks, timelines, and resourcesrequired to achieve the testing objectives.
+This section outlines the specific testing tasks, timelines, and resourcesrequired to achieve the testing objectives. Please have a look at our extra file for the [Test Plan](../test_plan/test_plan.md).
 
 # Test Cases
 This section details the specific test cases that were executed, including their pass/fail status and any defects found during testing. 
+
+Currently we only have written Cypress Tests, but JUnit tests will follow.
 
 # Test Results
 This section summarizes the results of the testing, including any defects found, their severity, and the steps taken to resolve them. 
