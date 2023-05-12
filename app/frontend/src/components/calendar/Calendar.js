@@ -1,9 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import timeGridPlugin from '@fullcalendar/timegrid'
-import listPlugin from '@fullcalendar/list'
-import interactionPlugin from '@fullcalendar/interaction'
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import Container from 'react-bootstrap/esm/Container';
 
@@ -11,8 +10,8 @@ import {CalendarHttpClientContext} from '../../App';
 import { tinf21B4Rapla } from "../../config";
 
 function Calendar() {
-  const calendarHttpClient = useContext(CalendarHttpClientContext)
-  const [events, setEvents] = useState(null)
+  const calendarHttpClient = useContext(CalendarHttpClientContext);
+  const [events, setEvents] = useState(null);
   useEffect(() => {
     setEvents(null);
     calendarHttpClient.getEventsFromRapla(tinf21B4Rapla).then((ev) => {setEvents(ev); console.log(ev);});
