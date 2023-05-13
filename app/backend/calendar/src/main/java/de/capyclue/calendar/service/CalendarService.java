@@ -5,9 +5,10 @@ import de.capyclue.calendar.model.FcRRule;
 import de.capyclue.calendar.repository.EventRepository;
 import de.capyclue.calendar.repository.FcRRuleRepository;
 import net.fortuna.ical4j.data.CalendarBuilder;
-import net.fortuna.ical4j.model.*;
+import net.fortuna.ical4j.model.Calendar;
+import net.fortuna.ical4j.model.Component;
+import net.fortuna.ical4j.model.ComponentList;
 import net.fortuna.ical4j.model.component.VEvent;
-import net.fortuna.ical4j.model.property.RRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

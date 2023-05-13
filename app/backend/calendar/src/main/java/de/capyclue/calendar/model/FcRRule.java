@@ -1,22 +1,27 @@
 package de.capyclue.calendar.model;
 
-import javax.persistence.*;
-import net.fortuna.ical4j.model.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import net.fortuna.ical4j.model.Date;
+import net.fortuna.ical4j.model.Property;
+import net.fortuna.ical4j.model.Recur;
 import net.fortuna.ical4j.model.component.VEvent;
 import net.fortuna.ical4j.model.property.RRule;
-import org.hibernate.annotations.Generated;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class FcRRule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long uuid;
   //  @Column(name = "frequency", nullable = true)
-    private String frequency;
+    private String freq;
    // @Column(name = "dtstart", nullable = true)
     private String dtstart;
   //  @Column(name = "until", nullable = true)
@@ -43,6 +48,7 @@ public class FcRRule {
 
     private String tzid;
 
+
     @OneToOne(mappedBy = "rrule")
     private Event event;
 
@@ -54,21 +60,21 @@ public class FcRRule {
         this.tzid = (event.getProperty(Property.TZID) == null)?null: (event.getProperty(Property.TZID)).getValue();
 
         if (recur != null) {
-            this.frequency = (recur.getFrequency() == null)?null: recur.getFrequency();
+            this.freq = (recur.getFrequency() == null)?null: recur.getFrequency().toLowerCase();
             this.until = (recur.getUntil() == null)?null: recur.getUntil();
             this.count = recur.getCount();
-            this.interval = recur.getInterval();
-            this.byweekday = (recur.getDayList() == null)?null: recur.getDayList().toString();
-            this.bymonthday = (recur.getMonthDayList() == null)?null: recur.getMonthDayList().toString();
-            this.byyearday = (recur.getYearDayList() == null)?null: recur.getYearDayList().toString();
-            this.byweekno = (recur.getWeekNoList() == null)?null: recur.getWeekNoList().toString();
-            this.bysetpos = (recur.getSetPosList() == null)?null: recur.getSetPosList().toString();
-            this.wkst = (recur.getWeekStartDay() == null)?null: recur.getWeekStartDay();
+            this.interval = (recur.getInterval() <= 0)?null: recur.getInterval();
+            this.byweekday = (recur.getDayList() == null || recur.getDayList().size() == 0)?null: recur.getDayList().toString().toLowerCase();
+            this.bymonthday = (recur.getMonthDayList() == null || (recur.getMonthDayList()).size() == 0)?null: recur.getMonthDayList().toString().toLowerCase();
+            this.byyearday = (recur.getYearDayList() == null || recur.getYearDayList().size() == 0)?null: recur.getYearDayList().toString().toLowerCase();
+            this.byweekno = (recur.getWeekNoList() == null || recur.getWeekNoList().size() == 0)?null: recur.getWeekNoList().toString().toLowerCase();
+            this.bysetpos = (recur.getSetPosList() == null || recur.getSetPosList().size() == 0)?null: recur.getSetPosList().toString().toLowerCase();
+            this.wkst = (recur.getWeekStartDay() == null)?null: recur.getWeekStartDay().toLowerCase();
         }
     }
 
     public FcRRule() {
-        this.frequency = null;
+        this.freq = null;
         this.dtstart = null;
         this.until = null;
         this.count = null;
@@ -82,12 +88,14 @@ public class FcRRule {
         this.tzid = null;
     }
 
+    @JsonIgnore
+    @JsonProperty(value = "uuid")
     public Long getUuid() {
         return uuid;
     }
 
-    public String getFrequency() {
-        return frequency;
+    public String getFreq() {
+        return freq;
     }
 
     public String getDtstart() {
@@ -108,6 +116,18 @@ public class FcRRule {
 
     public String getByweekday() {
         return byweekday;
+    }
+
+    @JsonProperty("byweekday")
+    public List<String> getArrayListOfByWeekDay() {
+        if (this.byweekday != null) {
+            List<String> byWeekDays = new ArrayList();
+            for (String s : this.byweekday.split(",")) {
+                byWeekDays.add(s.toString().toLowerCase());
+            }
+            return byWeekDays;
+        }
+        return null;
     }
 
     public String getBymonthday() {
@@ -138,7 +158,7 @@ public class FcRRule {
     public String toString() {
         final StringBuilder sb = new StringBuilder("FcRRule{");
         sb.append("uuid='").append(uuid).append('\'');
-        sb.append("frequency='").append(frequency).append('\'');
+        sb.append("frequency='").append(freq).append('\'');
         sb.append(", dtstart='").append(dtstart).append('\'');
         sb.append(", until=").append(until);
         sb.append(", count=").append(count);
