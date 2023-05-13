@@ -12,7 +12,7 @@ import {CalendarHttpClientContext} from '../../App';
 import { tinf21B4Rapla } from "../../config";
 
 function Calendar() {
-  const calendarHttpClient = useContext(CalendarHttpClientContext)
+  const calendarHttpClient = useContext(CalendarHttpClientContext);
   const [events, setEvents] = useState(null);
   useEffect(() => {
     setEvents(null);
@@ -24,6 +24,7 @@ function Calendar() {
       <h1>Kalender</h1>
       <FullCalendar
         plugins={[ bootstrap5Plugin, dayGridPlugin, listPlugin, timeGridPlugin, rrulePlugin ]}
+        timeZone="Europe/Berlin"
         initialView="timeGridWeek"
         weekends={false}
         themeSystem="bootstrap5"
