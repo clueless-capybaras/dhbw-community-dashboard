@@ -16,6 +16,9 @@ jobs:
         cd app/frontend
         npm ci
         npx cypress run --spec "cypress/e2e/homeScreen.cy.js"
+      with:
+        name: Cypress Tests (Videos)
+        path: app/frontend/cypress/videos
     - name: Stop Frontend
       run: docker-compose -f app/docker-compose.yml down -v
 
