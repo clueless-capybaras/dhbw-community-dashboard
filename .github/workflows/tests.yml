@@ -18,6 +18,7 @@ jobs:
         npx cypress run --spec "cypress/e2e/homeScreen.cy.js"
     - name: Archive Test Videos
       uses: actions/upload-artifact@v3
+      if: always()
       with:
         name: Cypress Test Videos
         path: app/frontend/cypress/videos
