@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import LoginButton from './auth/LoginButton';
 import LogoutButton from './auth/LogoutButton';
 
-function Navibar() {
+function Navibar(props) {
     return (
         <Navbar key={false} bg="dark" variant="dark" expand={false} className="mb-3">
         <Stack direction="horizontal" gap={3}>
@@ -18,6 +18,7 @@ function Navibar() {
               id={`offcanvasNavbar-expand-${false}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${false}`}
               placement="start"
+              className={props.cyClass}
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${false}`}>

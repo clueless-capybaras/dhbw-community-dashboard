@@ -1,0 +1,72 @@
+name: Tests
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  Cypress-Frontend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Start Frontend
+      run: docker-compose -f app/docker-compose.yml up --build --force-recreate -d frontend
+    - name: Cypress Tests
+      run: |
+        cd app/frontend
+        npm ci
+        npx cypress run --spec "cypress/e2e/homeScreen.cy.js"
+    - name: Stop Frontend
+      run: docker-compose -f app/docker-compose.yml down -v
+
+  JUnit-Calendar:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+    - name: Preparation
+      run: |
+        docker-compose -f app/docker-compose.yml up --build --force-recreate -d database-calendar
+        sed -i 's/database-calendar:3306/localhost:3307/' app/backend/calendar/src/main/resources/application.properties
+    - name: Build
+      run: mvn package -DskipTests --file app/backend/calendar/pom.xml
+    - name: Test
+      run: mvn test --file app/backend/calendar/pom.xml
+  JUnit-Canteen:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+    - name: Preparation
+      run: |
+        docker-compose -f app/docker-compose.yml up --build --force-recreate -d database-canteen
+        sed -i 's/database-canteen:3306/localhost:3308/' app/backend/canteen/src/main/resources/application.properties
+    - name: Build
+      run: mvn package -DskipTests --file app/backend/canteen/pom.xml
+    - name: Test
+      run: mvn test --file app/backend/canteen/pom.xml
+  JUnit-User:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+    - name: Preparation
+      run: |
+        docker-compose -f app/docker-compose.yml up --build --force-recreate -d database-user
+        sed -i 's/database-user:3306/localhost:3306/' app/backend/user/src/main/resources/application.properties
+    - name: Build
+      run: mvn package -DskipTests --file app/backend/user/pom.xml
+    - name: Test
+      run: mvn test --file app/backend/user/pom.xml
