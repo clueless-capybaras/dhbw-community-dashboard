@@ -15,7 +15,7 @@ jobs:
       run: |
         cd app/frontend
         npm ci
-        npx cypress run --spec "cypress/e2e/homeScreen.cy.js"
+        npx cypress run --spec "cypress/e2e/production/*"
     - name: Archive Test Videos
       uses: actions/upload-artifact@v3
       if: always()

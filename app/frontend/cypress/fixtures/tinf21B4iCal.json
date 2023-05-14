@@ -1,0 +1,1876 @@
+[
+  {
+      "uuid": "ad3e7c37-3265-41b6-bca9-c646bafc263e",
+      "title": "Semesterbeginn 3+5 Semester",
+      "description": "",
+      "start": "2023-10-02T07:30:00",
+      "end": "2023-10-02T08:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab2bbef0-baec-489c-bb00-075f3c5708e7",
+      "title": "Klausur Betriebssysteme  ( min)",
+      "description": "F492  Hörsaal",
+      "start": "2022-12-20T10:00:00",
+      "end": "2022-12-20T12:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "af50401e-cba7-4b76-ba43-3dd8621e3761",
+      "title": "Allerheiligen",
+      "description": "",
+      "start": "2018-11-01T08:00:00",
+      "end": "2018-11-01T18:00:00",
+      "rrule": {
+          "freq": "yearly",
+          "dtstart": "20181101T080000",
+          "count": 10
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ace57bc4-e41c-4973-862e-7cf8367b5e73",
+      "title": "Klausur Datenbanken Grundlagen der Datenbanken ( min)",
+      "description": "F492  Hörsaal",
+      "start": "2023-06-27T09:00:00",
+      "end": "2023-06-27T11:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a44c49b1-9164-4eb9-96cd-d8e002c77ca7",
+      "title": "Klausur Datenbanken Datenbanken ( min)",
+      "description": "F492  Hörsaal",
+      "start": "2023-06-12T09:00:00",
+      "end": "2023-06-12T11:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a388b5f9-8164-4046-bb71-1f547e49f656",
+      "title": "Wiederholungsklausur Mathematik II - Numerik  ( min)",
+      "description": "F492  Hörsaal",
+      "start": "2023-05-03T13:00:00",
+      "end": "2023-05-03T15:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a0641fcf-7d21-4f73-8b5a-94f4ecc0b193",
+      "title": "Rechnerarchitektur I",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-05T09:30:00",
+      "end": "2022-10-05T12:00:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221005T083000",
+          "count": 11,
+          "interval": 1,
+          "byweekday": [
+              "we"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a4ba1be5-9dd6-4196-9322-5630031e3205",
+      "title": "Statistik",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-04T10:00:00",
+      "end": "2023-04-04T13:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20230404T090000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "tu"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ae1d2ce0-105a-41e2-8ea3-57b1ed0cce31",
+      "title": "Statistik",
+      "description": "F492  Hörsaal",
+      "start": "2023-05-10T09:00:00",
+      "end": "2023-05-10T12:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a04186ae-6f94-4cc7-a598-eaf4f49621e8",
+      "title": "Intercultural Communication Klausur  (60 min)",
+      "description": "A266  Hörsaal",
+      "start": "2022-07-26T15:00:00",
+      "end": "2022-07-26T16:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a4996320-8a2b-41f8-b2a4-661505818d5d",
+      "title": "Workflow",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-07T10:00:00",
+      "end": "2023-04-07T13:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20230407T090000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "fr"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ad98e4d0-fa6c-4fb0-90f8-eba4c07bab47",
+      "title": "Beginn TINF21 / 1. Semester",
+      "description": "",
+      "start": "2023-01-09T08:00:00",
+      "end": "2023-01-09T08:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a187c673-403f-4741-84c4-18e0353146b1",
+      "title": "AdA (Z)",
+      "description": "A267  Hörsaal",
+      "start": "2023-04-20T16:30:00",
+      "end": "2023-04-20T19:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a1b83019-bc82-4699-9f70-6dba35dbb865",
+      "title": "AdA (Z)",
+      "description": "A267  Hörsaal",
+      "start": "2023-04-04T16:30:00",
+      "end": "2023-04-04T19:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aa2373ad-b2fa-446f-9803-3d78913362ff",
+      "title": "AdA (Z)",
+      "description": "A267  Hörsaal",
+      "start": "2023-04-27T16:30:00",
+      "end": "2023-04-27T19:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ac81eb80-5a08-4909-b759-d7ac74f24426",
+      "title": "AdA (Z)",
+      "description": "A267  Hörsaal",
+      "start": "2023-04-13T16:30:00",
+      "end": "2023-04-13T19:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a09a522a-6d1c-4751-ba5c-5c1e3ba08417",
+      "title": "Beginn Theoriephase 4. Semester",
+      "description": "",
+      "start": "2023-04-03T07:30:00",
+      "end": "2023-04-03T08:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a2d8c22e-2f48-4ea4-b9b8-00b98968ec75",
+      "title": "Mathematik II (Angewandte Mathematik)",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-18T13:00:00",
+      "end": "2022-10-18T16:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a402daa5-4745-45f6-b6f3-1aa6f798c806",
+      "title": "Mathematik II (Angewandte Mathematik)",
+      "description": "F492  Hörsaal",
+      "start": "2022-11-21T08:30:00",
+      "end": "2022-11-21T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a44c5ddb-352f-4f3a-af92-efddfdc2978f",
+      "title": "Mathematik II (Angewandte Mathematik)",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-31T08:30:00",
+      "end": "2022-10-31T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a4be8e3f-bb1d-4838-8a9e-349af637ccbe",
+      "title": "Mathematik II (Angewandte Mathematik)",
+      "description": "F492  Hörsaal",
+      "start": "2022-11-14T08:30:00",
+      "end": "2022-11-14T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a5a22d8c-fc51-4c5b-8eba-f4bc374faa15",
+      "title": "Mathematik II (Angewandte Mathematik)",
+      "description": "F492  Hörsaal",
+      "start": "2022-11-07T08:30:00",
+      "end": "2022-11-07T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a67276ec-d5df-4de7-a537-ed2c1703ef6a",
+      "title": "Mathematik II (Angewandte Mathematik)",
+      "description": "F492  Hörsaal",
+      "start": "2022-11-28T08:30:00",
+      "end": "2022-11-28T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a7566a72-aaa9-4b3d-aca2-481a6a03f097",
+      "title": "Mathematik II (Angewandte Mathematik)",
+      "description": "F492  Hörsaal",
+      "start": "2022-12-05T08:30:00",
+      "end": "2022-12-05T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a8b3a128-2aa7-4ab2-8207-621162b867ea",
+      "title": "Mathematik II (Angewandte Mathematik)",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-24T10:30:00",
+      "end": "2022-10-24T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a8e56a22-7f4f-4217-9922-19122b75107e",
+      "title": "Mathematik II (Angewandte Mathematik)",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-10T08:30:00",
+      "end": "2022-10-10T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a980a781-b71f-4b5a-a980-a843d4ad4682",
+      "title": "Mathematik II (Angewandte Mathematik)",
+      "description": "F492  Hörsaal",
+      "start": "2022-12-12T08:30:00",
+      "end": "2022-12-12T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a138faef-23a5-4831-abb8-f21269ad82ce",
+      "title": "Kommunikations- und Netztechnik I",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-07T14:00:00",
+      "end": "2023-04-07T17:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20230407T130000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "fr"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a52e5c7b-9186-4304-ba5c-851759b1be9f",
+      "title": "Labor Anwendungen der Robotik",
+      "description": "D323  Labor",
+      "start": "2023-04-14T09:30:00",
+      "end": "2023-04-14T14:30:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20230414T083000",
+          "count": 9,
+          "interval": 1,
+          "byweekday": [
+              "fr"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a08d99b1-0b8b-4409-a0bc-fcb7cc7a2034",
+      "title": "Programmieren",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2022-05-18T08:00:00",
+      "end": "2022-05-18T12:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a298663b-2000-41c6-8afc-22122dee4ed1",
+      "title": "Programmieren",
+      "description": "A173  Hörsaal",
+      "start": "2022-05-11T09:30:00",
+      "end": "2022-05-11T13:45:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20220511T083000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "we"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a86f02a5-12a0-4321-b942-95d24cac692c",
+      "title": "Wiederholungsklausur Digitaltechnik I  (120 min)",
+      "description": "",
+      "start": "2022-11-16T12:00:00",
+      "end": "2022-11-16T14:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ad724e0d-0396-4b20-8d03-087cfa3af0e1",
+      "title": "Klausur Informatik 2 (90 min)",
+      "description": "F376  Hörsaal, A268  Hörsaal, A173  Hörsaal, A266  Hörsaal",
+      "start": "2022-08-05T09:00:00",
+      "end": "2022-08-05T10:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a07594c4-dded-4dc1-bb81-2b6ee0a20ade",
+      "title": "Grundlagen des Software Engineering",
+      "description": "F492  Hörsaal",
+      "start": "2023-06-12T13:00:00",
+      "end": "2023-06-12T17:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a3718428-d384-49c5-ad7f-7af3ba27e552",
+      "title": "Grundlagen des Software Engineering",
+      "description": "F492  Hörsaal",
+      "start": "2023-05-08T13:00:00",
+      "end": "2023-05-08T17:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a3d06be2-883d-4b9f-9161-f8e6fc254665",
+      "title": "Grundlagen des Software Engineering",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-17T13:30:00",
+      "end": "2023-04-17T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a4b703a5-d5b5-464f-b147-7110eefeb47d",
+      "title": "Grundlagen des Software Engineering",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-03T10:00:00",
+      "end": "2023-04-03T14:00:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20230403T090000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "mo"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a70beab1-6b89-465a-b20d-ec6b86abbbb2",
+      "title": "Grundlagen des Software Engineering",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-24T13:30:00",
+      "end": "2023-04-24T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a9d98a0a-5000-4e0b-badf-8ad07ab06964",
+      "title": "Grundlagen des Software Engineering",
+      "description": "F492  Hörsaal",
+      "start": "2023-05-22T13:00:00",
+      "end": "2023-05-22T17:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab238116-6944-432f-9ded-4ef85e7033e6",
+      "title": "Grundlagen des Software Engineering",
+      "description": "F492  Hörsaal",
+      "start": "2023-06-19T13:00:00",
+      "end": "2023-06-19T17:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ac89e9a9-eb9f-4ba5-a076-03097f156351",
+      "title": "Grundlagen des Software Engineering",
+      "description": "F492  Hörsaal",
+      "start": "2023-05-15T13:00:00",
+      "end": "2023-05-15T17:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "adc82711-62d0-452f-8a37-95f6c45cd8e6",
+      "title": "Grundlagen des Software Engineering",
+      "description": "F492  Hörsaal",
+      "start": "2023-06-05T13:00:00",
+      "end": "2023-06-05T17:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a2206e66-82cd-49d6-ba64-b9966b6695f8",
+      "title": "Theoretische Informatik II",
+      "description": "A173  Hörsaal",
+      "start": "2022-06-13T14:00:00",
+      "end": "2022-06-13T18:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ae98d948-6e68-42bd-9e14-370bf9d35636",
+      "title": "Theoretische Informatik II",
+      "description": "A173  Hörsaal",
+      "start": "2022-05-13T09:00:00",
+      "end": "2022-05-13T13:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20220513T080000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "fr"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a12f5f4f-e4c5-4f9d-8410-5f7206563164",
+      "title": "Connecting Networks (CCNA-4, Z)",
+      "description": "E309  Labor",
+      "start": "2023-04-07T17:30:00",
+      "end": "2023-04-07T20:00:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20230407T163000",
+          "count": 10,
+          "interval": 1,
+          "byweekday": [
+              "fr"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a910dc8a-5688-4723-a50b-52f635b2845f",
+      "title": "Connecting Networks (CCNA-4, Z)",
+      "description": "A268  Hörsaal, E309  Labor",
+      "start": "2023-05-26T16:30:00",
+      "end": "2023-05-26T19:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aabc37e4-00d6-49ca-8a32-5e1232ec82ba",
+      "title": "Connecting Networks (CCNA-4, Z)",
+      "description": "E309  Labor",
+      "start": "2023-06-02T16:30:00",
+      "end": "2023-06-02T19:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a5c383df-a8ac-46c0-85e8-9dfd1258d1b8",
+      "title": "Prüfung Programmieren  (120 min)",
+      "description": "A268  Hörsaal",
+      "start": "2022-10-17T09:00:00",
+      "end": "2022-10-17T12:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a1d7f89c-0846-4114-aa61-f80cfe772207",
+      "title": "Ada",
+      "description": "A268  Hörsaal",
+      "start": "2022-10-04T17:30:00",
+      "end": "2022-10-04T20:00:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221004T163000",
+          "count": 9,
+          "interval": 1,
+          "byweekday": [
+              "tu"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab6c04a6-dd70-45c3-9b78-2565618cc620",
+      "title": "Webengineering II",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-07T09:45:00",
+      "end": "2022-10-07T13:00:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221007T084500",
+          "count": 11,
+          "interval": 1,
+          "byweekday": [
+              "fr"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a3ec6f46-25ef-4835-8a10-e443f401c471",
+      "title": "Grundlagen des Software Engineering",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-06T09:30:00",
+      "end": "2022-10-06T13:30:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221006T083000",
+          "count": 11,
+          "interval": 1,
+          "byweekday": [
+              "th"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a2251377-dda4-4bc6-ab27-d0a7ac546032",
+      "title": "Vorstellung Studienarbieten Informatik",
+      "description": "BAudimaxR EGO  Hörsaal",
+      "start": "2023-05-17T12:00:00",
+      "end": "2023-05-17T16:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "afa459fa-0a77-4faf-927f-fac8f79ac814",
+      "title": "Geschäftsprozesse",
+      "description": "F488  Hörsaal",
+      "start": "2022-10-07T09:30:00",
+      "end": "2022-10-07T12:45:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221007T083000",
+          "count": 9,
+          "interval": 1,
+          "byweekday": [
+              "fr"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a36c899d-427e-4277-b3f0-b4d28ddaeb18",
+      "title": "Semesterabschlussbesprechung",
+      "description": "A173  Hörsaal",
+      "start": "2022-07-29T12:15:00",
+      "end": "2022-07-29T12:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a5617392-e022-4379-85c9-bafe7f541e2f",
+      "title": "Klausur Marketing Marketing (90 min)",
+      "description": "A173  Hörsaal, A267  Hörsaal",
+      "start": "2022-08-02T09:00:00",
+      "end": "2022-08-02T11:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a6bd4f6b-db51-47b0-b3a3-1906711a65a4",
+      "title": "Fromale Sprachen",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-04T10:00:00",
+      "end": "2022-10-04T13:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221004T090000",
+          "count": 11,
+          "interval": 1,
+          "byweekday": [
+              "tu"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "af204bad-35a8-42bd-b521-e4056558cb5b",
+      "title": "Fromale Sprachen",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-06T14:00:00",
+      "end": "2022-10-06T17:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221006T130000",
+          "count": 11,
+          "interval": 1,
+          "byweekday": [
+              "th"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a26de899-112a-4f27-be80-b8d846917997",
+      "title": "Klausur Compilerbau Compilerbau ( min)",
+      "description": "F492  Hörsaal",
+      "start": "2023-06-26T10:00:00",
+      "end": "2023-06-26T12:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a5d7513f-dc4e-4899-a714-75fe5c96349b",
+      "title": "Tag der deutschen Einheit",
+      "description": "",
+      "start": "2018-10-03T08:00:00",
+      "end": "2018-10-03T18:00:00",
+      "rrule": {
+          "freq": "yearly",
+          "dtstart": "20181003T080000",
+          "count": 10
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a1ca77fc-f59d-4004-8319-5c56abf09fd0",
+      "title": "Ostermontag",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2021-04-05T08:00:00",
+      "end": "2021-04-05T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a6220cef-5066-4b16-990c-354ceaa04f6a",
+      "title": "Ostermontag",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2022-04-18T08:00:00",
+      "end": "2022-04-18T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a7f4a13f-0c94-4d43-aa51-8f324df6a062",
+      "title": "Ostermontag",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2019-04-22T08:00:00",
+      "end": "2019-04-22T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aabfa059-9fc7-4022-8a13-0b82097aafb0",
+      "title": "Ostermontag",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2024-04-01T08:00:00",
+      "end": "2024-04-01T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ac7e977f-0905-4b07-90e8-61d2e45e7f2c",
+      "title": "Ostermontag",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2020-04-13T08:00:00",
+      "end": "2020-04-13T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "acf83393-6b1f-43cb-a0dd-057117a8f739",
+      "title": "Ostermontag",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2023-04-10T08:00:00",
+      "end": "2023-04-10T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ad8da2d1-9425-4697-b6aa-d06994555b58",
+      "title": "Ostermontag",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2018-04-02T08:00:00",
+      "end": "2018-04-02T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a216c4bf-5d0d-492f-83c9-80e33f1c8492",
+      "title": "OO Best Practice (AI)",
+      "description": "BAudimaxR EGO  Hörsaal",
+      "start": "2023-06-09T08:30:00",
+      "end": "2023-06-09T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a30045cb-f4dc-43ff-be1f-f569c52c72d2",
+      "title": "OO Best Practice (AI)",
+      "description": "BAudimaxR EGO  Hörsaal",
+      "start": "2023-06-02T08:30:00",
+      "end": "2023-06-02T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a6b75344-2df9-41fa-9b54-590b3d8ffaa5",
+      "title": "OO Best Practice (AI)",
+      "description": "BAudimaxR EGO  Hörsaal",
+      "start": "2023-06-16T08:30:00",
+      "end": "2023-06-16T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aa38fad0-d5a8-4910-b907-af9914ae71fd",
+      "title": "OO Best Practice (AI)",
+      "description": "BAudimaxR EGO  Hörsaal",
+      "start": "2023-04-28T08:30:00",
+      "end": "2023-04-28T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aacb72f0-b8a1-4b59-b21d-7bca3d77d63f",
+      "title": "OO Best Practice (AI)",
+      "description": "A268  Hörsaal, BAudimaxR EGO  Hörsaal",
+      "start": "2023-04-14T08:30:00",
+      "end": "2023-04-14T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab6d62d7-b4e0-4547-89b8-66212badcb78",
+      "title": "OO Best Practice (AI)",
+      "description": "BAudimaxR EGO  Hörsaal",
+      "start": "2023-04-21T08:30:00",
+      "end": "2023-04-21T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ac884f7a-7e6e-4c8a-a583-b36155854601",
+      "title": "OO Best Practice (AI)",
+      "description": "A268  Hörsaal, BAudimaxR EGO  Hörsaal",
+      "start": "2023-05-05T08:30:00",
+      "end": "2023-05-05T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ad49f0f4-2f60-49b6-ab55-22bbf4861613",
+      "title": "OO Best Practice (AI)",
+      "description": "BAudimaxR EGO  Hörsaal",
+      "start": "2023-05-26T08:30:00",
+      "end": "2023-05-26T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "af8da4a6-44f0-4841-8c3d-10bcb1881191",
+      "title": "OO Best Practice (AI)",
+      "description": "BAudimaxR EGO  Hörsaal",
+      "start": "2023-05-12T08:30:00",
+      "end": "2023-05-12T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a10887cf-931d-4d0e-a644-5567f4fcfe98",
+      "title": "Mathematik I - Analysis",
+      "description": "",
+      "start": "2022-07-04T09:30:00",
+      "end": "2022-07-04T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a2597e4c-d96e-4752-997e-51d021ed4f63",
+      "title": "Mathematik I - Analysis",
+      "description": "",
+      "start": "2022-06-27T09:30:00",
+      "end": "2022-06-27T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a2856ee2-0d82-4e92-8df7-c8f61f3e4c14",
+      "title": "Mathematik I - Analysis",
+      "description": "",
+      "start": "2022-06-13T09:30:00",
+      "end": "2022-06-13T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a4ff2b5c-20b4-4912-9d46-e0a6d16933ed",
+      "title": "Mathematik I - Analysis",
+      "description": "",
+      "start": "2022-07-25T09:30:00",
+      "end": "2022-07-25T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a8b4e446-eded-4be5-998e-9172e64df789",
+      "title": "Mathematik I - Analysis",
+      "description": "",
+      "start": "2022-07-11T09:30:00",
+      "end": "2022-07-11T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a9051511-340a-4f2d-adbd-1bc23c334080",
+      "title": "Mathematik I - Analysis",
+      "description": "A366  Hörsaal",
+      "start": "2022-05-30T09:30:00",
+      "end": "2022-05-30T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a9450088-71e2-4f8b-bb5c-c888b15400e2",
+      "title": "Mathematik I - Analysis",
+      "description": "A366  Hörsaal",
+      "start": "2022-05-09T09:30:00",
+      "end": "2022-05-09T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a9de9e3c-a6c4-4758-bf1b-2c5d5f8101b9",
+      "title": "Mathematik I - Analysis",
+      "description": "",
+      "start": "2022-06-20T09:30:00",
+      "end": "2022-06-20T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a9fbb495-1c70-486f-a15b-eafa214b9c24",
+      "title": "Mathematik I - Analysis",
+      "description": "A366  Hörsaal",
+      "start": "2022-05-16T09:30:00",
+      "end": "2022-05-16T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aae4ec6e-bd03-475f-81de-56933b902252",
+      "title": "Mathematik I - Analysis",
+      "description": "",
+      "start": "2022-07-18T09:30:00",
+      "end": "2022-07-18T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "af952507-0a75-4aad-b1ee-f975dc31cb31",
+      "title": "Mathematik I - Analysis",
+      "description": "A366  Hörsaal",
+      "start": "2022-05-23T09:30:00",
+      "end": "2022-05-23T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a2f2e121-ce96-4fbd-8894-ca81f2b7119c",
+      "title": "Rechnerarchitektur Zusatztermin",
+      "description": "",
+      "start": "2022-12-16T11:30:00",
+      "end": "2022-12-16T13:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a3ab92de-20a1-4c67-9c81-17d05eeff52a",
+      "title": "Hl. 3 Könige",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2020-01-06T08:00:00",
+      "end": "2020-01-06T18:00:00",
+      "rrule": {
+          "freq": "yearly",
+          "dtstart": "20200106T080000",
+          "count": 10
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a9d04f85-d4da-496d-8863-9e98e5c18f23",
+      "title": "Klausur Programmieren  ( min)",
+      "description": "A266  Hörsaal",
+      "start": "2023-01-09T13:30:00",
+      "end": "2023-01-09T16:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a80af821-3bc4-4930-b9b9-961f5b5b64a3",
+      "title": "Klausurwoche 4. Semester",
+      "description": "",
+      "start": "2023-06-26T08:30:00",
+      "end": "2023-06-26T09:00:00",
+      "rrule": {
+          "freq": "daily",
+          "dtstart": "20230626T073000",
+          "count": 5,
+          "interval": 1
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "afbb4b43-2ffe-408a-9e17-32f8f1f37201",
+      "title": "Scaling Networks (CCNA-3, Z)",
+      "description": "A268  Hörsaal, E309  Labor",
+      "start": "2022-10-07T17:00:00",
+      "end": "2022-10-07T19:30:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221007T160000",
+          "count": 10,
+          "interval": 1,
+          "byweekday": [
+              "fr"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a624a7c3-f309-424b-b0ed-f9d04be06402",
+      "title": "Klausur Signale&Systeme  ( min)",
+      "description": "F488  Hörsaal",
+      "start": "2022-12-16T09:00:00",
+      "end": "2022-12-16T11:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a83406c0-3191-4383-a048-8869a315f05e",
+      "title": "Klausur Geschäftsprozesse (120 min)",
+      "description": "A263  Hörsaal",
+      "start": "2022-12-16T09:00:00",
+      "end": "2022-12-16T11:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a445d774-0902-4c39-a665-5d6abfb3e1b1",
+      "title": "Faschingsdienstag",
+      "description": "",
+      "start": "2025-03-04T08:00:00",
+      "end": "2025-03-04T08:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a44c3d84-ece8-4189-9e67-636d1aa6b6c0",
+      "title": "Faschingsdienstag",
+      "description": "",
+      "start": "2023-02-21T07:45:00",
+      "end": "2023-02-21T08:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a612058b-a2e2-4b73-9d37-51fee124fabc",
+      "title": "Faschingsdienstag",
+      "description": "",
+      "start": "2022-03-01T07:45:00",
+      "end": "2022-03-01T08:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "abeae2b8-5c93-414d-aa15-591a066a77f9",
+      "title": "Faschingsdienstag",
+      "description": "",
+      "start": "2024-02-13T08:00:00",
+      "end": "2024-02-13T08:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ac49af4b-36be-432a-ac27-f2f295ab69e7",
+      "title": "Faschingsdienstag",
+      "description": "",
+      "start": "2018-02-13T08:15:00",
+      "end": "2018-02-13T08:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "acf05548-e415-43f8-942e-1739071aab79",
+      "title": "Faschingsdienstag",
+      "description": "",
+      "start": "2020-02-25T08:00:00",
+      "end": "2020-02-25T08:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aeef6408-48f7-4511-b0d0-6fb72a3b21da",
+      "title": "Faschingsdienstag",
+      "description": "",
+      "start": "2019-03-05T08:00:00",
+      "end": "2019-03-05T08:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aefe821b-958a-4ca8-9d83-879f9167aa8b",
+      "title": "Faschingsdienstag",
+      "description": "",
+      "start": "2021-02-16T08:00:00",
+      "end": "2021-02-16T08:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a1dd4aeb-fa52-4960-b41a-8f728c6edb9f",
+      "title": "Wiederholungsklausur Schlüsselqualifikation II  (120 min)",
+      "description": "A165  Hörsaal",
+      "start": "2022-11-23T09:45:00",
+      "end": "2022-11-23T11:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a35f3137-d216-4c35-b378-92b1ceb72890",
+      "title": "Christi Himmelfahrt",
+      "description": "",
+      "start": "2022-05-26T08:00:00",
+      "end": "2022-05-26T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a56e1991-2cef-4c80-9278-4a756de90389",
+      "title": "Christi Himmelfahrt",
+      "description": "",
+      "start": "2023-05-18T08:00:00",
+      "end": "2023-05-18T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a79d3554-9c73-424b-ba6c-a6aab25a821f",
+      "title": "Christi Himmelfahrt",
+      "description": "",
+      "start": "2019-05-30T08:00:00",
+      "end": "2019-05-30T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a9314cdc-9d48-4b92-9bb8-1ed8be0a3579",
+      "title": "Christi Himmelfahrt",
+      "description": "",
+      "start": "2024-05-09T08:00:00",
+      "end": "2024-05-09T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ac4f937f-9602-450a-a42f-c9d182aae976",
+      "title": "Christi Himmelfahrt",
+      "description": "",
+      "start": "2020-05-21T08:00:00",
+      "end": "2020-05-21T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ae06b49c-03ae-4d2d-a6be-da553a490dab",
+      "title": "Christi Himmelfahrt",
+      "description": "",
+      "start": "2021-05-13T08:00:00",
+      "end": "2021-05-13T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a622fae3-1542-4204-bb14-b750f9008ac8",
+      "title": "Repetitorium Mathematik I",
+      "description": "A173  Hörsaal, F376  Hörsaal, XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2022-05-10T18:45:00",
+      "end": "2022-05-10T20:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20220510T174500",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "tu"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a1b9a659-1ade-4653-83fc-73c8e04018d6",
+      "title": "Klausur Rechnerarchitektur (60 min)",
+      "description": "A268  Hörsaal, A267  Hörsaal, F488  Hörsaal, F492  Hörsaal",
+      "start": "2022-12-22T10:00:00",
+      "end": "2022-12-22T12:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a1f73761-b238-40e7-abe6-0c07be40a8ff",
+      "title": "Projekt Management 2",
+      "description": "A173  Hörsaal",
+      "start": "2022-06-15T13:30:00",
+      "end": "2022-06-15T16:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a65abf94-d233-42bd-822a-1c41973bf733",
+      "title": "Projekt Management 2",
+      "description": "A173  Hörsaal",
+      "start": "2022-05-12T14:00:00",
+      "end": "2022-05-12T16:30:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20220512T130000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "th"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ae29661d-60c3-42f4-bc19-00ed960315eb",
+      "title": "Projekt Management 2",
+      "description": "A173  Hörsaal",
+      "start": "2022-07-14T13:00:00",
+      "end": "2022-07-14T16:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a1103fe1-ebf9-42e5-a578-713500d495ec",
+      "title": "Karfreitag",
+      "description": "",
+      "start": "2023-04-07T08:00:00",
+      "end": "2023-04-07T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a92ed0dd-bc47-43f1-99dd-0c41179bc105",
+      "title": "Karfreitag",
+      "description": "",
+      "start": "2021-04-02T08:00:00",
+      "end": "2021-04-02T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aab05565-84d9-4559-99fb-f0c17f3d40ec",
+      "title": "Karfreitag",
+      "description": "",
+      "start": "2019-04-19T08:00:00",
+      "end": "2019-04-19T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "abdd6408-b9a6-4e82-8dad-213b1bc627d4",
+      "title": "Karfreitag",
+      "description": "",
+      "start": "2022-04-15T08:00:00",
+      "end": "2022-04-15T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ac549852-be29-4fb0-8202-9bf6214f195c",
+      "title": "Karfreitag",
+      "description": "",
+      "start": "2024-03-29T08:00:00",
+      "end": "2024-03-29T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aca283aa-6195-4e00-a4c7-1649bce826a1",
+      "title": "Karfreitag",
+      "description": "",
+      "start": "2020-04-10T08:00:00",
+      "end": "2020-04-10T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "af33c008-4568-4e67-8ad5-a1c4e482bbd6",
+      "title": "Karfreitag",
+      "description": "",
+      "start": "2018-03-30T08:00:00",
+      "end": "2018-03-30T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a1083cd1-c625-4670-a29a-454dca9ef3f7",
+      "title": "Kolloquium Modul Praxis II (30 min)",
+      "description": "",
+      "start": "2023-09-26T08:30:00",
+      "end": "2023-09-26T18:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a4bf2a90-941e-4db4-abc0-1651bd454197",
+      "title": "Kolloquium Modul Praxis II (30 min)",
+      "description": "",
+      "start": "2023-09-25T08:30:00",
+      "end": "2023-09-25T18:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aae34c7c-2dc7-4c95-a472-32b43b67ea94",
+      "title": "Kolloquium Modul Praxis II (30 min)",
+      "description": "",
+      "start": "2023-09-28T08:30:00",
+      "end": "2023-09-28T18:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab5bf7f7-2aac-48c5-b084-91e0a905494f",
+      "title": "Kolloquium Modul Praxis II (30 min)",
+      "description": "",
+      "start": "2023-09-27T08:30:00",
+      "end": "2023-09-27T18:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ad12e028-ad31-4583-ba17-4585eb8c568d",
+      "title": "Kolloquium Modul Praxis II (30 min)",
+      "description": "",
+      "start": "2023-09-29T08:30:00",
+      "end": "2023-09-29T18:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ac90d054-5ca3-4a70-b9ee-69a69528e7da",
+      "title": "Klausur Angewandte Mathematik  (90 min)",
+      "description": "F492  Hörsaal",
+      "start": "2022-12-19T10:00:00",
+      "end": "2022-12-19T12:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a0b8c4a6-8a9a-4f23-a989-5b9b4a6f4ba2",
+      "title": "Design Thinking",
+      "description": "F488  Hörsaal",
+      "start": "2022-10-21T16:15:00",
+      "end": "2022-10-21T19:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a2b3dbdf-4508-4383-acd7-417d4d2ab959",
+      "title": "Design Thinking",
+      "description": "F488  Hörsaal",
+      "start": "2022-11-04T16:15:00",
+      "end": "2022-11-04T19:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a2c6b300-6c4f-4b1b-bc08-bcf85e911978",
+      "title": "Design Thinking",
+      "description": "F488  Hörsaal",
+      "start": "2022-11-11T16:15:00",
+      "end": "2022-11-11T19:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a66e4a41-cba4-4b9a-be04-7779aacb19ee",
+      "title": "Design Thinking",
+      "description": "F488  Hörsaal",
+      "start": "2022-11-25T16:15:00",
+      "end": "2022-11-25T19:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab5aeea1-2460-4837-a7f9-0d3c99e72ffd",
+      "title": "Design Thinking",
+      "description": "F488  Hörsaal",
+      "start": "2022-11-18T16:15:00",
+      "end": "2022-11-18T19:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab67837f-150a-4d17-b5aa-9a2685cda840",
+      "title": "Design Thinking",
+      "description": "F488  Hörsaal",
+      "start": "2022-10-28T16:15:00",
+      "end": "2022-10-28T19:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ae2fa681-7208-4435-a556-8dc668acb246",
+      "title": "Design Thinking",
+      "description": "F488  Hörsaal",
+      "start": "2022-10-14T16:15:00",
+      "end": "2022-10-14T19:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "af1d61f1-b447-414c-95d6-5ec40bf66ab6",
+      "title": "Design Thinking",
+      "description": "F488  Hörsaal",
+      "start": "2022-12-02T16:15:00",
+      "end": "2022-12-02T19:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "afb502f9-2dd1-4627-a3e3-b787d62f3a6a",
+      "title": "Design Thinking",
+      "description": "F488  Hörsaal",
+      "start": "2022-10-07T16:15:00",
+      "end": "2022-10-07T19:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a2de0bb3-2532-4871-8eca-1de4c99ee70e",
+      "title": "Tag der Arbeit",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2018-05-01T08:00:00",
+      "end": "2018-05-01T18:00:00",
+      "rrule": {
+          "freq": "yearly",
+          "dtstart": "20180501T080000",
+          "count": 10
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a4cff11f-97c6-4263-bfcb-31d114401cc5",
+      "title": "Marketing",
+      "description": "A173  Hörsaal",
+      "start": "2022-07-11T14:30:00",
+      "end": "2022-07-11T17:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aabb80cf-88aa-4d1d-bce2-4044730a5d0d",
+      "title": "Marketing",
+      "description": "A173  Hörsaal",
+      "start": "2022-05-12T09:30:00",
+      "end": "2022-05-12T12:45:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20220512T083000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "th"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "acbe077f-4273-466a-bc92-6bfff6fd731c",
+      "title": "Vorstellung mögliche Studienarbeiten Robotik",
+      "description": "E313  Labor",
+      "start": "2023-06-20T16:15:00",
+      "end": "2023-06-20T17:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a29b8f29-dc54-4db2-9497-afcb64e933d3",
+      "title": "Vorlesung Mathematik 1 - Analysis",
+      "description": "BAudimaxR EGO  Hörsaal, A368  Hörsaal",
+      "start": "2022-07-18T09:30:00",
+      "end": "2022-07-18T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a45be43f-6ea0-4285-8e56-7f312266e2a8",
+      "title": "Vorlesung Mathematik 1 - Analysis",
+      "description": "BAudimaxR EGO  Hörsaal, A368  Hörsaal",
+      "start": "2022-07-04T09:30:00",
+      "end": "2022-07-04T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a69a9636-232a-487f-a3e8-9772d5fa21ee",
+      "title": "Vorlesung Mathematik 1 - Analysis",
+      "description": "BAudimaxR EGO  Hörsaal",
+      "start": "2022-06-06T09:30:00",
+      "end": "2022-06-06T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a973b7c1-7b47-439b-be9b-dc95d2ca68c8",
+      "title": "Vorlesung Mathematik 1 - Analysis",
+      "description": "BAudimaxR EGO  Hörsaal, A368  Hörsaal",
+      "start": "2022-07-25T09:30:00",
+      "end": "2022-07-25T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "abd1fe72-a534-4c27-801c-22e78c7ab4ec",
+      "title": "Vorlesung Mathematik 1 - Analysis",
+      "description": "BAudimaxR EGO  Hörsaal, A368  Hörsaal",
+      "start": "2022-06-20T09:30:00",
+      "end": "2022-06-20T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ac86b146-31eb-4614-96ff-6c8a49187265",
+      "title": "Vorlesung Mathematik 1 - Analysis",
+      "description": "BAudimaxR EGO  Hörsaal, A368  Hörsaal",
+      "start": "2022-06-27T09:30:00",
+      "end": "2022-06-27T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "acb532ef-8cea-4442-9a89-8306c14aaebf",
+      "title": "Vorlesung Mathematik 1 - Analysis",
+      "description": "BAudimaxR EGO  Hörsaal, A368  Hörsaal",
+      "start": "2022-06-13T09:30:00",
+      "end": "2022-06-13T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ada4301b-ed5b-4ee6-9a44-749c69996a78",
+      "title": "Vorlesung Mathematik 1 - Analysis",
+      "description": "BAudimaxR EGO  Hörsaal, A368  Hörsaal",
+      "start": "2022-07-11T09:30:00",
+      "end": "2022-07-11T13:45:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a38eef7c-19f7-4a70-86f3-fcd0aa92d6fc",
+      "title": "Grundlagen der Datenbanken",
+      "description": "F492  Hörsaal",
+      "start": "2023-05-10T13:00:00",
+      "end": "2023-05-10T16:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab3949c5-c3fb-46c5-9628-2752491ccd46",
+      "title": "Grundlagen der Datenbanken",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-26T13:00:00",
+      "end": "2023-04-26T16:15:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ae85e383-da06-46ac-9814-58340fb146a5",
+      "title": "Grundlagen der Datenbanken",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-04T14:00:00",
+      "end": "2023-04-04T17:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20230404T130000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "tu"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "abc657a9-1b6a-418a-b13c-a5b105803f60",
+      "title": "Datenbanken I",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-03T13:30:00",
+      "end": "2022-10-03T16:45:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221003T123000",
+          "count": 11,
+          "interval": 1,
+          "byweekday": [
+              "mo"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab2fe0cd-0a03-415b-8de0-7601239b8b69",
+      "title": "Compilerbau",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-05T10:00:00",
+      "end": "2023-04-05T13:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20230405T090000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "we"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "acb433ea-7bfb-4a5f-9544-ed5da3108a2f",
+      "title": "Compilerbau",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-06T10:00:00",
+      "end": "2023-04-06T13:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20230406T090000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "th"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a7fcb052-9b32-44d2-9602-1e6940208dfb",
+      "title": "Nachklausur Programmieren  (120 min)",
+      "description": "A263  Hörsaal",
+      "start": "2023-04-25T10:00:00",
+      "end": "2023-04-25T12:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a7cb16ee-b62f-4148-bc3e-e8c2ce26eef2",
+      "title": "Intercultural Communication 2 Gruppe 2",
+      "description": "A173  Hörsaal",
+      "start": "2022-05-10T16:45:00",
+      "end": "2022-05-10T18:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20220510T154500",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "tu"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a0f87d48-b39c-440f-8bee-b08c939700d2",
+      "title": "Signale und Systeme",
+      "description": "A267  Hörsaal",
+      "start": "2022-10-07T09:00:00",
+      "end": "2022-10-07T13:00:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221007T080000",
+          "count": 9,
+          "interval": 1,
+          "byweekday": [
+              "fr"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ae8c65f7-da70-45ef-a7df-77e9b2e56ede",
+      "title": "Signale und Systeme",
+      "description": "A267  Hörsaal",
+      "start": "2022-11-04T09:30:00",
+      "end": "2022-11-04T13:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a8bd4c78-87d6-4ec8-9258-195a9ab8e591",
+      "title": "Systemnahe Programmierung I",
+      "description": "F492  Hörsaal",
+      "start": "2023-04-06T14:15:00",
+      "end": "2023-04-06T17:15:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20230406T131500",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "th"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "abc95892-ef15-4b76-bce0-df3c5ef2b1aa",
+      "title": "Übungstermin Programmieren",
+      "description": "BAudimaxL BBBank  Hörsaal, BAudimaxR EGO  Hörsaal",
+      "start": "2022-10-06T17:30:00",
+      "end": "2022-10-06T19:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a94443b9-7a12-44e4-b9d6-4a1a225873d9",
+      "title": "Klausur Statistik Statistik ( min)",
+      "description": "F492  Hörsaal",
+      "start": "2023-06-29T09:00:00",
+      "end": "2023-06-29T11:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "afec28b8-3ea9-42cb-b804-464d7a06d86f",
+      "title": "Wiederholungsklausuren  (150 min)",
+      "description": "A165  Hörsaal",
+      "start": "2023-04-12T09:30:00",
+      "end": "2023-04-12T12:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a039f8dc-6619-4d1e-aba4-d3e8dc22f012",
+      "title": "Pfingstmontag",
+      "description": "",
+      "start": "2022-06-06T08:00:00",
+      "end": "2022-06-06T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a0cb22ff-3507-4d2b-8c80-4981a2db3a4a",
+      "title": "Pfingstmontag",
+      "description": "",
+      "start": "2018-05-21T08:00:00",
+      "end": "2018-05-21T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a12a5557-1062-4d1f-a18a-9a39f943b924",
+      "title": "Pfingstmontag",
+      "description": "",
+      "start": "2019-06-10T08:00:00",
+      "end": "2019-06-10T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a17c1550-96f0-4364-b776-eb0e05af21df",
+      "title": "Pfingstmontag",
+      "description": "",
+      "start": "2023-05-29T08:00:00",
+      "end": "2023-05-29T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a99d4a52-045e-45d7-ba0e-3102c2c7c197",
+      "title": "Pfingstmontag",
+      "description": "",
+      "start": "2024-05-20T08:00:00",
+      "end": "2024-05-20T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aa15d8f1-644a-48e9-82a3-94c047f23d85",
+      "title": "Pfingstmontag",
+      "description": "",
+      "start": "2021-05-24T08:00:00",
+      "end": "2021-05-24T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ad91f4cb-cf01-4605-97eb-8edca8f49e61",
+      "title": "Pfingstmontag",
+      "description": "",
+      "start": "2020-06-01T08:00:00",
+      "end": "2020-06-01T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a6a81a45-4d5f-4ac1-9657-ddbeb27c3641",
+      "title": "Klausur  (120 min)",
+      "description": "BAudimaxL BBBank  Hörsaal, BAudimaxR EGO  Hörsaal",
+      "start": "2022-08-01T09:00:00",
+      "end": "2022-08-01T11:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a4fc8ae5-65fe-43f2-b5ee-9f9b691945ec",
+      "title": "Betriebssysteme",
+      "description": "F492  Hörsaal",
+      "start": "2022-10-05T13:00:00",
+      "end": "2022-10-05T15:30:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20221005T120000",
+          "count": 11,
+          "interval": 1,
+          "byweekday": [
+              "we"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab56950a-f70f-4067-a595-25c711d61db2",
+      "title": "Intercultural Communikation 2 Gruppe 1",
+      "description": "A173  Hörsaal",
+      "start": "2022-07-19T13:15:00",
+      "end": "2022-07-19T15:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "abdad90a-c5c8-4bac-a094-1b19d34a8924",
+      "title": "Intercultural Communikation 2 Gruppe 1",
+      "description": "A173  Hörsaal",
+      "start": "2022-07-12T13:00:00",
+      "end": "2022-07-12T15:30:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "acdac293-688f-4c0f-99a2-ec935a546a30",
+      "title": "Intercultural Communikation 2 Gruppe 1",
+      "description": "A173  Hörsaal",
+      "start": "2022-05-10T15:00:00",
+      "end": "2022-05-10T16:30:00",
+      "rrule": {
+          "freq": "weekly",
+          "dtstart": "20220510T140000",
+          "count": 12,
+          "interval": 1,
+          "byweekday": [
+              "tu"
+          ]
+      },
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a5d2c6fc-5c81-4117-beee-b9182895e37d",
+      "title": "Klausur Formale Sprachen (90 min)",
+      "description": "A268  Hörsaal",
+      "start": "2022-12-23T10:00:00",
+      "end": "2022-12-23T12:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a454d89e-6b91-4d29-a86e-bcff20f8f6d2",
+      "title": "Fronleichnam",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2020-06-11T08:00:00",
+      "end": "2020-06-11T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a7579b49-bb4f-4140-8758-71b04dca877c",
+      "title": "Fronleichnam",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2018-05-31T08:00:00",
+      "end": "2018-05-31T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "a782073c-ee73-4feb-941d-85674092d843",
+      "title": "Fronleichnam",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2021-06-03T08:00:00",
+      "end": "2021-06-03T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aa6ea7ea-834e-48ae-ae71-31bd053cf4dd",
+      "title": "Fronleichnam",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2023-06-08T08:00:00",
+      "end": "2023-06-08T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "aaa5b4c3-9b6e-42ea-a989-66cc11d756b0",
+      "title": "Fronleichnam",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2024-05-30T08:00:00",
+      "end": "2024-05-30T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "ab768240-62ae-4a6f-b3d4-8ad3a3e52cfb",
+      "title": "Fronleichnam",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2022-06-16T08:00:00",
+      "end": "2022-06-16T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  },
+  {
+      "uuid": "af27154f-8710-4308-8b64-e98a03f69c63",
+      "title": "Fronleichnam",
+      "description": "XOnline-Veranstaltung  wird verschoben unter Virtueller Raum",
+      "start": "2019-06-20T08:00:00",
+      "end": "2019-06-20T18:00:00",
+      "rrule": null,
+      "url": "https://rapla.dhbw-karlsruhe.de/rapla?page=ical&user=eisenbiegler&file=TINF21B4"
+  }
+]
