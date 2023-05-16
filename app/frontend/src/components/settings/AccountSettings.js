@@ -21,11 +21,11 @@ function AccountSettings(props) {
                         <Card.Title>User</Card.Title>
                     </Card.Header>
                     <Card.Body>
-                        <Image src={require("../../images/christian-lindner.jpg")} className="mb-2" style={{maxWidth: "15rem", maxHeight: "auto"}} roundedCircle />
+                        <Image src={require("../../images/robert-habeck.jpg")} className="mb-2" style={{maxWidth: "15rem", maxHeight: "auto"}} roundedCircle />
                         <ListGroup variant="flush">
-                            <ListGroup.Item>Christian Lindner</ListGroup.Item>
+                            <ListGroup.Item>Robert Habeck</ListGroup.Item>
                             <ListGroup.Item>TINF21B4</ListGroup.Item>
-                            <ListGroup.Item>lindner.christian.a21@student.dhbw-karlsruhe.de</ListGroup.Item>
+                            <ListGroup.Item>habeck.robert.a21@student.dhbw-karlsruhe.de</ListGroup.Item>
                         </ListGroup>
                         <Button variant="primary" className="mx-1">Ändern</Button>
                         <Button variant="danger" className="mx-1">Löschen</Button>
