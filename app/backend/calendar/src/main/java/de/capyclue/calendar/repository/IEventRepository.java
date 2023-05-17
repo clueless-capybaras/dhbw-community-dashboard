@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 @Repository
-public interface SpringCalendarRepository extends JpaRepository<Event, String> {
+public interface IEventRepository extends JpaRepository<Event, String> {
     Optional<Event> findByUuid(String uuid);
     List<Event> findAll();
     List<Event> findAllByUrl(String url);

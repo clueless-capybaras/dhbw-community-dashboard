@@ -15,7 +15,13 @@ jobs:
       run: |
         cd app/frontend
         npm ci
-        npx cypress run --spec "cypress/e2e/homeScreen.cy.js"
+        npx cypress run --spec "cypress/e2e/production/*"
+    - name: Archive Test Videos
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: Cypress Test Videos
+        path: app/frontend/cypress/videos
     - name: Stop Frontend
       run: docker-compose -f app/docker-compose.yml down -v
 
