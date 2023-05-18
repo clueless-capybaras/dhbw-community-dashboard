@@ -18,14 +18,18 @@ jobs:
         npx cypress run --spec "cypress/e2e/production/*" --reporter mochawesome
         npx mochawesome-merge "cypress/results/*.json" -o mochawesome.json
         npx marge mochawesome.json -o cypress/results/marged/ -f "[status]_[datetime]-report" --ts "longDate"
-        del mochawesome.json
-        del cypress/results/*.json
     - name: Archive Test Videos
       uses: actions/upload-artifact@v3
       if: always()
       with:
         name: Cypress Test Videos
         path: app/frontend/cypress/videos
+    - name: Archive Mocha Report
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: Mochawesome Report
+        path: app/frontend/cypress/results/marged/    
     - name: Stop Frontend
       run: docker-compose -f app/docker-compose.yml down -v
 
