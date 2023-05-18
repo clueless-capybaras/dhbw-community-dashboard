@@ -15,7 +15,11 @@ jobs:
       run: |
         cd app/frontend
         npm ci
-        npx cypress run --spec "cypress/e2e/production/*"
+        npx cypress run --spec "cypress/e2e/production/*" --reporter mochawesome
+        npx mochawesome-merge "cypress/results/*.json" -o mochawesome.json
+        npx marge mochawesome.json -o cypress/results/marged/ -f "[status]_[datetime]-report" --ts "longDate"
+        del mochawesome.json
+        del cypress/results/*.json
     - name: Archive Test Videos
       uses: actions/upload-artifact@v3
       if: always()
