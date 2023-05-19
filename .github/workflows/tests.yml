@@ -93,7 +93,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Append failed tests to MD file
         run: |
-          echo "| $(date +'%Y-%m-%dT%H:%M:%S') | ${{ github.ref_name }} | [${{ github.run_id }}](https://github.com/MyMrMush/dhbw-community-dashboard-test/actions/runs/${{ github.run_id }}) | - | - |" >> docs/test_evaluation_summary/failed_tests.md
+          echo "| $(date +'%Y-%m-%dT%H:%M:%S') | ${{ github.ref_name }} | [${{ github.run_id }}](https://github.com/clueless-capybaras/dhbw-community-dashboard/actions/runs/${{ github.run_id }}) | - | - |" >> docs/test_evaluation_summary/failed_tests.md
       - name: Commit MD
         uses: EndBug/add-and-commit@v9
         with: 
