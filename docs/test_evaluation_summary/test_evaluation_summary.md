@@ -33,9 +33,11 @@ For more information, please also read our full [Test Plan](../test_plan/test_pl
 This section outlines the specific testing tasks, timelines, and resources required to achieve the testing objectives. Please have a look at our extra file for the [Test Plan](../test_plan/test_plan.md).
 
 # Test Cases
-This section details the specific test cases that were executed, including their pass/fail status and any defects found during testing. 
+This section links to the specific test cases that were executed, including their pass/fail status. Further navigation inside Github allows for further details including a view on the specific component/test suite/feature failing. 
 
 Currently we only have written Cypress Tests, but JUnit tests will follow.
+
+[Test History](https://github.com/clueless-capybaras/dhbw-community-dashboard/actions/workflows/tests.yml)
 
 # Test Results
 This section summarizes the results of the testing, including any defects found, their severity, and the steps taken to resolve them. 
