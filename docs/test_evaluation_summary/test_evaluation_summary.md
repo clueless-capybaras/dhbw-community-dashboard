@@ -40,7 +40,9 @@ Currently we only have written Cypress Tests, but JUnit tests will follow.
 [Test History](https://github.com/clueless-capybaras/dhbw-community-dashboard/actions/workflows/tests.yml)
 
 # Test Results
-This section summarizes the results of the testing, including any defects found, their severity, and the steps taken to resolve them. 
+This section summarizes the results of the testing, including any defects found, their severity, and the steps taken to resolve them.
+
+[Failed Tests Table](failed_tests.md)
 
 # Metrics
 This section provides quantitative data on the testing process, such as the number of defects found, the defect resolution time, and the test coverage achieved. 
