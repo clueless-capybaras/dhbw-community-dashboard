@@ -9,12 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    #- name: Start Frontend
-    #  run: docker-compose -f app/docker-compose.yml up --build --force-recreate -d frontend
-    - name: Cypress Tests
+    - name: Prepare environment
       run: |
         cd app/frontend
         npm ci
+        npm i pm2 -g
+    - name: Start Frontend
+      run: |
+        pm2 --name FrontendTest start npm -- start
+    - name: Cypress Tests
+      run: |
         npx cypress run --spec "cypress/e2e/production/*" --reporter mochawesome
         npx mochawesome-merge "cypress/results/*.json" -o mochawesome.json
         npx marge mochawesome.json -o cypress/results/marged/ -f "[status]_[datetime]-report" --ts "longDate"
@@ -31,7 +35,8 @@ jobs:
         name: Mochawesome Report
         path: app/frontend/cypress/results/marged/    
     - name: Stop Frontend
-      run: docker-compose -f app/docker-compose.yml down -v
+      if: always()
+      run: pm2 stop 0
 
   JUnit-Calendar:
     runs-on: ubuntu-latest
