@@ -4,6 +4,7 @@ import { createContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Navibar from './components/Navibar';
+import ErrorModal from './components/ErrorModal';
 import Canteen from './components/canteen/Canteen';
 import Calendar from './components/calendar/Calendar';
 import Settings from './components/settings/Settings';
@@ -21,6 +22,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navibar cyClass="cy-navBarNav"/>
+        <ErrorModal />
         <Routes>
           <Route path='/' element={<Dashboard colWidth='3' cyClass='cy-entryPageNav'/>} />
           <Route path='/canteen/:whichCanteen' element={<CanteenHttpClientContext.Provider value={new CanteenHttpClient()}><Canteen /></CanteenHttpClientContext.Provider>} />
