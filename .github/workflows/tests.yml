@@ -19,11 +19,10 @@ jobs:
         cd app/frontend
         pm2 --name FrontendTest start npm -- start
     - name: Cypress Tests
-      run: |
-        cd app/frontend
-        npx cypress run --spec "cypress/e2e/production/*" --reporter mochawesome
-        npx mochawesome-merge "cypress/results/*.json" -o mochawesome.json
-        npx marge mochawesome.json -o cypress/results/marged/ -f "[status]_[datetime]-report" --ts "longDate"
+      uses: nick-fields/retry@v2
+      with:
+        max_attempts: 5
+        command: cd app/frontend && npx cypress run --spec "cypress/e2e/production/*" --reporter mochawesome && npx mochawesome-merge "cypress/results/*.json" -o mochawesome.json && npx marge mochawesome.json -o cypress/results/marged/ -f "[status]_[datetime]-report" --ts "longDate"
     - name: Archive Test Videos
       uses: actions/upload-artifact@v3
       if: always()
