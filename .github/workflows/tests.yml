@@ -88,7 +88,7 @@ jobs:
   Log-Failed-Tests:
     runs-on: ubuntu-latest
     needs: [Cypress-Frontend, JUnit-Calendar, JUnit-Canteen, JUnit-User]
-    if: ${{ always() && contains(needs.*.result, 'failure') }}
+    if: ${{ always() && contains(needs.*.result, 'failure') && github.ref != 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v3
       - name: Append failed tests to MD file
