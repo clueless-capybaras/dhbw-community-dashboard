@@ -16,6 +16,7 @@ jobs:
         npm i pm2 -g
     - name: Start Frontend
       run: |
+        cd app/frontend
         pm2 --name FrontendTest start npm -- start
     - name: Cypress Tests
       run: |
