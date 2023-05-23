@@ -2,3 +2,4 @@
 | Date | Branch | Test Run | Severity | Fix |
 | --- | --- | --- | --- | --- |
 | 2023-05-23T08:44:19 | fix-ci | [5055151962](https://github.com/clueless-capybaras/dhbw-community-dashboard/actions/runs/5055151962) | - | - |
+| 2023-05-23T08:52:41 | fix-ci | [5055229819](https://github.com/clueless-capybaras/dhbw-community-dashboard/actions/runs/5055229819) | - | - |
