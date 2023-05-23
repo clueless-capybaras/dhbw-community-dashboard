@@ -100,4 +100,3 @@ jobs:
           add: docs/test_evaluation_summary/failed_tests.md
           default_author: github_actions
           message: 'Automated logging of failed tests'
-          push: origin HEAD:main
