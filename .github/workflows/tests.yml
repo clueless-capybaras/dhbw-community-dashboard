@@ -19,6 +19,7 @@ jobs:
         pm2 --name FrontendTest start npm -- start
     - name: Cypress Tests
       run: |
+        cd app/frontend
         npx cypress run --spec "cypress/e2e/production/*" --reporter mochawesome
         npx mochawesome-merge "cypress/results/*.json" -o mochawesome.json
         npx marge mochawesome.json -o cypress/results/marged/ -f "[status]_[datetime]-report" --ts "longDate"
