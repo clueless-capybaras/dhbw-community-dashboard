@@ -36,4 +36,9 @@ public class UserController {
         return new User();
     }
 
+    @GetMapping(path="/testauth")
+    public String testAuth(){
+        return "hello world, this is a protected route of the user microservice";
+    }
+
 }
