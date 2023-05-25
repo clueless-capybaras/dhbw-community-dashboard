@@ -56,8 +56,8 @@ public class User {
     @Column(name = "canteenShowPork", nullable = false)
     private Boolean canteenShowPork;
 
-    public User(String user_id, String nickname, String email, String picture) {
-        this.user_id = user_id;
+    public User(String id, String nickname, String email, String picture) {
+        this.id = id;
         this.nickname = nickname;
         this.email = email;
         this.picture = picture;
@@ -76,11 +76,11 @@ public class User {
     }
 
     public String getUser_id() {
-        return user_id;
+        return id;
     }
 
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUser_id(String id) {
+        this.id = id;
     }
 
     public String getNickname() {
