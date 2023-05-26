@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { Auth0Provider } from "@auth0/auth0-react";
 import reportWebVitals from './reportWebVitals';
-import { baseUrlAuth, clientId } from './config';
+import { baseUrlAuth, clientId, audience } from './config';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -15,7 +15,8 @@ root.render(
     domain={baseUrlAuth}
     clientId={clientId}
     authorizationParams={{
-      redirect_uri: window.location.origin
+      redirect_uri: window.location.origin,
+      audience: audience,
     }}
   >
     <App />
