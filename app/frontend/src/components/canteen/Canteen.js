@@ -34,10 +34,12 @@ function Canteen(){
     return(
         <Container>
             <Row>
-                <Col>
+                <Col className="d-flex justify-content-center">
                     <h1>Mensa</h1>
                 </Col>
-                <Col>
+            </Row>
+            <Row>
+                <Col className="d-flex justify-content-end">
                     <DropdownButton id="dropdown-basic-button" title={canteen.title}>
                         {canteens.map((canteenIt) => <Dropdown.Item key={canteenIt.key} onClick={()=> navigate('/canteen/'+canteenIt.key)}>{canteenIt.title}</Dropdown.Item>)}
                     </DropdownButton>
@@ -59,7 +61,7 @@ function Canteen(){
                             </Tabs>
                         </Col>
                     </div>)
-                    :(<Col>
+                    :(<Col className="d-flex justify-content-center">
                         <Spinner animation="border" role="status" />
                     </Col>)
                 }
