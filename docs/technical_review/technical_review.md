@@ -19,7 +19,7 @@ The affected components provide central features to the DHBW Community Dashboard
 ## Components for Review
 Component | Function |
 ---|---
-Login & Registration | login and registration of users while only alowing DHBW students to register and mendaing a DHBW email address confirmation
+Login & Registration | login and registration of users while only alowing DHBW students with a DHBW email address to register
 
 
 ## Criteria of Review
@@ -36,7 +36,7 @@ Login & Registration | code review, walkthrough
 ### Actions
 Action | Comment | Responsible | Deadline
 ---|---|---|---
-Create bug task for improveve bahavior of email confirmation modal | The modal should close after refresh if the email has been confirmed | Florian Pilz | 2023/05/25
+Create bug task for improved behavior of email confirmation modal | The modal should close after refresh if the email has been confirmed | Florian Pilz | 2023/05/25
 
 ### Lessons Learned
 - We don't need to do everything on our own. There are solutions like [Auth0](https://auth0.com/) that provide a secure and scalable login and registration system.
