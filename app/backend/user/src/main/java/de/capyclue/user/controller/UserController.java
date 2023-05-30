@@ -4,10 +4,8 @@ import de.capyclue.user.model.User;
 import de.capyclue.user.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,14 +24,16 @@ public class UserController {
         return "hello world, this is the user microservice";
     }
 
-    @GetMapping(path = "/users")
-    public List<User> getAllUsers(){
-        return userService.getAllUsers();
-    }
-
-    @GetMapping(path = "/user/{id}")
-    public User getUserById(@PathVariable Long id){
-        return new User();
+    @GetMapping(path = "/user")
+    public User getUserByAuth0Token(Authentication authentication){
+        String auth0UserId = authentication.getName();
+        System.out.println("auth0UserId: " + auth0UserId);
+        User user = new User();
+        user.setId(1L);
+        user.setFirstName("Max");
+        user.setLastName("Mustermann");
+        user.setEmail("max.mushter@email.de");
+        return user;
     }
 
 }

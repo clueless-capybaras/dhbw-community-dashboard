@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from 'react';
+import { useAuth0 } from "@auth0/auth0-react";
+import { baseUrlUser } from '../../config';
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
@@ -10,6 +14,25 @@ import GeneralSettings from './GeneralSettings';
 import AboutSettings from './AboutSettings';
 
 function Settings() {
+    const { user, isAuthenticated, getAccessTokenSilently} = useAuth0();
+    const [userData, setUserData] = useState({});
+    useEffect(() => {
+        if (!isAuthenticated) {
+            return;
+        }
+        (async () => {
+        let token = await getAccessTokenSilently();
+        const response = await fetch(baseUrlUser+'/user/', {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+        let data = await response.json();
+        setUserData(data);
+        })();
+    }, [getAccessTokenSilently, isAuthenticated]);
+
+
     return(
         <>
         <Tab.Container defaultActiveKey="account">
