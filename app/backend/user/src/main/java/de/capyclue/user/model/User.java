@@ -11,9 +11,6 @@ public class User {
     @Column(name = "id", nullable = false)
     private String id;
 
-    //@Column(name = "username", nullable = false)
-    //private String username;
-
     @Column(name = "nickname", nullable = false)
     private String nickname;
 
@@ -33,6 +30,7 @@ public class User {
     private String calendarStandardView;
 
     @Column(name = "calendarLink", nullable = true)
+    @ElementCollection(targetClass=String.class)
     private List<String> calendarLink;
 
     @Column(name = "canteenStandardCanteen", nullable = false)
@@ -75,11 +73,11 @@ public class User {
     public User() {
     }
 
-    public String getUser_id() {
+    public String getId() {
         return id;
     }
 
-    public void setUser_id(String id) {
+    public void setId(String id) {
         this.id = id;
     }
 
