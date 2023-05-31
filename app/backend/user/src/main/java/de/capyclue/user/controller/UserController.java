@@ -35,9 +35,8 @@ public class UserController {
         String auth0UserId = authentication.getName();
         System.out.println("auth0UserId: " + auth0UserId);
         User user = new User();
-        user.setId(1L);
-        user.setFirstName("Max");
-        user.setLastName("Mustermann");
+        user.setId("1L");
+        user.setNickname("max.mushter");
         user.setEmail("max.mushter@email.de");
         return user;
     }
