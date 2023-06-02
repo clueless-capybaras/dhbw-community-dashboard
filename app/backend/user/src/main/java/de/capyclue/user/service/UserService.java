@@ -19,4 +19,12 @@ public class UserService implements IUserService {
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
+
+    public User getUserById(String id) {
+        return userRepository.findById(id);
+    }
+
+    public void saveUser(User user) {
+        userRepository.save(user);
+    }
 }
