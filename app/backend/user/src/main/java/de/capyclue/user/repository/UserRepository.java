@@ -15,12 +15,16 @@ public class UserRepository {
         this.springUserRepository = springUserRepository;
     }
 
-    public User findById(Long id) {
-        return springUserRepository.findById(id).orElse(null);
+    public User findById(String id) {
+        return springUserRepository.findById(id).get();
     }
 
     public List<User> findAll() {
         return springUserRepository.findAll();
+    }
+
+    public void save(User user) {
+        this.springUserRepository.save(user);
     }
 
 }
