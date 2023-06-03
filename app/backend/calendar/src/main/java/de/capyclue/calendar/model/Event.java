@@ -1,10 +1,15 @@
 package de.capyclue.calendar.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name="events")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Event {
     @Id
     @Column(name = "uuid")
@@ -22,6 +27,10 @@ public class Event {
     @Column(name = "endDate")
     private final LocalDateTime end;
 
+
+    @Column(name = "duration")
+    private final Duration duration;
+
     @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name="rrule_id", referencedColumnName = "id")
     private final FcRRule rrule;
@@ -30,12 +39,13 @@ public class Event {
     private final String url;
 
 
-    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, FcRRule rrule, String url) {
+    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, Duration duration, FcRRule rrule, String url) {
         this.uuid = uuid;
         this.title = title;
         this.description = description;
         this.start = start;
         this.end = end;
+        this.duration = duration;
         this.rrule = rrule;
         this.url = url;
     }
@@ -46,6 +56,7 @@ public class Event {
         this.description = null;
         this.start = null;
         this.end = null;
+        this.duration = null;
         this.rrule = null;
         this.url = null;
     }
@@ -68,6 +79,21 @@ public class Event {
 
     public LocalDateTime getEnd() {
         return end;
+    }
+
+    public Duration getDuration() {
+        return duration;
+    }
+
+    @JsonProperty("duration")
+    public Long getDurationInMilliSecs() {
+        Long out;
+        if (this.duration != null) {
+            out = this.duration.getSeconds()*1000;
+        } else {
+            out = null;
+        }
+        return out;
     }
 
     public String getUrl() {

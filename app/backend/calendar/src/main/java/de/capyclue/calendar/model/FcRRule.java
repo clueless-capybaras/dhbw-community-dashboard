@@ -4,18 +4,43 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import net.fortuna.ical4j.model.Date;
+import net.fortuna.ical4j.model.Parameter;
 import net.fortuna.ical4j.model.Property;
 import net.fortuna.ical4j.model.Recur;
 import net.fortuna.ical4j.model.component.VEvent;
+import net.fortuna.ical4j.model.property.DateProperty;
 import net.fortuna.ical4j.model.property.RRule;
 
 import javax.persistence.*;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class FcRRule {
+
+    private static LocalDateTime parseToET(DateProperty datetimeIn) {
+        Parameter tzid = datetimeIn.getParameter("TZID");
+        LocalDateTime etOut;
+        if (tzid != null) {
+            String dtValue = datetimeIn.getValue();
+            DateTimeFormatter f = DateTimeFormatter.ofPattern( "uuuuMMdd'T'HHmmss");
+            LocalDateTime ldt = LocalDateTime.parse( dtValue , f );
+            ZoneId z = ZoneId.of(tzid.getValue());
+            ZonedDateTime zdt = ldt.atZone( z );
+            Instant utct = Instant.from(zdt);
+            etOut = LocalDateTime.ofInstant(utct, ZoneId.of("Europe/Berlin"));
+        } else {
+            Date dtDate = datetimeIn.getDate();
+            etOut = LocalDateTime.ofInstant(dtDate.toInstant(),ZoneId.of("Europe/Berlin"));
+        }
+        return etOut;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -23,7 +48,7 @@ public class FcRRule {
   //  @Column(name = "frequency", nullable = true)
     private String freq;
    // @Column(name = "dtstart", nullable = true)
-    private String dtstart;
+    private LocalDateTime dtstart;
   //  @Column(name = "until", nullable = true)
     @Column(name="termination")
     private Date until;
@@ -56,7 +81,7 @@ public class FcRRule {
         RRule rrule = (event.getProperty("RRULE") == null)?null: ((RRule)((event.getProperty(Property.RRULE))));
         Recur recur = (rrule == null)?null: (rrule.getRecur() == null)?null: rrule.getRecur();
 
-        this.dtstart = (event.getProperty("RRULE") == null)?null: (event.getProperty(Property.DTSTART)).getValue();
+        this.dtstart = (event.getProperty("RRULE") == null)?null: parseToET(event.getStartDate());
         this.tzid = (event.getProperty(Property.TZID) == null)?null: (event.getProperty(Property.TZID)).getValue();
 
         if (recur != null) {
@@ -88,6 +113,8 @@ public class FcRRule {
         this.tzid = null;
     }
 
+
+
     @JsonIgnore
     @JsonProperty(value = "uuid")
     public Long getUuid() {
@@ -98,7 +125,7 @@ public class FcRRule {
         return freq;
     }
 
-    public String getDtstart() {
+    public LocalDateTime getDtstart() {
         return dtstart;
     }
 
