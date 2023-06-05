@@ -1,5 +1,7 @@
 import Stack from 'react-bootstrap/Stack';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Form from 'react-bootstrap/Form';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Dashboard from "./Dashboard";
 
@@ -25,7 +27,6 @@ function Navibar(props) {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <LogInLogOutStatus />
               <Dashboard colWidth='6'/>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
@@ -37,6 +38,11 @@ function Navibar(props) {
             </Link> 
           </Navbar.Brand>
         </Stack>
+        <Nav>
+        <Form className="d-flex text-light" style={{marginRight: '1em'}}>
+            <LogInLogOutStatus />
+          </Form>    
+        </Nav>
       </Navbar>
     );
 }
