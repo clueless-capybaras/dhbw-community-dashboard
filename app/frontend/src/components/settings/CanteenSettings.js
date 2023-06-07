@@ -31,12 +31,21 @@ function CanteenSettings(props) {
         props.userData.canteenHighlightingOption = highlightingOption;
     }
     
-        const [mealShowCheck, setMealShowCheck] = useState(true);
-    
-        const handleMealShowCheckChange = event => {
-            setMealShowCheck(!mealShowCheck);
-    
-        }
+    const [showVegetarian, setShowVegetarian] = useState(props.userData.canteenShowVegetarian);
+    const handleShowVegetarianChange = event => {
+        setShowVegetarian(!showVegetarian);
+        props.userData.canteenShowVegetarian = showVegetarian;
+    }
+    const [showVegan, setShowVegan] = useState(props.userData.canteenShowVegan);
+    const handleShowVeganChange = event => {
+        setShowVegan(!showVegan);
+        props.userData.canteenShowVegan = showVegan;
+    }
+    const [showPork, setShowPork] = useState(props.userData.canteenShowPork);
+    const handleShowPorkChange = event => {
+        setShowPork(!showPork);
+        props.userData.canteenShowPork = showPork;
+    }
 
     return(
         <>
@@ -114,9 +123,9 @@ function CanteenSettings(props) {
                 <Form.Label>Gerichte anzeigen mit Eigenschaft:</Form.Label>
                 </Col>
                 <Col>
-                <Form.Check type="checkbox" label="vegetarisch" defaultChecked={props.userData.canteenShowVegetarian ? true : false} onChange={handleMealShowCheckChange} />
-                <Form.Check type="checkbox" label="vegan" defaultChecked={props.userData.canteenShowVegan ? true : false} onChange={handleMealShowCheckChange} />
-                <Form.Check type="checkbox" label="Schweinefleisch" defaultChecked={props.userData.canteenShowPork ? true : false} onChange={handleMealShowCheckChange} />
+                <Form.Check type="checkbox" label="vegetarisch" defaultChecked={showVegetarian} onChange={handleShowVegetarianChange} />
+                <Form.Check type="checkbox" label="vegan" defaultChecked={showVegan} onChange={handleShowVeganChange} />
+                <Form.Check type="checkbox" label="Schweinefleisch" defaultChecked={showPork} onChange={handleShowPorkChange} />
                 </Col>
             </Row>
         </Container>
