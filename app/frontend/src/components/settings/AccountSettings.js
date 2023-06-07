@@ -36,24 +36,6 @@ function AccountSettings(props) {
             </Row>
            
         </Container>
-
-        <hr className="my-5 mx-3" />
-
-        <Container>
-            <Row className="mb-3">
-                <Col>
-                <h2>Kurs</h2>
-                </Col>
-            </Row>
-            <Row className="mb-3">
-                <Col md="3">
-                
-                </Col>
-                <Col md="9">
-                
-                </Col>
-            </Row>
-        </Container>
         </>
     );
 }

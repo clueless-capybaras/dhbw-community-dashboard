@@ -45,26 +45,22 @@ function Settings() {
                     <Nav.Link eventKey="account">Account</Nav.Link>
                     <Nav.Link eventKey="calendar">Kalender</Nav.Link>
                     <Nav.Link eventKey="canteen">Mensa</Nav.Link>
-                    <Nav.Link eventKey="general">Allgemein</Nav.Link>
                     <Nav.Link eventKey="about">Über</Nav.Link>
                 </Nav>
                 
                 </Col>
 
-                <Col md="9">
+                <Col>
                 {/* contents of different settings pages */}
                 <Tab.Content>
                     <Tab.Pane eventKey="account">
-                        <AccountSettings />
+                        <AccountSettings user={user} userData={userData} />
                     </Tab.Pane>
                     <Tab.Pane eventKey="calendar">
-                        <CalendarSettings />
+                        <CalendarSettings user={user} userData={userData} />
                     </Tab.Pane>
                     <Tab.Pane eventKey="canteen">
-                        <CanteenSettings />
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="general">
-                        <GeneralSettings />
+                        <CanteenSettings user={user} userData={userData} />
                     </Tab.Pane>
                     <Tab.Pane eventKey="about">
                         <AboutSettings />

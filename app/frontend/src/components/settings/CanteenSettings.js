@@ -7,25 +7,36 @@ import Form from 'react-bootstrap/Form';
 
 function CanteenSettings(props) {
 
-    const [mealShowCheck, setMealShowCheck] = useState(true); //
-
-    const handleMealShowCheckChange = event => {
-        setMealShowCheck(!mealShowCheck);
-
+    const [standardCanteen, setStandardCanteen] = useState(props.userData.canteenStandardCanteen);
+    const handleStandardCanteenChange = event => {
+        setStandardCanteen(event.target.value);
+        props.userData.canteenStandardCanteen = standardCanteen;
     }
-
-    const [highlightingCheck, setHighlightingCheck] = useState(false);
-
+    
+    const [highlightingCheck, setHighlightingCheck] = useState(props.userData.canteenHighlightingActive);
     const handleHighlightingCheckChange = event => {
         setHighlightingCheck(!highlightingCheck);
+        props.userData.canteenHighlightingActive = highlightingCheck;
     }
-
-    const [highlightingColor, setHighlightingColor] = useState("#3aac5c"); //Change the useState-Value to user's last saved settings
-
+    
+    const [highlightingColor, setHighlightingColor] = useState(props.userData.canteenHighlightingColor);
     const handleHighlightingColorChange = event => {
         setHighlightingColor(event.target.value);
-        console.log(highlightingColor);
+        props.userData.canteenHighlightingColor = highlightingColor;
     }
+
+    const [highlightingOption, setHighlightingOption] = useState(props.userData.canteenHighlightingOption);
+    const handleHighlightingOptionChange = event => {
+        setHighlightingOption(event.target.value);
+        props.userData.canteenHighlightingOption = highlightingOption;
+    }
+    
+        const [mealShowCheck, setMealShowCheck] = useState(true);
+    
+        const handleMealShowCheckChange = event => {
+            setMealShowCheck(!mealShowCheck);
+    
+        }
 
     return(
         <>
@@ -41,11 +52,11 @@ function CanteenSettings(props) {
                 <Col md="3">
                 Meine Mensa: 
                 </Col>
-                <Col md="9">
-                <Form.Select>
-                    <option>Mensa Erzbergerstraße</option>
-                    <option>Mensa am Adenauerring</option>
-                    <option>Mensa Moltke</option>
+                <Col>
+                <Form.Select defaultValue={standardCanteen} onChange={handleStandardCanteenChange}>
+                    <option value="mensa-erzbergerstrasse">Mensa Erzbergerstraße</option>
+                    <option value="mensa-am-adenauerring">Mensa am Adenauerring</option>
+                    <option value="mensa-moltke">Mensa Moltke</option>
                 </Form.Select>
                 </Col>
             </Row>
@@ -53,13 +64,12 @@ function CanteenSettings(props) {
                 <Col md="3">
                 <Form.Label>Highlighting aktivieren: </Form.Label>
                 </Col>
-                <Col md="9">
-                <Form.Check className="" type="checkbox" onChange={handleHighlightingCheckChange} id="" aria-label="activate Highlighting" />
+                <Col>
+                <Form.Check type="checkbox" defaultChecked={highlightingCheck} onChange={handleHighlightingCheckChange} aria-label="activate Highlighting" />
                 </Col>
             </Row>
 
             {/* Show following Options only when Checkbox is checked */}
-            {/* add Check for user's saved settings */}
             { highlightingCheck ?
 
             <>
@@ -67,7 +77,7 @@ function CanteenSettings(props) {
                 <Col md="3">
                 <Form.Label>Highlighting-Farbe: </Form.Label>
                 </Col>
-                <Col md="9">
+                <Col>
                 <Form.Control type="color" defaultValue={highlightingColor} title="Color Picker" id="highlightingColorPicker" onChange={handleHighlightingColorChange} />
                 </Col>
             </Row>
@@ -76,11 +86,11 @@ function CanteenSettings(props) {
                 <Col md="3">
                 <Form.Label>Highlighting-Typen: </Form.Label>
                 </Col>
-                <Col md="9">
-                <Form.Select>
-                    <option>vegetarisch</option>
-                    <option>vegan</option>
-                    <option>Schweinefleisch</option>
+                <Col>
+                <Form.Select defaultValue={highlightingOption} onChange={handleHighlightingOptionChange}>
+                    <option value="vegetarisch">vegetarisch</option>
+                    <option value="vegan">vegan</option>
+                    <option value="schweinefleisch">Schweinefleisch</option>
                 </Form.Select>
                 </Col>
             </Row>
@@ -103,10 +113,10 @@ function CanteenSettings(props) {
                 <Col md="3">
                 <Form.Label>Gerichte anzeigen mit Eigenschaft:</Form.Label>
                 </Col>
-                <Col md="9">
-                <Form.Check type="checkbox" label="vegetarisch" checked={mealShowCheck} onChange={handleMealShowCheckChange} />
-                <Form.Check type="checkbox" label="vegan" checked={mealShowCheck} onChange={handleMealShowCheckChange} />
-                <Form.Check type="checkbox" label="Schweinefleisch" checked={mealShowCheck} onChange={handleMealShowCheckChange} />
+                <Col>
+                <Form.Check type="checkbox" label="vegetarisch" defaultChecked={props.userData.canteenShowVegetarian ? true : false} onChange={handleMealShowCheckChange} />
+                <Form.Check type="checkbox" label="vegan" defaultChecked={props.userData.canteenShowVegan ? true : false} onChange={handleMealShowCheckChange} />
+                <Form.Check type="checkbox" label="Schweinefleisch" defaultChecked={props.userData.canteenShowPork ? true : false} onChange={handleMealShowCheckChange} />
                 </Col>
             </Row>
         </Container>
