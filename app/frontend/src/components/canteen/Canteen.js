@@ -72,7 +72,13 @@ function Canteen(){
                                                         return true;
                                                 }
                                             })
-                                            .map((meal) => <CanteenMealCard key={meal.name} meal={meal} />)}
+                                            .map((meal) => <CanteenMealCard key={meal.name} meal={meal} highlight={
+                                                {
+                                                    "active": settings && settings.canteenHighlightingActive,
+                                                    "color": settings.canteenHighlightingColor,
+                                                    "category": settings.canteenHighlightingOption
+                                                }
+                                                } />)}
                                         </Row>
                                     </Tab>)
                                 })}
