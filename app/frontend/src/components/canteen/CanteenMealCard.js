@@ -14,7 +14,6 @@ function CanteenMealCard(props){
         (props.highlight.category === "vegetarian" && props.meal.meatCategory === "vegetarisch") ||
         (props.highlight.category === "vegan" && props.meal.meatCategory === "vegan")
         )) {
-        console.log("highlight "+ props.meal.name + " with " + props.highlight.color + " because of " + props.highlight.category);
         styleOfCard = {width: '25rem', textAlign: 'left', margin: 'auto', shadow: 'none', border: 'solid', borderColor: props.highlight.color};
     };
     return(
