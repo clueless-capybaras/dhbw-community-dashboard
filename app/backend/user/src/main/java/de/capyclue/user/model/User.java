@@ -39,14 +39,8 @@ public class User {
     @Column(name = "canteenHighlightingOption", nullable = true)
     private String canteenHighlightingOption;
 
-    @Column(name = "canteenShowVegetarian", nullable = true)
-    private Boolean canteenShowVegetarian;
-
-    @Column(name = "canteenShowVegan", nullable = true)
-    private Boolean canteenShowVegan;
-
-    @Column(name = "canteenShowPork", nullable = true)
-    private Boolean canteenShowPork;
+    @Column(name = "canteenFilteringOption", nullable = true)
+    private String canteenFilteringOption;
 
     public User(String id, String nickname, String email, String picture) {
         this.id = id;
@@ -57,9 +51,6 @@ public class User {
         this.canteenHighlightingActive = false;
         this.canteenHighlightingColor = "#3aac5c";
         this.canteenHighlightingOption = "vegetarian";
-        this.canteenShowVegetarian = true;
-        this.canteenShowVegan = true;
-        this.canteenShowPork = true;
     }
 
     public User() {
@@ -152,28 +143,12 @@ public class User {
         this.canteenHighlightingOption = canteenHighlightingOption;
     }
 
-    public Boolean getCanteenShowVegetarian() {
-        return canteenShowVegetarian;
+    public String getCanteenFilteringOption() {
+        return canteenFilteringOption;
     }
 
-    public void setCanteenShowVegetarian(Boolean canteenShowVegetarian) {
-        this.canteenShowVegetarian = canteenShowVegetarian;
-    }
-
-    public Boolean getCanteenShowVegan() {
-        return canteenShowVegan;
-    }
-
-    public void setCanteenShowVegan(Boolean canteenShowVegan) {
-        this.canteenShowVegan = canteenShowVegan;
-    }
-
-    public Boolean getCanteenShowPork() {
-        return canteenShowPork;
-    }
-
-    public void setCanteenShowPork(Boolean canteenShowPork) {
-        this.canteenShowPork = canteenShowPork;
+    public void setCanteenFilteringOption(String canteenFilteringOption) {
+        this.canteenFilteringOption = canteenFilteringOption;
     }
 
     @Override
@@ -184,14 +159,12 @@ public class User {
                 ", displayName='" + displayName + '\'' +
                 ", calendarTimeFormat=" + calendarTimeFormat +
                 ", calendarStandardView='" + calendarStandardView + '\'' +
-                ", calendarLink=" + calendarLink +
+                ", calendarLink='" + calendarLink + '\'' +
                 ", canteenStandardCanteen='" + canteenStandardCanteen + '\'' +
                 ", canteenHighlightingActive=" + canteenHighlightingActive +
                 ", canteenHighlightingColor='" + canteenHighlightingColor + '\'' +
                 ", canteenHighlightingOption='" + canteenHighlightingOption + '\'' +
-                ", canteenShowVegetarian=" + canteenShowVegetarian +
-                ", canteenShowVegan=" + canteenShowVegan +
-                ", canteenShowPork=" + canteenShowPork +
+                ", canteenFilteringOption='" + canteenFilteringOption + '\'' +
                 '}';
     }
 }

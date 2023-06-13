@@ -8,11 +8,13 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Spinner from 'react-bootstrap/Spinner';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import { useAuth0 } from "@auth0/auth0-react";
 
 import {CanteenHttpClientContext} from '../../App';
 import CanteenMealCard from "./CanteenMealCard";
 
 function Canteen(){
+    const { user, isAuthenticated, getAccessTokenSilently} = useAuth0();
     const { whichCanteen } = useParams();
     const navigate = useNavigate();
     const canteens = [
@@ -25,8 +27,10 @@ function Canteen(){
     // managing the menu
     const canteenHttpClient = useContext(CanteenHttpClientContext);
     const [dailyMenus, setDailyMenus] = useState(null);
+    const [settings, setSettings] = useState(null);
     useEffect(() => {
         setDailyMenus(null);
+        canteenHttpClient.getCanteenSettings(isAuthenticated, getAccessTokenSilently).then((s) => setSettings(s));
         canteenHttpClient.getWeeklyMenuOfCanteen(canteen.key).then((dm) => setDailyMenus(dm));
     }, [canteen.key, canteenHttpClient, whichCanteen]);
     const weekdayReference = new Date().toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' });
@@ -54,7 +58,21 @@ function Canteen(){
                                     const weekday = new Date(dailyMenu.day).toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' });
                                     return (<Tab eventKey={weekday} title={weekday}>
                                         <Row>
-                                            {dailyMenu.options.map((meal) => <CanteenMealCard key={meal.name} meal={meal} />)}
+                                            {dailyMenu.options
+                                            .filter((meal) => {
+                                                if (!settings || !settings.canteenFilteringOption || settings.canteenFilteringOption === "all") return true;
+                                                switch (settings.canteenFilteringOption) {
+                                                    case "nopork":
+                                                        return (meal.meatCategory !== "Schwein");
+                                                    case "vegetarian":
+                                                        return (meal.meatCategory === "vegetarisch" || meal.meatCategory === "vegan");
+                                                    case "vegan":
+                                                        return (meal.meatCategory === "vegan");
+                                                    default:
+                                                        return true;
+                                                }
+                                            })
+                                            .map((meal) => <CanteenMealCard key={meal.name} meal={meal} />)}
                                         </Row>
                                     </Tab>)
                                 })}

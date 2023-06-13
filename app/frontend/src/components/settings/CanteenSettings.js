@@ -22,11 +22,16 @@ function CanteenSettings(props) {
     const handleHighlightingOptionChange = (e) => {
         setHighlightingOption(e.target.value);
     };
+    const [filteringOption, setFilteringOption] = useState(props.dbUser.canteenFilteringOption || 'all');
+    const handleFilteringOptionChange = (e) => {
+        setFilteringOption(e.target.value);
+    };
     useEffect(() => {
         setColor(props.dbUser.canteenHighlightingColor);
         setCanteen(props.dbUser.canteenStandardCanteen);
         setHighlightingOption(props.dbUser.canteenHighlightingOption);
-    }, [props.dbUser.canteenHighlightingColor, props.dbUser.canteenStandardCanteen, props.dbUser.canteenHighlightingOption]);
+        setFilteringOption(props.dbUser.canteenFilteringOption);
+    }, [props.dbUser.canteenHighlightingColor, props.dbUser.canteenStandardCanteen, props.dbUser.canteenHighlightingOption, props.dbUser.canteenFilteringOption]);
    
     return(
         <>
@@ -98,12 +103,15 @@ function CanteenSettings(props) {
 
             <Row className="mb-3">
                 <Col md="3">
-                <Form.Label>Gerichte anzeigen mit Eigenschaft:</Form.Label>
+                <Form.Label>Gerichte anzeigen mit Mindesteigenschaft:</Form.Label>
                 </Col>
                 <Col md="9">
-                <Form.Check id="canteenShowVegetarian" defaultChecked={props.dbUser.canteenShowVegetarian} type="checkbox" label="vegetarisch"  />
-                <Form.Check id="canteenShowVegan" defaultChecked={props.dbUser.canteenShowVegan} type="checkbox" label="vegan"  />
-                <Form.Check id="canteenShowPork" defaultChecked={props.dbUser.canteenShowPork} type="checkbox" label="Schweinefleisch" />
+                <Form.Select id="filteringOptionSelect" value={filteringOption} onChange={handleFilteringOptionChange}>
+                    <option value="all">Alle Anzeigen</option>
+                    <option value="nopork">Kein Schweinefleisch</option>
+                    <option value="vegetarian">vegetarisch</option>
+                    <option value="vegan">vegan</option>
+                </Form.Select>
                 </Col>
             </Row>
             <Row className="mb-3">
@@ -125,9 +133,7 @@ function handleSave(newDbUser, auth0User, isAuthenticated, getAccessTokenSilentl
     newDbUser.canteenHighlightingActive = document.getElementById("highlightingCheck").checked;
     newDbUser.canteenHighlightingColor = document.getElementById("highlightingColorSelect").value;
     newDbUser.canteenHighlightingOption = document.getElementById("highlightingOptionSelect").value;
-    newDbUser.canteenShowVegetarian = document.getElementById("canteenShowVegetarian").checked;
-    newDbUser.canteenShowVegan = document.getElementById("canteenShowVegan").checked;
-    newDbUser.canteenShowPork = document.getElementById("canteenShowPork").checked;
+    newDbUser.canteenFilteringOption = document.getElementById("filteringOptionSelect").value;
 
 
     //console.log("newDbUser", newDbUser);

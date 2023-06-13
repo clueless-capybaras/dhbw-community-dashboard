@@ -27,9 +27,6 @@ public class UserService implements IUserService {
         } catch (Exception e) {
             System.out.println("user not found");
         }
-        user.setCanteenShowVegetarian((user.getCanteenShowVegetarian() == null) || user.getCanteenShowVegetarian());
-        user.setCanteenShowVegan((user.getCanteenShowVegan() == null) || user.getCanteenShowVegan());
-        user.setCanteenShowPork((user.getCanteenShowPork() == null) || user.getCanteenShowPork());
         return user;
     }
 
