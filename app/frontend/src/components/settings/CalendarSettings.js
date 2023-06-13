@@ -4,8 +4,11 @@ import Col from "react-bootstrap/Col";
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
+import { useAuth0 } from '@auth0/auth0-react';
+import { baseUrlUser } from '../../config';
 
 function CalendarSettings(props) {
+    const {isAuthenticated, getAccessTokenSilently} = useAuth0();
     
     return(
         <>
@@ -23,8 +26,8 @@ function CalendarSettings(props) {
                 Format: 
                 </Col>
                 <Col md="9">
-                <Form.Check type="radio" name="hourFormatRadioGroup" label="24 Stunden" defaultChecked />
-                <Form.Check type="radio" name="hourFormatRadioGroup" label="12 Stunden" />
+                <Form.Check disabled type="radio" name="hourFormatRadioGroup" label="24 Stunden" defaultChecked />
+                <Form.Check disabled type="radio" name="hourFormatRadioGroup" label="12 Stunden" />
                 </Col>
             </Row>
 
@@ -33,7 +36,7 @@ function CalendarSettings(props) {
                 Standard Ansicht: 
                 </Col>
                 <Col md="9">
-                <Form.Select>
+                <Form.Select disabled>
                     <option>Tag</option>
                     <option>Arbeitswoche</option>
                     <option>Woche</option>
@@ -49,12 +52,12 @@ function CalendarSettings(props) {
         <Container>
             <Row className="mb-3">
                 <Col>
-                <h2>Kalender hinzufügen/entfernen</h2>
+                <h2>RAPLA Kalender</h2>
                 </Col>
             </Row>
             <Row className="mb-3">
                 <Col md="3">
-                Kalender hinzufügen: 
+                RAPLA Link: 
                 </Col>
                 <Container>
                     <Row>
@@ -64,15 +67,44 @@ function CalendarSettings(props) {
                     </Row>
                 </Container>
                 <Col md="8">
-                <Form.Control type="link" placeholder="https://rapla.dhbw-karlsruhe.de/..." />
+                <Form.Control id="calendarLink" type="link" placeholder="https://rapla.dhbw-karlsruhe.de/..."
+                defaultValue={props.dbUser.calendarLink}
+                />
                 </Col>
                 <Col md="1">
-                <Button type="button" onClick="">+</Button>
+                <Button type="button" onClick={()=>handleSave(props.dbUser, props.auth0User, isAuthenticated, getAccessTokenSilently)}>Speichern</Button>
                 </Col>
             </Row>
         </Container>
         </>
     );
+}
+
+function handleSave(newDbUser, auth0User, isAuthenticated, getAccessTokenSilently) {
+    console.log("Speichern");
+    newDbUser.id = auth0User.sub;
+    newDbUser.nickname = auth0User.nickname;
+    newDbUser.email = auth0User.email;
+
+    //validate if calendarLink is valid
+    newDbUser.calendarLink = document.getElementById('calendarLink').value;
+
+    //console.log("newDbUser", newDbUser);
+    if (!isAuthenticated) {
+        return;
+    }
+    (async () => {
+    let token = await getAccessTokenSilently();
+    const response = await fetch(baseUrlUser+'/user/', {
+        method: 'PUT',
+        headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newDbUser)
+    });
+    //console.log("response", response);
+    })();
 }
 
 export default CalendarSettings;

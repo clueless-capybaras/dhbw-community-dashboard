@@ -34,11 +34,17 @@ public class UserController {
     public User getUserByAuth0Token(Authentication authentication){
         String auth0UserId = authentication.getName();
         System.out.println("auth0UserId: " + auth0UserId);
-        User user = new User();
-        user.setId("1L");
-        user.setNickname("max.mushter");
-        user.setEmail("max.mushter@email.de");
-        return user;
+        return this.userService.getUserById(auth0UserId);
+    }
+
+    @PutMapping(path = "/user")
+    public void saveUser(@RequestBody User user, Authentication authentication){
+        String auth0UserId = authentication.getName();
+        if(!auth0UserId.equals(user.getId())){
+            throw new IllegalArgumentException("user id does not match auth0 user id");
+        }
+        System.out.println("user: " + user);
+        this.userService.saveUser(user);
     }
 
 }

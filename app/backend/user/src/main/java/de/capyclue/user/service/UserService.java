@@ -21,7 +21,16 @@ public class UserService implements IUserService {
     }
 
     public User getUserById(String id) {
-        return userRepository.findById(id);
+        User user = new User();
+        try {
+            user = userRepository.findById(id);
+        } catch (Exception e) {
+            System.out.println("user not found");
+        }
+        user.setCanteenShowVegetarian((user.getCanteenShowVegetarian() == null) || user.getCanteenShowVegetarian());
+        user.setCanteenShowVegan((user.getCanteenShowVegan() == null) || user.getCanteenShowVegan());
+        user.setCanteenShowPork((user.getCanteenShowPork() == null) || user.getCanteenShowPork());
+        return user;
     }
 
     public void saveUser(User user) {

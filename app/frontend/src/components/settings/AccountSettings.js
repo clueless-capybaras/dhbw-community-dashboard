@@ -6,8 +6,12 @@ import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
+import { useAuth0 } from '@auth0/auth0-react';
+import { baseUrlUser } from '../../config';
 
 function AccountSettings(props) {
+    const {isAuthenticated, getAccessTokenSilently} = useAuth0();
 
     return(
         <>
@@ -21,14 +25,20 @@ function AccountSettings(props) {
                         <Card.Title>User</Card.Title>
                     </Card.Header>
                     <Card.Body>
-                        <Image src={require("../../images/robert-habeck.jpg")} className="mb-2" style={{maxWidth: "15rem", maxHeight: "auto"}} roundedCircle />
+                        <Image src={props.auth0User.picture} className="mb-2" style={{maxWidth: "15rem", maxHeight: "auto"}} roundedCircle />
                         <ListGroup variant="flush">
-                            <ListGroup.Item>Robert Habeck</ListGroup.Item>
-                            <ListGroup.Item>TINF21B4</ListGroup.Item>
-                            <ListGroup.Item>habeck.robert.a21@student.dhbw-karlsruhe.de</ListGroup.Item>
+                            <ListGroup.Item>
+                            <InputGroup className="mb-3">
+                                <InputGroup.Text>Anzeigename</InputGroup.Text>
+                                <Form.Control
+                                id='displayName'
+                                defaultValue={props.dbUser.displayName}
+                                />
+                            </InputGroup>
+                            </ListGroup.Item>
+                            <ListGroup.Item>{props.auth0User.email}</ListGroup.Item>
                         </ListGroup>
-                        <Button variant="primary" className="mx-1">Ändern</Button>
-                        <Button variant="danger" className="mx-1">Löschen</Button>
+                        <Button variant="primary" className="mx-1" id="saveButton" onClick={()=>handleSave(props.dbUser, props.auth0User, isAuthenticated, getAccessTokenSilently)}>Speichern</Button>
                     </Card.Body>
                 </Card>
                 </Col>
@@ -36,26 +46,33 @@ function AccountSettings(props) {
             </Row>
            
         </Container>
-
-        <hr className="my-5 mx-3" />
-
-        <Container>
-            <Row className="mb-3">
-                <Col>
-                <h2>Kurs</h2>
-                </Col>
-            </Row>
-            <Row className="mb-3">
-                <Col md="3">
-                
-                </Col>
-                <Col md="9">
-                
-                </Col>
-            </Row>
-        </Container>
         </>
     );
+}
+
+function handleSave(newDbUser, auth0User, isAuthenticated, getAccessTokenSilently) {
+    console.log("Speichern");
+    newDbUser.id = auth0User.sub;
+    newDbUser.nickname = auth0User.nickname;
+    newDbUser.email = auth0User.email;
+    newDbUser.displayName = document.getElementById('displayName').value;
+
+    //console.log("newDbUser", newDbUser);
+    if (!isAuthenticated) {
+        return;
+    }
+    (async () => {
+    let token = await getAccessTokenSilently();
+    const response = await fetch(baseUrlUser+'/user/', {
+        method: 'PUT',
+        headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newDbUser)
+    });
+    //console.log("response", response);
+    })();
 }
 
 export default AccountSettings;
