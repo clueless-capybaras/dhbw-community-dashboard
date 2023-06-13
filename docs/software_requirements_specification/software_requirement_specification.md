@@ -67,7 +67,7 @@ with respect to [Vanessas research on univerity apps](https://capyclue.atlassian
 As a DHBW student I want to have my lecture schedule displayed up to date to recent changes to see all my upcoming lectures.
 
 **Derivatives** from this user story:
-- I want RAPLA to be synchronized with my calendar on a daily basis // 12 h basis / when I login
+- I want RAPLA to be synchronized with my calendar on a daily basis // 12 h basis // when I login
 - I want to have at least a week and a day view such that upcoming events can be seen comfortably
 
 ![Wireframe: main calendar view with lectures and private appointments](../wireframes/WFM_Calendar.png)
@@ -133,7 +133,7 @@ As a student I want to have held my personal data in a secure environment such t
 As a student I want certain features to be accessible for people irrespective of them being signed up to the DHBW Community Dashboard such that I can easily share campus information with guests and friends.
 
 ### Student requirement: Course affiliation
-As a student I want to be able to easily be associated with my DHBW course such that I get access to to course specific information.
+As a student I want to be able to easily be associated with my DHBW course such that I get access to course specific information.
 
 ### Student requirement: Confirm my course representative
 As a student I want to be able to confirm my course representative within the application such that there is a way to ensure, that my course is represented by the right person.
