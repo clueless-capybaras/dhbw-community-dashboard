@@ -10,20 +10,20 @@ export default class CanteenHttpClient {
     }
 
     async getCanteenSettings(isAuthenticated, getAccessTokenSilently){
-        console.log("getCanteenSettings");
+        //console.log("getCanteenSettings");
         if (!isAuthenticated) {
             return;
         }
         let token = await getAccessTokenSilently();
-        console.log(token);
+        //console.log(token);
         const response = await fetch(baseUrlUser+'/user/', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
         });
-        console.log(response);
+        //console.log(response);
         let data = await response.json();
-        console.log(data);
+        //console.log(data);
         return data;
     }
 }

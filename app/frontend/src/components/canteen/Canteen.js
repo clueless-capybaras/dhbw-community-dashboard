@@ -30,11 +30,17 @@ function Canteen(){
     const [settings, setSettings] = useState(null);
     useEffect(() => {
         setDailyMenus(null);
-        canteenHttpClient.getCanteenSettings(isAuthenticated, getAccessTokenSilently).then((s) => setSettings(s));
-        canteenHttpClient.getWeeklyMenuOfCanteen(canteen.key).then((dm) => setDailyMenus(dm));
+        canteenHttpClient.getCanteenSettings(isAuthenticated, getAccessTokenSilently).then((s) => {
+            setSettings(s);
+            if(isAuthenticated && s && s.canteenStandardCanteen && s.canteenStandardCanteen !== canteen.key){
+                navigate('/canteen/'+s.canteenStandardCanteen);
+            }
+            canteenHttpClient.getWeeklyMenuOfCanteen(canteen.key).then((dm) => setDailyMenus(dm));
+        });
     }, [canteen.key, canteenHttpClient, whichCanteen]);
     const weekdayReference = new Date().toLocaleDateString('de-DE', { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' });
-    
+
+
     return(
         <Container>
             <Row>
@@ -72,11 +78,11 @@ function Canteen(){
                                                         return true;
                                                 }
                                             })
-                                            .map((meal) => <CanteenMealCard key={meal.name} meal={meal} highlight={
+                                            .map((meal) => <CanteenMealCard key={meal.name+"_"+weekday+"_"+Math.random()} meal={meal} highlight={
                                                 {
                                                     "active": settings && settings.canteenHighlightingActive,
-                                                    "color": settings.canteenHighlightingColor,
-                                                    "category": settings.canteenHighlightingOption
+                                                    "color": settings?settings.canteenHighlightingColor:"",
+                                                    "category": settings?settings.canteenHighlightingOption:""
                                                 }
                                                 } />)}
                                         </Row>
