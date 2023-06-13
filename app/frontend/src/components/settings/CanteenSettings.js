@@ -107,9 +107,9 @@ function CanteenSettings(props) {
                 </Col>
             </Row>
             <Row className="mb-3">
-                <Col md="3">
-                    <Button variant="primary" onClick={() => handleSave(props.dbUser, props.auth0User, isAuthenticated, getAccessTokenSilently)}>Speichern</Button>
-                </Col>    
+                <Col className="d-flex justify-content-center">
+                <Button variant="primary" className="mx-1" id="saveButton" onClick={()=>handleSave(props.dbUser, props.auth0User, isAuthenticated, getAccessTokenSilently)}>Speichern</Button>
+                </Col>
             </Row>
         </Container>
         </>

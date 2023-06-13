@@ -38,11 +38,14 @@ function AccountSettings(props) {
                             </ListGroup.Item>
                             <ListGroup.Item>{props.auth0User.email}</ListGroup.Item>
                         </ListGroup>
-                        <Button variant="primary" className="mx-1" id="saveButton" onClick={()=>handleSave(props.dbUser, props.auth0User, isAuthenticated, getAccessTokenSilently)}>Speichern</Button>
                     </Card.Body>
                 </Card>
                 </Col>
-
+            </Row>
+            <Row className="mb-3">
+                <Col className="d-flex justify-content-center">
+                <Button variant="primary" className="mx-1" id="saveButton" onClick={()=>handleSave(props.dbUser, props.auth0User, isAuthenticated, getAccessTokenSilently)}>Speichern</Button>
+                </Col>
             </Row>
            
         </Container>
