@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name="events")
@@ -38,8 +39,11 @@ public class Event {
     @Column(name = "url", nullable = true)
     private final String url;
 
+    @ElementCollection
+    private final List<LocalDateTime> exdate;
 
-    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, Duration duration, FcRRule rrule, String url) {
+
+    public Event(String uuid, String title, String description, LocalDateTime start, LocalDateTime end, Duration duration, FcRRule rrule, String url, List<LocalDateTime> exdate) {
         this.uuid = uuid;
         this.title = title;
         this.description = description;
@@ -48,6 +52,7 @@ public class Event {
         this.duration = duration;
         this.rrule = rrule;
         this.url = url;
+        this.exdate = exdate;
     }
 
     public Event() {
@@ -59,6 +64,7 @@ public class Event {
         this.duration = null;
         this.rrule = null;
         this.url = null;
+        this.exdate = null;
     }
 
     public String getUuid() {
@@ -102,5 +108,9 @@ public class Event {
 
     public FcRRule getRrule() {
         return rrule;
+    }
+
+    public List<LocalDateTime> getExdate() {
+        return exdate;
     }
 }
