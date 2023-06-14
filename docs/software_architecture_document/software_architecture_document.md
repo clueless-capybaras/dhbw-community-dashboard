@@ -38,7 +38,7 @@ The Use cases that are relevant for the architecture have - at this stage - been
 
 The following use cases have therefore been selected:
 + The overall usecase diagram because it displays the variety of services
-+ The activity diagram for adding a new appointment to the calendar because it represents both the calendar as an integral service that is expected to be steadily available  and a case of user specific backend communication. A full use case realization document will be added to a later version of the software architecture document.
++ The activity diagram for adding a new appointment to the calendar because it represents both the calendar as an integral service that is expected to be steadily available  and a case of user specific backend communication.
 
 ## Overall Use Case Diagram
 ![Overall Use-Case Diagram](../use_case_diagrams/UCD1_overall.png)
@@ -89,11 +89,11 @@ This diagram provides a view of hardware and virtualised components involved in 
 
 ![component diagram](../component_diagrams/CD1_components.png)
 
-This component diagram displays the architecurally releveant modulation of the software. The project is split into a react frontend and multiple microservices consisting of a java spring-boot rest backend and corresponding mariadb databases. Each component is nested in a seperate docker container, where only the rest backends and the react frontend will be exposed to the user, the databses are only addressable by the backends.
+This component diagram displays the architecurally releveant modulation of the software. The project is split into a react frontend and multiple microservices consisting of a java spring-boot rest backend and corresponding mariadb databases. Each component is nested in a seperate docker container, where only the rest backends and the react frontend will be exposed to the user, the databases are only addressable by the backends.
 
 # Performance
 
-An important architectural decision that the system's performance benifits from is to implement caching in several contexts such that the overhead of loading the displayable HTML, JS and CSS is kept as minimal as possible. While a certain size is realistically unavoidable here, concepts like lazy loading, resource injection and minification should be adhered to.
+An important architectural decision that the system's performance benefits from, is to implement caching in several contexts such that the overhead of loading the displayable HTML, JS and CSS is kept as minimal as possible. While a certain size is realistically unavoidable here, concepts like lazy loading, resource injection and minification should be adhered to.
 
 Moreover to ensure both the availability and a proper performance in cases of a slow internet connection a bad-connection-mode will be implemented.
 
