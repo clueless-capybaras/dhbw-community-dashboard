@@ -7,16 +7,23 @@ import interactionPlugin from '@fullcalendar/interaction'
 import rrulePlugin from '@fullcalendar/rrule'
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import Container from 'react-bootstrap/esm/Container';
+import { useAuth0 } from '@auth0/auth0-react';
 
 import {CalendarHttpClientContext} from '../../App';
 import { tinf21B4Rapla } from "../../config";
 
 function Calendar() {
+  const { user, isAuthenticated, getAccessTokenSilently} = useAuth0();
   const calendarHttpClient = useContext(CalendarHttpClientContext);
+  const [settings, setSettings] = useState(null);
   const [events, setEvents] = useState(null);
   useEffect(() => {
     setEvents(null);
-    calendarHttpClient.getEventsFromRapla(tinf21B4Rapla).then((ev) => {setEvents(ev); console.log(ev);});
+    calendarHttpClient.getCalendarSettings(isAuthenticated, getAccessTokenSilently).then((s) => {
+      setSettings(s);
+      let raplaUrl = (s && s.calendarLink) ? s.calendarLink : tinf21B4Rapla;
+      calendarHttpClient.getEventsFromRapla(raplaUrl).then((ev) => {setEvents(ev); console.log(ev);});
+    });
   }, []
   );
   return (

@@ -21,7 +21,13 @@ public class UserService implements IUserService {
     }
 
     public User getUserById(String id) {
-        return userRepository.findById(id);
+        User user = new User();
+        try {
+            user = userRepository.findById(id);
+        } catch (Exception e) {
+            System.out.println("user not found");
+        }
+        return user;
     }
 
     public void saveUser(User user) {

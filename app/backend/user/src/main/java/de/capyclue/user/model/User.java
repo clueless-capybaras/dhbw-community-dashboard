@@ -16,57 +16,41 @@ public class User {
     @Column(name = "displayName", nullable = true)
     private String displayName;
 
-    @Column(name = "email", nullable = false)
-    private String email;
-
-    @Column(name = "picture", nullable = false)
-    private String picture;
-
-    @Column(name = "calendarTimeFormat", nullable = false)
+    @Column(name = "calendarTimeFormat", nullable = true)
     private Integer calendarTimeFormat;
 
-    @Column(name = "calendarStandardView", nullable = false)
+    @Column(name = "calendarStandardView", nullable = true)
     private String calendarStandardView;
 
     @Column(name = "calendarLink", nullable = true)
-    @ElementCollection(targetClass=String.class)
-    private List<String> calendarLink;
+    //@ElementCollection(targetClass=String.class)
+    //private List<String> calendarLink;
+    private String calendarLink;
 
-    @Column(name = "canteenStandardCanteen", nullable = false)
+    @Column(name = "canteenStandardCanteen", nullable = true)
     private String canteenStandardCanteen;
 
-    @Column(name = "canteenHighlightingActive", nullable = false)
+    @Column(name = "canteenHighlightingActive", nullable = true)
     private Boolean canteenHighlightingActive;
 
-    @Column(name = "canteenHighlightingColor", nullable = false)
+    @Column(name = "canteenHighlightingColor", nullable = true)
     private String canteenHighlightingColor;
 
-    @Column(name = "canteenHighlightingOption", nullable = false)
+    @Column(name = "canteenHighlightingOption", nullable = true)
     private String canteenHighlightingOption;
 
-    @Column(name = "canteenShowVegetarian", nullable = false)
-    private Boolean canteenShowVegetarian;
-
-    @Column(name = "canteenShowVegan", nullable = false)
-    private Boolean canteenShowVegan;
-
-    @Column(name = "canteenShowPork", nullable = false)
-    private Boolean canteenShowPork;
+    @Column(name = "canteenFilteringOption", nullable = true)
+    private String canteenFilteringOption;
 
     public User(String id, String nickname, String email, String picture) {
         this.id = id;
         this.nickname = nickname;
-        this.email = email;
-        this.picture = picture;
         this.calendarTimeFormat = 24;
         this.calendarStandardView = "timeGridWeek";
         this.canteenStandardCanteen = "mensa-erzbergerstrasse";
         this.canteenHighlightingActive = false;
         this.canteenHighlightingColor = "#3aac5c";
         this.canteenHighlightingOption = "vegetarian";
-        this.canteenShowVegetarian = true;
-        this.canteenShowVegan = true;
-        this.canteenShowPork = true;
     }
 
     public User() {
@@ -96,22 +80,6 @@ public class User {
         this.displayName = displayName;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
     public Integer getCalendarTimeFormat() {
         return calendarTimeFormat;
     }
@@ -127,7 +95,7 @@ public class User {
     public void setCalendarStandardView(String calendarStandardView) {
         this.calendarStandardView = calendarStandardView;
     }
-
+/*
     public List<String> getCalendarLink() {
         return calendarLink;
     }
@@ -135,7 +103,14 @@ public class User {
     public void setCalendarLink(List<String> calendarLink) {
         this.calendarLink = calendarLink;
     }
+*/
+    public String getCalendarLink() {
+        return calendarLink;
+    }
 
+    public void setCalendarLink(String calendarLink) {
+        this.calendarLink = calendarLink;
+    }
     public String getCanteenStandardCanteen() {
         return canteenStandardCanteen;
     }
@@ -168,27 +143,28 @@ public class User {
         this.canteenHighlightingOption = canteenHighlightingOption;
     }
 
-    public Boolean getCanteenShowVegetarian() {
-        return canteenShowVegetarian;
+    public String getCanteenFilteringOption() {
+        return canteenFilteringOption;
     }
 
-    public void setCanteenShowVegetarian(Boolean canteenShowVegetarian) {
-        this.canteenShowVegetarian = canteenShowVegetarian;
+    public void setCanteenFilteringOption(String canteenFilteringOption) {
+        this.canteenFilteringOption = canteenFilteringOption;
     }
 
-    public Boolean getCanteenShowVegan() {
-        return canteenShowVegan;
-    }
-
-    public void setCanteenShowVegan(Boolean canteenShowVegan) {
-        this.canteenShowVegan = canteenShowVegan;
-    }
-
-    public Boolean getCanteenShowPork() {
-        return canteenShowPork;
-    }
-
-    public void setCanteenShowPork(Boolean canteenShowPork) {
-        this.canteenShowPork = canteenShowPork;
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", displayName='" + displayName + '\'' +
+                ", calendarTimeFormat=" + calendarTimeFormat +
+                ", calendarStandardView='" + calendarStandardView + '\'' +
+                ", calendarLink='" + calendarLink + '\'' +
+                ", canteenStandardCanteen='" + canteenStandardCanteen + '\'' +
+                ", canteenHighlightingActive=" + canteenHighlightingActive +
+                ", canteenHighlightingColor='" + canteenHighlightingColor + '\'' +
+                ", canteenHighlightingOption='" + canteenHighlightingOption + '\'' +
+                ", canteenFilteringOption='" + canteenFilteringOption + '\'' +
+                '}';
     }
 }

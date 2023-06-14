@@ -8,9 +8,17 @@ function CanteenMealCard(props){
     if (props.meal.name.length > 59) {
         styleOfTitle = {minHeight: '4rem', fontSize: '13pt'};
     }
+    let styleOfCard = {width: '25rem', textAlign: 'left', margin: 'auto', shadow: 'none'};
+    if (props.highlight && props.highlight.active === true && (
+        (props.highlight.category === "pork" && props.meal.meatCategory === "Schwein") ||
+        (props.highlight.category === "vegetarian" && props.meal.meatCategory === "vegetarisch") ||
+        (props.highlight.category === "vegan" && props.meal.meatCategory === "vegan")
+        )) {
+        styleOfCard = {width: '25rem', textAlign: 'left', margin: 'auto', shadow: 'none', border: 'solid', borderColor: props.highlight.color};
+    };
     return(
         <Col>
-            <Card bg="light" className="mb-3" style={{ width: '25rem', textAlign: 'left', margin: 'auto' }}>
+            <Card bg="light" className="mb-3" style={styleOfCard}>
                 <Card.Body>
                     <Card.Title style={styleOfTitle}>{props.meal.name}</Card.Title>
                     <Badge bg="success" style={{ fontSize: '1rem' }}>{props.meal.meatCategory}</Badge>
