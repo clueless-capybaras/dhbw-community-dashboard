@@ -37,6 +37,29 @@ public class CalendarService implements ICalendarService {
         }
         return etOut;
     }
+
+    private static List<LocalDateTime> parseToET(Property exdate) {
+        Parameter tzid = exdate.getParameter("TZID");
+        List<LocalDateTime> exdateOut = new ArrayList<>();
+        if (tzid != null) {
+            String[] exdateValues = exdate.getValue().split(",");
+            for (String dtValue : exdateValues) {
+                DateTimeFormatter f = DateTimeFormatter.ofPattern( "uuuuMMdd'T'HHmmss");
+                LocalDateTime ldt = LocalDateTime.parse( dtValue , f );
+                ZoneId z = ZoneId.of(tzid.getValue());
+                ZonedDateTime zdt = ldt.atZone( z );
+                Instant utct = Instant.from(zdt);
+                exdateOut.add(LocalDateTime.ofInstant(utct, ZoneId.of("Europe/Berlin")));
+            }
+        } else {
+            String[] exdateValues = exdate.getValue().split(",");
+            for (String dtValue : exdateValues) {
+                DateTimeFormatter f = DateTimeFormatter.ofPattern( "uuuuMMdd'T'HHmmss");
+                LocalDateTime ldt = LocalDateTime.parse( dtValue , f );
+                exdateOut.add(ldt);            }
+        }
+        return exdateOut;
+    }
     private final EventRepository eventRepository;
     private final FcRRuleRepository fcRRuleRepository;
 
@@ -77,7 +100,8 @@ public class CalendarService implements ICalendarService {
                         (event.getEndDate() == null)?null: parseToET(event.getEndDate()),
                         dur,
                         (event.getProperty("RRULE") == null)?null:new FcRRule(event),
-                        (event.getUrl()==null)? null: event.getUrl().toString()
+                        (event.getUrl()==null)? null: event.getUrl().toString(),
+                        (event.getProperty("EXDATE") == null)?null:parseToET(event.getProperty("EXDATE"))
                 ));
             }
             this.eventRepository.saveAll(eventList);
