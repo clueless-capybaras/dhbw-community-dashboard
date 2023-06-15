@@ -58,7 +58,8 @@ This section summarizes the key findings of the testing and the overall status o
 
 The overall status of our Software is bug free. We have a very high test coverage in our frontend and we are confident that our Software is ready for production.
 
-Our Lighthouse metrics for desktop nearly have a 100% score and since we focused on the desktop version, we are very satisfied with this result. 
+Our Lighthouse metrics for desktop nearly have a 100% score and since we focused on the desktop version, we are very satisfied with this result.
+
 ![Desktops Metrics Summary View](desktop_metrics_summary.png)
 
 The mobile version is not as good as the desktop version with a score of 81%. This is because we didn't focus on the mobile version and we didn't have enough time to optimize it. But we are still satisfied with the result because it is still an okay score.
