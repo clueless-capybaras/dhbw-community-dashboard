@@ -13,7 +13,7 @@ function GeneralSettings(props) {
                 <Col md="3">
                 
                 </Col>
-                <Col md="9">
+                <Col>
                 
                 </Col>
             </Row>

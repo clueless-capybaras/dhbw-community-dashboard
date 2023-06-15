@@ -25,7 +25,7 @@ function CalendarSettings(props) {
                 <Col md="3">
                 Format: 
                 </Col>
-                <Col md="9">
+                <Col>
                 <Form.Check disabled type="radio" name="hourFormatRadioGroup" label="24 Stunden" defaultChecked />
                 <Form.Check disabled type="radio" name="hourFormatRadioGroup" label="12 Stunden" />
                 </Col>
@@ -35,7 +35,7 @@ function CalendarSettings(props) {
                 <Col md="3">
                 Standard Ansicht: 
                 </Col>
-                <Col md="9">
+                <Col>
                 <Form.Select disabled>
                     <option>Tag</option>
                     <option>Arbeitswoche</option>
@@ -59,14 +59,7 @@ function CalendarSettings(props) {
                 <Col md="3">
                 RAPLA Link: 
                 </Col>
-                <Container>
-                    <Row>
-                        <Col md="8">
-                        
-                        </Col>
-                    </Row>
-                </Container>
-                <Col md="8">
+                <Col>
                 <Form.Control id="calendarLink" type="link" placeholder="https://rapla.dhbw-karlsruhe.de/..."
                 defaultValue={props.dbUser.calendarLink}
                 />
