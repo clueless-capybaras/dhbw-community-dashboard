@@ -19,10 +19,10 @@ function Dashboard(props) {
                 {/*<DashboardCard title='Moodle'   icon={book} external={true} path='https://moodle.dhbw.de'/>*/}
                 <DashboardCard colWidth={props.colWidth} cyClass='cy-calendar' title='Kalender'    icon={calendar} external={false} path='../calendar'/>
                 <DashboardCard colWidth={props.colWidth} cyClass='cy-mensa' title='Mensa'    icon={canteen} external={false} path='../canteen/default'/>
-                <DashboardCard colWidth={props.colWidth} cyClass='cy-dualis' title='Dualis'  icon={dualis} external={false} path='../dualis'/>
-                <DashboardCard colWidth={props.colWidth} cyClass='cy-links' title='Links'    icon={links} external={false} path='../links'/>
-                <DashboardCard colWidth={props.colWidth} cyClass='cy-news' title='News'    icon={news} external={false} path='../news'/>
-                <DashboardCard colWidth={props.colWidth} cyClass='cy-contact' title='Kontakt'    icon={contact} external={false} path='../contact'/>
+                <DashboardCard disabled={true} colWidth={props.colWidth} cyClass='cy-dualis' title='Dualis'  icon={dualis} external={false} path='../dualis'/>
+                <DashboardCard disabled={true} colWidth={props.colWidth} cyClass='cy-links' title='Links'    icon={links} external={false} path='../links'/>
+                <DashboardCard disabled={true} colWidth={props.colWidth} cyClass='cy-news' title='News'    icon={news} external={false} path='../news'/>
+                <DashboardCard disabled={true} colWidth={props.colWidth} cyClass='cy-contact' title='Kontakt'    icon={contact} external={false} path='../contact'/>
                 <DashboardCard colWidth={props.colWidth} cyClass='cy-settings' title='Einstellungen'    icon={settings} external={false} path='../settings'/>
             </Row>
         </Container>
