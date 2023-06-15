@@ -37,9 +37,8 @@ This section links to the specific test cases that were executed, including thei
 
 Currently we mainly have written Cypress Tests and for JUnit Tests we wrote Smoke Tests. Unfortunately we are not up to date with our JUnit Tests but we already have the framework implemented and besides written tests we also did a review every time we made a pull request. This way another developer could check the code and test it manually, so our Software was still extensively tested.
 
-
-
-[Test History](https://github.com/clueless-capybaras/dhbw-community-dashboard/actions/workflows/tests.yml)
+You can have a detailed look on our performed tests in our 
+[Test History](https://github.com/clueless-capybaras/dhbw-community-dashboard/actions/workflows/tests.yml). There you can click on a specific test you want to have a detailed look on and you can see the test results and the artifacts.
 
 # Test Results
 This section summarizes the results of the testing, including any defects found, their severity, and the steps taken to resolve them. 
