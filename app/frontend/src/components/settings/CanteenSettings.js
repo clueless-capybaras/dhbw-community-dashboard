@@ -68,12 +68,7 @@ function CanteenSettings(props) {
                 <Form.Label>Highlighting-Farbe: </Form.Label>
                 </Col>
                 <Col md="9">
-                <Form.Select id="highlightingColorSelect" value={color} onChange={handleColorChange}>
-                    <option value="green">grün</option>
-                    <option value="yellow">gelb</option>
-                    <option value="red">rot</option>
-                    <option value="blue">blau</option>
-                </Form.Select>
+                <Form.Control type="color" id="highlightingColorSelect" value={color} onChange={handleColorChange} />
                 </Col>
             </Row>
 
