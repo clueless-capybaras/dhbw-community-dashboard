@@ -47,7 +47,7 @@ function CanteenSettings(props) {
                 <Col md="3">
                 Meine Mensa: 
                 </Col>
-                <Col md="9">
+                <Col>
                 <Form.Select id="canteenStandardCanteen" value={canteen} onChange={handleCanteenChange}>
                     <option value="mensa-erzbergerstrasse">Mensa Erzbergerstraße</option>
                     <option value="mensa-am-adenauerring">Mensa am Adenauerring</option>
@@ -59,7 +59,7 @@ function CanteenSettings(props) {
                 <Col md="3">
                 <Form.Label>Highlighting aktivieren: </Form.Label>
                 </Col>
-                <Col md="9">
+                <Col>
                 <Form.Check defaultChecked={props.dbUser.canteenHighlightingActive} className="" type="checkbox" id="highlightingCheck" aria-label="activate Highlighting" />
                 </Col>
             </Row>
@@ -67,13 +67,8 @@ function CanteenSettings(props) {
                 <Col md="3">
                 <Form.Label>Highlighting-Farbe: </Form.Label>
                 </Col>
-                <Col md="9">
-                <Form.Select id="highlightingColorSelect" value={color} onChange={handleColorChange}>
-                    <option value="green">grün</option>
-                    <option value="yellow">gelb</option>
-                    <option value="red">rot</option>
-                    <option value="blue">blau</option>
-                </Form.Select>
+                <Col>
+                <Form.Control type="color" id="highlightingColorSelect" value={color} onChange={handleColorChange} />
                 </Col>
             </Row>
 
@@ -81,7 +76,7 @@ function CanteenSettings(props) {
                 <Col md="3">
                 <Form.Label>Highlighting-Typen: </Form.Label>
                 </Col>
-                <Col md="9">
+                <Col>
                 <Form.Select id="highlightingOptionSelect" value={highlightingOption} onChange={handleHighlightingOptionChange}>
                     <option value="vegetarian">vegetarisch</option>
                     <option value="vegan">vegan</option>
@@ -105,7 +100,7 @@ function CanteenSettings(props) {
                 <Col md="3">
                 <Form.Label>Gerichte anzeigen mit Mindesteigenschaft:</Form.Label>
                 </Col>
-                <Col md="9">
+                <Col>
                 <Form.Select id="filteringOptionSelect" value={filteringOption} onChange={handleFilteringOptionChange}>
                     <option value="all">Alle Anzeigen</option>
                     <option value="nopork">Kein Schweinefleisch</option>

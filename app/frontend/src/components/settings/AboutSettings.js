@@ -45,21 +45,23 @@ function AboutSettings(props) {
                 <Col md="3">
                 <a target="_blank" rel="noreferrer" href="https://github.com/clueless-capybaras/dhbw-community-dashboard">GitHub</a>
                 </Col>
-                <Col md="9">
+                <Col>
                 Wir verwenden GitHub als Repository für den gesamten Sourcecode und zur Dokumentation.
                 </Col>
-
+            </Row>
+            <Row className="mb-3">
                 <Col md="3">
                 <a target="_blank" rel="noreferrer" href="http://capyclue.mush-it.com/">Worpress</a>
                 </Col>
-                <Col md="9">
+                <Col>
                 Auf Worpress halten wir unsere größten Fans auf dem Laufenden.
                 </Col>
-
+            </Row>
+            <Row className="mb-3">
                 <Col md="3">
                 <a target="_blank" rel="noreferrer" href="https://capyclue.atlassian.net/jira/software/projects/CAPY/boards/1">Jira</a>
                 </Col>
-                <Col md="9">
+                <Col>
                 Jira ist unser Tool zum agilen Arbeiten im Sprint und zum Managen von Tasks und Bugs.
                 </Col>
             </Row>

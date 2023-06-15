@@ -51,7 +51,7 @@ function Settings() {
                 
                 </Col>
 
-                <Col md="9">
+                <Col>
                 {/* contents of different settings pages */}
                 <Tab.Content>
                     <Tab.Pane eventKey="account">
