@@ -32,7 +32,7 @@ function Canteen(){
         setDailyMenus(null);
         canteenHttpClient.getCanteenSettings(isAuthenticated, getAccessTokenSilently).then((s) => {
             setSettings(s);
-            if(isAuthenticated && s && s.canteenStandardCanteen && s.canteenStandardCanteen !== canteen.key){
+            if(isAuthenticated && s && s.canteenStandardCanteen && s.canteenStandardCanteen !== canteen.key && whichCanteen === 'default'){
                 navigate('/canteen/'+s.canteenStandardCanteen);
             }
             canteenHttpClient.getWeeklyMenuOfCanteen(canteen.key).then((dm) => setDailyMenus(dm));
