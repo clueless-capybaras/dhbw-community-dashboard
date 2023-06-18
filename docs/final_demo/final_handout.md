@@ -9,7 +9,7 @@
   - [overview](#overview)
   - [component vs microservice](#component-vs-microservice)
 - [quality assurance](#quality-assurance)
-  - [test coverage](#test-coverage)
+  - [planned test coverage](#planned-test-coverage)
   - [monitoring](#monitoring)
 - [CI/CD](#cicd)
 - [statistics](#statistics)
@@ -62,7 +62,7 @@ Related:
 
 - [**Jira:**](https://www.atlassian.com/software/jira) sprint planning, scrum board
 - [**Confluence:**](https://www.atlassian.com/software/confluence) team internal documentation
-- [**Worpress:**](https://capyclue.mush-it.com/) weekly blog posts
+- [**Wordpress:**](https://capyclue.mush-it.com/) weekly blog posts
 - [**Figma:**](https://www.figma.com/) wireframing, designing
 
 ### infrastructure <!-- omit from toc --> 
@@ -74,11 +74,12 @@ Related:
 
 ### development <!-- omit from toc --> 
 
-- [**React-Bootstrap:**](https://react-bootstrap.github.io/) frontend framework for React
-- [**Auth0:**](https://auth0.com/) user authorization framework
-- [**FullCalendar:**](https://fullcalendar.io/) calendar framework for React
-- [**Spring Boot:**](https://spring.io/projects/spring-boot) microservice framework for Java
-- [**MariaDB:**](https://mariadb.org/) MySQL based relational database
+- [**React:**](https://react.dev/) JavaScript SPA library
+- [**React-Bootstrap:**](https://react-bootstrap.github.io/) frontend component collection
+- [**Auth0:**](https://auth0.com/) user authorization service
+- [**FullCalendar:**](https://fullcalendar.io/) calendar library for React
+- [**Spring Boot:**](https://spring.io/projects/spring-boot) Java framework
+- [**MariaDB:**](https://mariadb.org/) relational database
 
 ### testing and monitoring <!-- omit from toc --> 
 
@@ -114,7 +115,7 @@ Related:
 #### component <!-- omit from toc --> 
 - reusable React elements
 - atomic design
-- Bootstrap framework
+- Bootstrap collection
   - pre-configured components
   - customizable
 
@@ -129,7 +130,7 @@ Related:
 
 ## quality assurance
 
-### test coverage
+### planned test coverage
 
 - **JUnit:** unit and integration tests for backend microservices
   - component coverage: **100**%
@@ -186,6 +187,12 @@ Related:
 ---
 
 ## statistics
+
+### hours per phase and workflow <!-- omit from toc --> 
+![diagram: hours per phase and workflow](./images/diagram_hours_per_phase_and_workflow.png)
+
+### hours per person and workflow <!-- omit from toc --> 
+![diagram: hours per person and workflow](./images/diagram_hours_per_person_and_workflow.png)
 
 ---
 
